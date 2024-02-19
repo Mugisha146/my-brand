@@ -27,45 +27,6 @@ body.login {
 .warn {
   color: rgb(51, 98, 209);
 }
-
-/* header */
-header[role="banner"] {
-  background: white;
-  box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.15);
-}
-header[role="banner"] h1 {
-  margin: 0;
-  font-weight: 300;
-  padding: 1rem;
-}
-header[role="banner"] h1:before {
-  content: "\f248";
-  font-family: FontAwesome;
-  padding-right: 0.6em;
-  color: #020B14;
-}
-header[role="banner"] .utilities {
-  width: 100%;
-  background: #020B14;
-  color: #ddd;
-}
-
-header[role="banner"] .utilities li a {
-  padding: 0.7em;
-  display: block;
-}
-
-/* header */
-.utilities a:before {
-  content: "\f248";
-  font-family: FontAwesome;
-  padding-right: 0.6em;
-}
-
-.logout a:before {
-  content: "";
-}
-
 .users a:before {
   content: "";
 }
@@ -210,7 +171,7 @@ form legend {
   margin: 1em 0 0.5em;
 }
 form input[type="submit"] {
-  background: #020B14;
+  background: #036890;
   border: none;
   padding: 0.7em 3em;
   margin: 1em 0;
@@ -219,13 +180,14 @@ form input[type="submit"] {
   font-weight: bold;
   display: inline-block;
   width: auto;
+  margin-left: 20px;
   -webkit-border-radius: 0.5em;
   -moz-border-radius: 0.5em;
   -ms-border-radius: 0.5em;
   border-radius: 0.5em;
 }
 form input[type="submit"]:hover {
-  background: turquoise;
+  background: rgb(5, 77, 69);
   border: none;
   border-bottom: solid 4px #21ccbb;
   padding: 0.7em 3em;
@@ -236,6 +198,7 @@ form input[type="submit"]:hover {
   font-weight: bold;
   display: inline-block;
   width: auto;
+  margin-left: 20px;
   -webkit-border-radius: 0.5em;
   -moz-border-radius: 0.5em;
   -ms-border-radius: 0.5em;
@@ -274,30 +237,6 @@ td {
   body {
     height: 100%;
   }
-
-  header[role="banner"] {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    z-index: 99;
-    height: 75px;
-  }
-  header[role="banner"] .utilities {
-    position: absolute;
-    top: 0;
-    right: 0;
-    background: transparent;
-    color: #020B14;
-    width: auto;
-  }
-  header[role="banner"] .utilities li {
-    display: inline-block;
-  }
-  header[role="banner"] .utilities li a {
-    padding: 0.5em 1em;
-  }
-
   nav[role="navigation"] {
     position: fixed;
     width: 200px;
@@ -348,3 +287,43 @@ td {
     width: 23%;
   }
 }
+
+/* Styles for the new navigation bar */
+.navzo {
+  background-color: #020B14;
+  color: white;
+  padding: 10px 0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000; /* Ensure the navigation bar is above other content */
+}
+
+.navzo .text-centerzo {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+.navzo .text-centerzo li {
+  display: inline-block;
+  margin: 0 10px;
+}
+
+.navzo .text-centerzo li a {
+  color: white;
+  text-decoration: none;
+  padding: 5px 10px;
+}
+
+.signupzo {
+  background-color: rgb(243, 116, 137);
+  color: black;
+  font-weight: bold;
+  padding: 15px 20px;
+  border-radius: 10px;
+  font-size: 15px;
+}
+

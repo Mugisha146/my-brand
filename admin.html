@@ -5,23 +5,32 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Admin page</title>
   <link rel="stylesheet" href="admin.css">
+  <link rel="stylesheet" href="about.css"> <!-- Include your existing CSS file -->
   <script src="https://kit.fontawesome.com/902bd6162d.js" crossorigin="anonymous"></script>
 </head>
 <body>
 
-<header role="banner">
-  <h1> ADMIN</h1>
-  <ul class="utilities">
-    <li class="users"><a href="#">PROFILE</a></li>
-    <li class="logout warn"><a href="#">LOG OUT</a></li>
+<!-- New navigation bar -->
+<div class="navzo">
+  <ul class="text-centerzo">
+    <li><a href="home.html"><i class="fa-solid fa-house"></i>&nbsp;  HOME</a></li>
+    <li><a href="about.html"><i class="fa-solid fa-address-card"></i>&nbsp; ABOUT ME</a></li>
+    <li><a href="skills.html"><i class="fa-solid fa-flask"></i>&nbsp; SKILLS</a></li>
+    <li><a href="blog.html"><i class="fa-solid fa-blog"></i>&nbsp; BLOG</a></li>
+    <li><a href="portfolio.html"><i class="fa-solid fa-briefcase"></i>&nbsp; PORTFOLIO</a></li>
+    <li><a href="contact.html"><i class="fa-solid fa-phone"></i>&nbsp; CONTACT</a></li>
+    <li><a href="login.html"><i class="fa-solid fa-user"></i>&nbsp; LOGIN</a></li>
+    <a href="signup.html"><button class="signup"><i class="fa-solid fa-user-plus"></i>&nbsp; SIGN UP</button></li></a>
   </ul>
-</header>
+</div>
 
 <nav role="navigation">
   <ul class="main">
-    <li class="write"><a href="#">CREATE NEW POST</a></li>
+    <li class="write"><a href="#">CREATE POST</a></li>
+    <li class="users"><a href="#">PROFILE</a></li>
     <li class="dashboard"><a href="#">DASHBOARD</a></li>
     <li class="users"><a href="#">MANAGE USERS</a></li>
+    <li class="logout warn"><a href="#">LOG OUT</a></li>
   </ul>
 </nav>
 
@@ -41,5 +50,6 @@
     </form>
   </section>
 </main>
+
 </body>
 </html>
