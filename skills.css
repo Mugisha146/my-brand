@@ -1,0 +1,210 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat');
+
+body, html {
+  background: #020B14;
+  font-family: 'Montserrat', sans-serif;
+}
+
+span, div, p {
+  font-family: 'Montserrat', sans-serif;
+}
+
+h1 {
+  text-align: center;
+  color: white;
+  font-size: 3em;
+  font-weight: 100;
+  margin: 40px;
+  margin-bottom:-8%;
+  font-weight:bold;
+}
+
+.box {
+  font-family: Roboto;
+  border-radius: 5px;
+  position: relative;
+  min-height: 600px;
+  margin: 150px auto;
+  display: block;
+  border: 1px solid white;
+  background: #020B14;
+}
+
+.box .skills {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  padding: 0;
+  margin: 0;
+}
+.skills img{
+    width: 20px;
+    height: 20px;
+    border-radius: 30px;
+}
+.box .skills li {
+  text-align: right;
+  font-size: 18px;
+  margin: 5px 0px;
+  color: white;
+  font-weight:bold;
+  margin-left: 10px;
+  
+}
+
+.box li {
+  list-style: none;
+  flex: 1;
+  position: relative;
+  padding: 10px 0px;
+}
+
+.box .level {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  padding: 0;
+  margin: 0;
+  height: 100%;
+}
+
+.box .level .bar {
+  background: #1e1b4b;
+  padding: 10px 0px;
+  float: left;
+  color: white;
+  text-align: center;
+}
+
+.header {
+  position: fixed;
+  left: 0px;
+  top: 0px;
+  width: 100%;
+  background: #f9f9f9;
+}
+
+  .box {
+    width: 70%;
+    max-width: 1000px;
+  }
+
+  .skills {
+    width: 13%;
+  }
+
+  .level {
+    width: 85%;
+    left: 15%;
+  }
+
+.never{
+    color: white;
+text-align: center;
+    margin-top: -6em;
+}
+
+nav.ul {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    color: white;
+}
+.nav li {
+      display: inline;
+      color: white;
+      float: left;
+      width: 12%;
+      padding-top: 20px;
+      padding-bottom: 20px;
+      border-bottom: 2px solid white;
+      margin:2px;
+}
+
+  .signup {
+      background-color:rgb(243, 116, 137);
+     color: black;
+     font-weight: bold;
+      width: 10%;
+      padding-top: 25px;
+      padding-bottom: 20px;
+      border-radius:10px;
+    font-weight:bolder;
+    font-size:15px;
+    
+  }
+.nav a { 
+        text-decoration: none;
+        color:white; 
+      }
+.text-center {
+    text-align: center;
+  }
+
+  /* Social Media Icons */
+  .social-media-list {
+    position: relative;
+    font-size: 22px;
+    text-align: center;
+    width: 100%;
+    padding: 20px;
+
+  }
+  
+  .social-media-list li a {
+    color: #fff;
+  }
+  
+  .social-media-list li {
+    position: relative; 
+    display: inline-block;
+    height: 60px;
+    width: 60px;
+    margin: 10px 3px;
+    line-height: 60px;
+    border-radius: 50%;
+    color: #fff;
+    background-color: rgb(51, 98, 209);
+    cursor: pointer; 
+    transition: all .2s ease-in-out;
+  }
+  
+  .social-media-list li:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 60px;
+    height: 60px;
+    line-height: 60px;
+    border-radius: 50%;
+    opacity: 0;
+    box-shadow: 0 0 0 1px #fff;
+    transition: all .2s ease-in-out;
+  }
+  
+  .social-media-list li:hover {
+    background-color: #fff; 
+  }
+  
+  .social-media-list li:hover:after {
+    opacity: 1;  
+    transform: scale(1.12);
+    transition-timing-function: cubic-bezier(0.37,0.74,0.15,1.65);
+  }
+  
+  .social-media-list li:hover a {
+    color: #000;
+  }
+  
+  .copyright {
+    font: 200 14px 'Oswald', sans-serif;
+    color: white;
+    letter-spacing: 1px;
+    text-align: center;
+  }
+  
+  hr {
+    border-color: rgba(255,255,255,.6);
+  }

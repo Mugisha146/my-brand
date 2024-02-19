@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin page</title>
+  <link rel="stylesheet" href="admin.css">
+  <script src="https://kit.fontawesome.com/902bd6162d.js" crossorigin="anonymous"></script>
+</head>
+<body>
+
+<header role="banner">
+  <h1> ADMIN</h1>
+  <ul class="utilities">
+    <li class="users"><a href="#">PROFILE</a></li>
+    <li class="logout warn"><a href="#">LOG OUT</a></li>
+  </ul>
+</header>
+
+<nav role="navigation">
+  <ul class="main">
+    <li class="write"><a href="#">CREATE NEW POST</a></li>
+    <li class="dashboard"><a href="#">DASHBOARD</a></li>
+    <li class="users"><a href="#">MANAGE USERS</a></li>
+  </ul>
+</nav>
+
+<main role="main">
+  <section class="panel important">
+    <h2>New Post</h2>
+    <form method="post">
+      <div class="twothirds">
+        Blog Title:<br>
+        <input type="text" name="title" size="40"><br><br>
+        Content:<br>    
+        <textarea name="newstext" rows="15" cols="67"></textarea><br>  
+      </div>
+      <div>
+        <input type="submit" name="submit" value="Post">
+      </div>
+    </form>
+  </section>
+</main>
+</body>
+</html>

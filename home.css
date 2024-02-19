@@ -1,0 +1,220 @@
+body {
+    margin: 0;
+    font-family: 'Josefin Sans', sans-serif;
+    background-color:#020B14;
+  }
+  
+  
+  p {
+    color: white;
+    font-weight: bold;
+  }
+  label {
+    margin-bottom: 10px; /* Add margin below each label */
+    font-size: 20px;
+    color: white;
+    font-weight: bold;
+  }
+  .text-center {
+    text-align: center;
+  }
+  .img-fluid {
+    width: 20%;
+    float:right;
+    margin-top:-31%;
+    margin-right:20%;
+    border-radius:15%;
+  }
+  .me-name{
+    float:right;
+    margin-top:-10%;
+    margin-right:24%;
+    color: white;
+  }
+  input,
+  textarea {
+    width: 100%;
+    padding: 10px;
+    background-color: transparent;
+    border: 1px solid #ffffff;
+    border-radius: 2px;
+    color: white;
+    margin-bottom: 20px; /* Add margin below each input field */
+  }
+  
+  .btn {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color:rgb(24, 115, 234);
+    box-shadow: none;
+    -webkit-box-shadow: none;
+    border: none;
+    border-radius: 2px;
+    color: white;
+    border-radius:10px;
+  }
+  .home-header {
+    margin: 0;
+    padding:0;
+    background:white;
+  }
+    .home-header p {
+      font-size: 90px;
+      font-weight: 200;
+    }
+    
+  nav.ul {
+      width: 100%;
+      margin: 0;
+      padding: 0;
+      color: white;
+  }
+  .nav li {
+        display: inline;
+        color: white;
+        float: left;
+        width: 12%;
+        padding-top: 20px;
+        padding-bottom: 20px;
+        border-bottom: 2px solid white;
+        margin:2px;
+  }
+  
+    .signup {
+        background-color:rgb(243, 116, 137);
+       color: black;
+       font-weight: bold;
+        width: 10%;
+        padding-top: 25px;
+        padding-bottom: 20px;
+        border-radius:10px;
+      font-weight:bolder;
+      font-size:15px;
+      
+    }
+  .nav a { 
+          text-decoration: none;
+          color:white; 
+        }
+  .content {
+    
+    width: 95%;
+    margin: 20px ;
+    padding: 20px;
+    background-color:#020B14;
+    clear: both;
+    overflow: hidden;
+    float:right;
+  }
+  .content-2 {
+    text-align:center;
+    background-color: #020B14;
+    padding-top:40px;
+    margin-top:40px;
+  }
+  .bottom-content{
+    color:white;
+    margin-top:15px;
+    font-weight:bolder;
+    font-size:15px;
+    text-align:center;
+  }
+  
+    
+  .mine-text{
+    font-size:20px;
+    text-align: center;
+  }
+  .sub{
+    background-color:rgb(243, 116, 137);
+    color:black;
+    font-weight: bold;
+    width:150px;
+    height:50px;
+    margin-top:15px;
+    border-radius:10px;
+     font-weight:bolder;
+     font-size:15px;
+     margin-bottom: 40px;
+  }
+  .mine-form{
+    padding-top:20px;
+    font-size:20px;
+    width:25%;
+    margin-top:6%;
+    margin-left:6%;
+    
+  }
+  .sub-field{
+    margin-left:34%;
+    margin-top:20px;
+    width:30%;
+  }
+
+
+  /* Social Media Icons */
+  .social-media-list {
+    position: relative;
+    font-size: 22px;
+    text-align: center;
+    width: 100%;
+    padding: 20px;
+
+  }
+  
+  .social-media-list li a {
+    color: #fff;
+  }
+  
+  .social-media-list li {
+    position: relative; 
+    display: inline-block;
+    height: 60px;
+    width: 60px;
+    margin: 10px 3px;
+    line-height: 60px;
+    border-radius: 50%;
+    color: #fff;
+    background-color: rgb(51, 98, 209);
+    cursor: pointer; 
+    transition: all .2s ease-in-out;
+  }
+  
+  .social-media-list li:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 60px;
+    height: 60px;
+    line-height: 60px;
+    border-radius: 50%;
+    opacity: 0;
+    box-shadow: 0 0 0 1px #fff;
+    transition: all .2s ease-in-out;
+  }
+  
+  .social-media-list li:hover {
+    background-color: #fff; 
+  }
+  
+  .social-media-list li:hover:after {
+    opacity: 1;  
+    transform: scale(1.12);
+    transition-timing-function: cubic-bezier(0.37,0.74,0.15,1.65);
+  }
+  
+  .social-media-list li:hover a {
+    color: #000;
+  }
+  
+  .copyright {
+    font: 200 14px 'Oswald', sans-serif;
+    color: white;
+    letter-spacing: 1px;
+    text-align: center;
+  }
+  
+  hr {
+    border-color: rgba(255,255,255,.6);
+  }
