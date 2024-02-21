@@ -11,13 +11,13 @@ html {
 }
 
 body {
-  background: #f1f2f7;
+  background: #a3a4ab;
   font-family: "Open Sans", arial, sans-serif;
   color: #020B14;
 }
 
 body.login {
-  background-color: white;
+  background-color: #a3a4ab;
   max-width: 500px;
   margin: 10vh auto;
   padding: 1em;
@@ -82,7 +82,7 @@ nav[role="navigation"] .users a:before {
 
 /* panels */
 .panel {
-  background-color: white;
+  background-color: #a3a4ab;
   color: #020B14;
   -webkit-border-radius: 0.3rem;
   -moz-border-radius: 0.3rem;
@@ -139,7 +139,7 @@ main li:before {
   height: 0;
   left: 0;
   top: 0.3em;
-  border-left: solid 10px #dde;
+  border-left: solid 10px #a3a4ab;
   border-top: solid 5px transparent;
   border-bottom: solid 5px transparent;
 }
@@ -150,7 +150,7 @@ form textarea,
 form select {
   width: 100%;
   display: block;
-  border: solid 1px #dde;
+  border: solid 1px #a3a4ab;
   padding: 0.5em;
 }
 form input:after,
@@ -287,43 +287,25 @@ td {
     width: 23%;
   }
 }
-
-/* Styles for the new navigation bar */
-.navzo {
-  background-color: #020B14;
+.navzo li {
+  display: inline;
   color: white;
-  padding: 10px 0;
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  z-index: 1000; /* Ensure the navigation bar is above other content */
-}
-
-.navzo .text-centerzo {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  text-align: center;
-}
-
-.navzo .text-centerzo li {
-  display: inline-block;
-  margin: 0 10px;
-}
-
-.navzo .text-centerzo li a {
-  color: white;
-  text-decoration: none;
-  padding: 5px 10px;
+  float: left;
+  width: 12%;
+  margin-left: 15px;
 }
 
 .signupzo {
-  background-color: rgb(243, 116, 137);
-  color: black;
-  font-weight: bold;
-  padding: 15px 20px;
-  border-radius: 10px;
-  font-size: 15px;
-}
+float: right;
 
+}
+.navzo a { 
+    text-decoration: none;
+    color:white; 
+    font-size: 15px;
+    font-weight: bold;
+  }
+.navzo a:hover{
+color: rgb(147, 92, 8);
+
+}     

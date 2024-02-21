@@ -8,14 +8,16 @@
 }
 
 body {
-    background-color: #020B14;
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  background-color: #020b14;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
   margin: 0 auto;
 }
 
 .container {
   width: 95%;
   margin: 2em;
+  padding-top: 5em;
 }
 
 .portfolio,
@@ -25,13 +27,14 @@ body {
 }
 
 .portfolio {
-  background-color: rgb(202, 202, 202);
+  background-color: #020b14;
   margin-top: 2.5rem;
   padding-top: 3rem;
   flex-direction: column;
   align-items: center;
   width: 100%;
   margin: 0 auto;
+  color: #fff;
 }
 
 .portfolio__header {
@@ -50,7 +53,7 @@ body {
 
 .box {
   flex: 1;
-  padding:0 1rem;
+  padding: 0 1rem;
 }
 
 .card {
@@ -60,7 +63,8 @@ body {
   justify-content: center;
   margin: 1.5rem 0;
   max-width: 360px;
-  box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 5px 0px, rgba(0, 0, 0, 0.5) 0px 2px 15px 0px;
+  box-shadow: rgba(207, 204, 204, 0.4) 0px 2px 5px 0px,
+    rgba(255, 252, 252, 0.5) 0px 2px 15px 0px;
   padding: 1rem;
   gap: 1rem;
 }
@@ -78,9 +82,9 @@ body {
 }
 
 .card p {
-    font-size: 16px;
+  font-size: 16px;
   font-weight: bold;
-  color: #020B14;
+  color: whitesmoke;
 }
 
 .text-container {
@@ -88,132 +92,115 @@ body {
   margin: 0 auto;
 }
 
-
-
-  .portfolio__container {
-    flex-direction: row;
-    align-items: stretch; /* Ensure all items stretch to the same height */
-    flex-wrap: wrap;
-    width: 100%;
-  }
-
-  .card {
-    width: 300px;
-    height: 400px;
-    border-radius: 10px;
-  }
-
-  .card img {
-    max-width: 100%;
-    margin-bottom: 1rem;
-    border-radius: 20px;
-  }
-
-  .card p {
-    font-weight: 200;
-  }
-
-  nav.ul {
-    width: 100%;
-    margin: 0;
-    padding: 0;
-    color: white;
+.portfolio__container {
+  flex-direction: row;
+  align-items: stretch; /* Ensure all items stretch to the same height */
+  flex-wrap: wrap;
+  width: 100%;
 }
+
+.card {
+  width: 300px;
+  height: 400px;
+  border-radius: 10px;
+}
+
+.card img {
+  max-width: 100%;
+  margin-bottom: 1rem;
+  border-radius: 20px;
+}
+
+.card p {
+  font-weight: 200;
+}
+
 .nav li {
-      display: inline;
-      color: white;
-      float: left;
-      width: 12%;
-      padding-top: 20px;
-      padding-bottom: 20px;
-      border-bottom: 2px solid white;
-      margin:2px;
+  display: inline;
+  color: white;
+  float: left;
+  width: 12%;
+  margin-left: 15px;
 }
 
-  .signup {
-      background-color:rgb(243, 116, 137);
-     color: black;
-     font-weight: bold;
-      width: 10%;
-      padding-top: 25px;
-      padding-bottom: 20px;
-      border-radius:10px;
-    font-weight:bolder;
-    font-size:15px;
-    
-  }
-.nav a { 
-        text-decoration: none;
-        color:white; 
-      }
+.signup {
+  float: right;
+}
+.nav a {
+  text-decoration: none;
+  color: white;
+  font-size: 15px;
+  font-weight: bold;
+}
+.nav a:hover {
+  color: rgb(147, 92, 8);
+}
 .text-center {
-    text-align: center;
-  }
+  text-align: center;
+}
 
+/* Social Media Icons */
+.social-media-list {
+  position: relative;
+  font-size: 22px;
+  text-align: center;
+  width: 100%;
+  padding: 20px;
+}
 
-  /* Social Media Icons */
-  .social-media-list {
-    position: relative;
-    font-size: 22px;
-    text-align: center;
-    width: 100%;
-    padding: 20px;
+.social-media-list li a {
+  color: #fff;
+}
 
-  }
-  
-  .social-media-list li a {
-    color: #fff;
-  }
-  
-  .social-media-list li {
-    position: relative; 
-    display: inline-block;
-    height: 60px;
-    width: 60px;
-    margin: 10px 3px;
-    line-height: 60px;
-    border-radius: 50%;
-    color: #fff;
-    background-color: rgb(51, 98, 209);
-    cursor: pointer; 
-    transition: all .2s ease-in-out;
-  }
-  
-  .social-media-list li:after {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 60px;
-    height: 60px;
-    line-height: 60px;
-    border-radius: 50%;
-    opacity: 0;
-    box-shadow: 0 0 0 1px #fff;
-    transition: all .2s ease-in-out;
-  }
-  
-  .social-media-list li:hover {
-    background-color: #fff; 
-  }
-  
-  .social-media-list li:hover:after {
-    opacity: 1;  
-    transform: scale(1.12);
-    transition-timing-function: cubic-bezier(0.37,0.74,0.15,1.65);
-  }
-  
-  .social-media-list li:hover a {
-    color: #000;
-  }
-  
-  .copyright {
-    font: 200 14px 'Oswald', sans-serif;
-    color: white;
-    letter-spacing: 1px;
-    text-align: center;
-  }
-  
-  hr {
-    border-color: rgba(255,255,255,.6);
-  }
+.social-media-list li {
+  position: relative;
+  display: inline-block;
+  height: 60px;
+  width: 60px;
+  margin: 10px 3px;
+  line-height: 60px;
+  border-radius: 50%;
+  color: #fff;
+  background-color: rgb(51, 98, 209);
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+
+.social-media-list li:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 60px;
+  height: 60px;
+  line-height: 60px;
+  border-radius: 50%;
+  opacity: 0;
+  box-shadow: 0 0 0 1px #fff;
+  transition: all 0.2s ease-in-out;
+}
+
+.social-media-list li:hover {
+  background-color: #fff;
+}
+
+.social-media-list li:hover:after {
+  opacity: 1;
+  transform: scale(1.12);
+  transition-timing-function: cubic-bezier(0.37, 0.74, 0.15, 1.65);
+}
+
+.social-media-list li:hover a {
+  color: #000;
+}
+
+.copyright {
+  font: 200 14px "Oswald", sans-serif;
+  color: white;
+  letter-spacing: 1px;
+  text-align: center;
+}
+
+hr {
+  border-color: rgba(255, 255, 255, 0.6);
+}

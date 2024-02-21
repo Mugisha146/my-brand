@@ -7,6 +7,7 @@ body{
     outline: none;
 }
 .holder{
+ 
     width: 440px;
     background: white;
     height: 600px;
@@ -120,39 +121,28 @@ form p a{
     color: #020B14;
 }
 
-nav.ul {
-    width: 100%;
-    margin: 0;
-    padding: 0;
-    color: white;
-}
 .nav li {
-      display: inline;
-      color: white;
-      float: left;
-      width: 12%;
-      padding-top: 20px;
-      padding-bottom: 20px;
-      border-bottom: 2px solid white;
-      margin:2px;
+  display: inline;
+  color: white;
+  float: left;
+  width: 12%;
+  margin-left: 15px;
 }
 
-  .signup {
-      background-color:rgb(243, 116, 137);
-     color: black;
-     font-weight: bold;
-      width: 10%;
-      padding-top: 25px;
-      padding-bottom: 20px;
-      border-radius:10px;
-    font-weight:bolder;
-    font-size:15px;
-    
-  }
+.signup {
+float: right;
+
+}
 .nav a { 
-        text-decoration: none;
-        color:white; 
-      }
+    text-decoration: none;
+    color:white; 
+    font-size: 15px;
+    font-weight: bold;
+  }
+.nav a:hover{
+color: rgb(147, 92, 8);
+
+}     
 .text-center {
     text-align: center;
   }
@@ -223,4 +213,8 @@ nav.ul {
   
   hr {
     border-color: rgba(255,255,255,.6);
+  }
+
+  .whii{
+    padding-top: 5em;
   }

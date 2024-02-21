@@ -10,11 +10,13 @@ span, div, p {
 }
 
 h1 {
+  padding-top: 3em;
   text-align: center;
   color: white;
   font-size: 3em;
   font-weight: 100;
-  margin: 40px;
+  margin: 35px;
+  margin-left: -30px;
   margin-bottom:-8%;
   font-weight:bold;
 }
@@ -106,38 +108,31 @@ text-align: center;
 }
 
 nav.ul {
-    width: 100%;
-    margin: 0;
-    padding: 0;
-    color: white;
+  width: 100%;
+  color: white;
 }
 .nav li {
-      display: inline;
-      color: white;
-      float: left;
-      width: 12%;
-      padding-top: 20px;
-      padding-bottom: 20px;
-      border-bottom: 2px solid white;
-      margin:2px;
+    display: inline;
+    color: white;
+    float: left;
+    width: 12%;
+    margin-left: 15px;
 }
 
-  .signup {
-      background-color:rgb(243, 116, 137);
-     color: black;
-     font-weight: bold;
-      width: 10%;
-      padding-top: 25px;
-      padding-bottom: 20px;
-      border-radius:10px;
-    font-weight:bolder;
-    font-size:15px;
-    
-  }
+.signup {
+float: right;
+  
+}
 .nav a { 
-        text-decoration: none;
-        color:white; 
-      }
+      text-decoration: none;
+      color:white; 
+      font-size: 15px;
+      font-weight: bold;
+    }
+.nav a:hover{
+color: rgb(147, 92, 8);
+
+}     
 .text-center {
     text-align: center;
   }

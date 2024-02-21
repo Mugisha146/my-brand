@@ -5,40 +5,50 @@
 }
 body {
   background-color: #020B14;
-  font-family: 'Fira Sans', sans-serif;
+  font-family: 'Josefin Sans', sans-serif;
 }
 
 .nav {
+  padding: 1.5em;
+  color: white;
+}
+
+nav.ul {
   width: 100%;
-  margin: 0;
-  padding: 0;
   color: white;
 }
-
-.nav ul {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  list-style: none;
-}
-
 .nav li {
-  padding: 20px;
-  border-bottom: 2px solid white;
+    display: inline;
+    color: white;
+    float: left;
+    width: 12%;
+    margin-left: 15px;
 }
 
-.nav a {
-  text-decoration: none;
-  color: white;
+.signup {
+float: right;
+  
 }
+.nav a { 
+      text-decoration: none;
+      color:white; 
+      font-size: 15px;
+      font-weight: bold;
+    }
+.nav a:hover{
+color: rgb(147, 92, 8);
 
+}     
 .all-blog {
+  
   width: 100%;
   max-width: 1000px;
   margin: auto;
-  background: #b8d8fa;
+  background: #020B14;
   padding: 25px;
   border-radius: 25px;
+  border:2px solid #b8d8fa;
+  padding: 20px;
 }
 
 .social-media-icon {
@@ -62,20 +72,6 @@ body {
   font-size: 24px;
 }
 
-.signup {
-  background-color:rgb(243, 116, 137);
-  
-  font-weight: bold;
-  width: 10%;
-  padding-top: 25px;
-  padding-bottom: 20px;
-  border-radius:10px;
-font-weight:bolder;
-font-size:15px;
-text-align: center;
-
-}
-
 .blog-slider__button {
   display: inline-flex;
   background-color: rgb(3, 57, 57);
@@ -96,6 +92,7 @@ text-align: center;
 
 .title-text {
   text-align: center;
+  color: #fff;
 }
 
 .profile-pic {
@@ -157,7 +154,7 @@ text-align: center;
   }
   
   .social-media-list li:hover a {
-    color: #000;
+    color: white;
   }
   
   .copyright {
@@ -188,8 +185,18 @@ text-align: center;
     border-radius: 30px;
   }
   .blog-slider__code {
-    color: #0d0925;
+    color: white;
     margin-bottom: 15px;
     display: block;
     font-weight: 500;
+  }
+  .kk{
+    padding-top: 5em;
+  }
+  .blog-slider__title{
+    color: #fff;
+  }
+  .blog-slider__text{
+    color: #fff;
+    margin-bottom: 10px;
   }
