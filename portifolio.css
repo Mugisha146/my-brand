@@ -24,6 +24,7 @@ body {
 .portfolio__container {
   display: flex;
   border-radius: 20px;
+  margin-left: 8em;
 }
 
 .portfolio {
@@ -203,4 +204,43 @@ body {
 
 hr {
   border-color: rgba(255, 255, 255, 0.6);
+}
+
+/* Media Queries for responsiveness */
+@media screen and (max-width: 768px) {
+  .container {
+    padding-top: 3em;
+  }
+
+  .portfolio__header {
+    font-size: 1.5rem;
+  }
+
+  .card {
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+  }
+
+  .card img {
+    border-radius: 10px;
+  }
+  .nav li {
+    display: block;
+    width: auto;
+    float: none;
+    margin-left: 0;
+    margin-bottom: 10px;
+  }
+
+  .signup {
+    float: none;
+    margin: 0 auto;
+    margin-top: 10px;
+    margin-left: 45%;
+  }
+  .portfolio,
+  .portfolio__container {
+    margin-left: -1em;
+  }
 }

@@ -1,192 +1,252 @@
 body {
-    background: #020B14;
-    font-family: 'Josefin Sans', sans-serif;
-    margin: 0;
+  background: #020b14;
+  font-family: "Josefin Sans", sans-serif;
+  margin: 0;
 }
 
 .nav li {
-    display: inline;
-    color: white;
-    float: left;
-    width: 12%;
-    margin-left: 15px;
+  display: inline;
+  color: white;
+  float: left;
+  width: 12%;
+  margin-left: 15px;
 }
 
 .signup {
-float: right;
-  
+  float: right;
 }
-.nav a { 
-      text-decoration: none;
-      color:white; 
-      font-size: 15px;
-      font-weight: bold;
-    }
-.nav a:hover{
-color: rgb(147, 92, 8);
 
-}     
+.nav a {
+  text-decoration: none;
+  color: white;
+  font-size: 15px;
+  font-weight: bold;
+}
+
+.nav a:hover {
+  color: rgb(147, 92, 8);
+}
+
 .login-container {
- padding: 9em;
- margin-left: 25em;
+  padding: 9em;
+  margin-left: 25em;
 }
 
 .login-box {
-    width: 400px;
-    background: white;
-    border-radius: 10px;
-    padding: 30px;
+  width: 400px;
+  background: white;
+  border-radius: 10px;
+  padding: 30px;
 }
 
 .login-title {
-    font-size: 50px;
-    color: #020B14;
-    margin-bottom: 20px;
-    font-weight: bold;
-    text-align: center;
+  font-size: 50px;
+  color: #020b14;
+  margin-bottom: 20px;
+  font-weight: bold;
+  text-align: center;
 }
 
 .social-container {
-    margin-bottom: 20px;
-    text-align: center;
+  margin-bottom: 20px;
+  text-align: center;
 }
 
 .social {
-    color: #020B14;
-    font-size: 20px;
-    margin-right: 10px;
+  color: #020b14;
+  font-size: 20px;
+  margin-right: 10px;
 }
 
 .social:hover {
-    color: #0056b3;
+  color: #0056b3;
 }
 
 .login-form {
-    margin-top: 20px;
+  margin-top: 20px;
 }
 
 .form-group {
-    margin-bottom: 20px;
+  margin-bottom: 20px;
 }
 
 .form-control {
-    border: 2px solid #020B14;
-    border-radius: 5px;
-    padding: 10px;
-    width: 100%;
+  border: 2px solid #020b14;
+  border-radius: 5px;
+  padding: 10px;
+  width: 100%;
 }
 
 .btn-outline-primary {
-    background: rgb(24, 115, 234);
-    color: #e6e3e3;
-    border: none;
-    border-radius: 5px;
-    padding: 10px 20px;
-    font-size: 16px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
+  background: rgb(24, 115, 234);
+  color: #e6e3e3;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
 }
 
 .btn-outline-primary:hover {
-    background-color: #020B14;
+  background-color: #020b14;
 }
 
 .login-btm {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .social-media-icon {
-    text-align: center;
-    padding: 20px;
+  text-align: center;
+  padding: 20px;
 }
 
 .social-media-list {
-    list-style: none;
-    padding: 0;
-    margin: 0;
+  list-style: none;
+  padding: 0;
+  margin: 0;
 }
 
 .social-media-list li {
-    display: inline-block;
-    margin: 0 10px;
+  display: inline-block;
+  margin: 0 10px;
 }
 
 .social-media-list li a {
-    color: white;
-    font-size: 24px;
+  color: white;
+  font-size: 24px;
 }
 
 hr {
-    border-color: rgba(255,255,255,.6);
+  border-color: rgba(255, 255, 255, 0.6);
 }
 
-  /* Social Media Icons */
-  .social-media-list {
-    position: relative;
-    font-size: 22px;
-    text-align: center;
-    width: 100%;
-    padding: 20px;
+/* Social Media Icons */
+.social-media-list {
+  position: relative;
+  font-size: 22px;
+  text-align: center;
+  width: 100%;
+  padding: 20px;
+}
 
+.social-media-list li a {
+  color: #fff;
+}
+
+.social-media-list li {
+  position: relative;
+  display: inline-block;
+  height: 60px;
+  width: 60px;
+  margin: 10px 3px;
+  line-height: 60px;
+  border-radius: 50%;
+  color: #fff;
+  background-color: rgb(51, 98, 209);
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+
+.social-media-list li:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 60px;
+  height: 60px;
+  line-height: 60px;
+  border-radius: 50%;
+  opacity: 0;
+  box-shadow: 0 0 0 1px #fff;
+  transition: all 0.2s ease-in-out;
+}
+
+.social-media-list li:hover {
+  background-color: #fff;
+}
+
+.social-media-list li:hover:after {
+  opacity: 1;
+  transform: scale(1.12);
+  transition-timing-function: cubic-bezier(0.37, 0.74, 0.15, 1.65);
+}
+
+.social-media-list li:hover a {
+  color: #000;
+}
+
+.copyright {
+  font: 200 14px "Oswald", sans-serif;
+  color: white;
+  letter-spacing: 1px;
+  text-align: center;
+}
+
+hr {
+  border-color: rgba(255, 255, 255, 0.6);
+}
+
+/* Media Queries for responsiveness */
+@media screen and (max-width: 768px) {
+  .login-container {
+    padding: 5em;
+    margin-left: 0;
+    margin-left: -1em;
   }
-  
-  .social-media-list li a {
-    color: #fff;
+
+  .login-box {
+    width: 100%;
   }
-  
-  .social-media-list li {
-    position: relative; 
-    display: inline-block;
-    height: 60px;
-    width: 60px;
-    margin: 10px 3px;
-    line-height: 60px;
-    border-radius: 50%;
-    color: #fff;
-    background-color: rgb(51, 98, 209);
-    cursor: pointer; 
-    transition: all .2s ease-in-out;
+  nav.ul {
+    width: 100%;
+    margin-left: -1em;
   }
-  
-  .social-media-list li:after {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 60px;
-    height: 60px;
-    line-height: 60px;
-    border-radius: 50%;
-    opacity: 0;
-    box-shadow: 0 0 0 1px #fff;
-    transition: all .2s ease-in-out;
+
+  .nav li {
+    display: block;
+    width: auto;
+    float: none;
+    margin-left: 0;
+    margin-bottom: 10px;
   }
-  
-  .social-media-list li:hover {
-    background-color: #fff; 
+
+  .signup {
+    float: none;
+    margin: 0 auto;
+    margin-top: 10px;
+    margin-left: 2.8em;
   }
-  
-  .social-media-list li:hover:after {
-    opacity: 1;  
-    transform: scale(1.12);
-    transition-timing-function: cubic-bezier(0.37,0.74,0.15,1.65);
+}
+
+@media screen and (max-width: 480px) {
+  .login-container {
+    padding: 3em;
+    margin-left: -1em;
   }
-  
-  .social-media-list li:hover a {
-    color: #000;
+
+  .login-box {
+    padding: 20px;
+    margin-left: -1em;
   }
-  
-  .copyright {
-    font: 200 14px 'Oswald', sans-serif;
-    color: white;
-    letter-spacing: 1px;
-    text-align: center;
+  nav.ul {
+    width: 100%;
   }
-  
-  hr {
-    border-color: rgba(255,255,255,.6);
+
+  .nav li {
+    display: block;
+    width: auto;
+    float: none;
+    margin-left: 0;
+    margin-bottom: 10px;
   }
- 
-  
+
+  .signup {
+    float: none;
+    margin: 0 auto;
+    margin-top: 10px;
+    margin-left: 2.8em;
+  }
+}
