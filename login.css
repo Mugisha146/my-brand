@@ -194,43 +194,26 @@ hr {
   .login-container {
     padding: 5em;
     margin-left: 0;
-    margin-left: -1em;
+    margin-left: -4em;
   }
 
   .login-box {
     width: 100%;
   }
-  nav.ul {
-    width: 100%;
-    margin-left: -1em;
+  .nav {
+    display: none;
   }
 
-  .nav li {
+  .navbar-toggle {
     display: block;
-    width: auto;
-    float: none;
-    margin-left: 0;
-    margin-bottom: 10px;
+    text-align: center;
+    cursor: pointer;
+    color: white;
+    font-size: 24px;
+    padding: 10px;
+    background-color: #020b14;
   }
 
-  .signup {
-    float: none;
-    margin: 0 auto;
-    margin-top: 10px;
-    margin-left: 2.8em;
-  }
-}
-
-@media screen and (max-width: 480px) {
-  .login-container {
-    padding: 3em;
-    margin-left: -1em;
-  }
-
-  .login-box {
-    padding: 20px;
-    margin-left: -1em;
-  }
   nav.ul {
     width: 100%;
   }
@@ -239,7 +222,7 @@ hr {
     display: block;
     width: auto;
     float: none;
-    margin-left: 0;
+    margin-left: 36%;
     margin-bottom: 10px;
   }
 
@@ -247,6 +230,6 @@ hr {
     float: none;
     margin: 0 auto;
     margin-top: 10px;
-    margin-left: 2.8em;
+    margin-left: 1.6em;
   }
 }

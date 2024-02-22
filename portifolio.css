@@ -217,14 +217,30 @@ hr {
   }
 
   .card {
-    width: 100%;
-    max-width: 300px;
-    height: auto;
+    margin-left: 1em;
   }
 
   .card img {
     border-radius: 10px;
   }
+  .nav {
+    display: none;
+  }
+
+  .navbar-toggle {
+    display: block;
+    text-align: center;
+    cursor: pointer;
+    color: white;
+    font-size: 24px;
+    padding: 10px;
+    background-color: #020b14;
+  }
+
+  nav.ul {
+    width: 100%;
+  }
+
   .nav li {
     display: block;
     width: auto;
@@ -237,7 +253,7 @@ hr {
     float: none;
     margin: 0 auto;
     margin-top: 10px;
-    margin-left: 45%;
+    margin-left: 39%;
   }
   .portfolio,
   .portfolio__container {

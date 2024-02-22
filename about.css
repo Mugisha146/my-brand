@@ -1,3 +1,7 @@
+* {
+  box-sizing: border-box;
+}
+
 body {
   background-color: #020b14;
   font-family: "Josefin Sans", sans-serif;
@@ -159,6 +163,20 @@ hr {
 
 /* Media Queries for responsiveness */
 @media only screen and (max-width: 768px) {
+  .nav {
+    display: none;
+  }
+
+  .navbar-toggle {
+    display: block;
+    text-align: center;
+    cursor: pointer;
+    color: white;
+    font-size: 24px;
+    padding: 10px;
+    background-color: #020b14;
+  }
+
   nav.ul {
     width: 100%;
   }

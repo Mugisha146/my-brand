@@ -208,6 +208,20 @@ hr {
 
 /* Media Queries for responsiveness */
 @media only screen and (max-width: 768px) {
+  .nav {
+    display: none;
+  }
+
+  .navbar-toggle {
+    display: block;
+    text-align: center;
+    cursor: pointer;
+    color: white;
+    font-size: 24px;
+    padding: 10px;
+    background-color: #020b14;
+  }
+
   nav.ul {
     width: 100%;
   }
@@ -216,7 +230,7 @@ hr {
     display: block;
     width: auto;
     float: none;
-    margin-left: 0;
+    margin-left: 34%;
     margin-bottom: 10px;
   }
 
@@ -224,7 +238,7 @@ hr {
     float: none;
     margin: 0 auto;
     margin-top: 10px;
-    margin-left: 7%;
+    margin-left: 1.9em;
   }
 
   .all-blog {

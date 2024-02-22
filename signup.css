@@ -1,124 +1,128 @@
-body{
-    font-family: "Work Sans", sans-serif;
-    box-sizing: border-box;
-    background-color: #020B14;
+* {
+  color: #fff;
 }
-:focus{
-    outline: none;
+body {
+  font-family: "Work Sans", sans-serif;
+  box-sizing: border-box;
+  background-color: #020b14;
 }
-.holder{
- 
-    width: 440px;
-    background: white;
-    height: 600px;
-    margin: 50px auto;
-    outline: 5px solid #f2f2f2;
-    border-radius: 30px;
+:focus {
+  outline: none;
 }
-.holder .parent{
-    background-color: white;
-    width: calc(100% - 50px);
-    height: calc(100% - 50px);
-    display: inline-block;
-    margin-left: 25px;
-    margin-top: 25px;
-    border-radius: 7px;
+.holder {
+  width: 440px;
+  background: #020b14;
+  height: 600px;
+  margin: 50px auto;
+  outline: 5px solid #ffffff;
+  border-radius: 30px;
 }
-.holder .parent h3{
-    text-align: center;
-    font-size: 25px;
-    margin-bottom: 0;
+.holder .parent {
+  background-color: #020b14;
+  width: calc(100% - 50px);
+  height: calc(100% - 50px);
+  display: inline-block;
+  margin-left: 25px;
+  margin-top: 25px;
+  border-radius: 7px;
 }
-form{
-    display: block;
-    border-bottom: 1px dashed #ccc;
-    margin-left: 20px;
-    margin-right: 20px;
+.holder .parent h3 {
+  text-align: center;
+  font-size: 25px;
+  margin-bottom: 0;
 }
-form > div{
-    margin: 20px;
-    padding: 10px;
-    border-bottom: 1px solid #ccc;
-    position: relative;
+form {
+  display: block;
+  border-bottom: 1px dashed #020b14;
+  margin-left: 20px;
+  margin-right: 20px;
 }
-form > div::before{
-    content:"\f007";
-    font-weight: 900;
-    font-family: "Font Awesome 5 Free";
-    position: absolute;
-    color: #777;
-    left: -1px;
+form > div {
+  margin: 20px;
+  padding: 10px;
+  border-bottom: 1px solid #020b14;
+  position: relative;
 }
-form > div:nth-child(2):before{
-    content:"\f2b6";
+form > div::before {
+  content: "\f007";
+  font-weight: 900;
+  font-family: "Font Awesome 5 Free";
+  position: absolute;
+  color: #fff;
+
+  left: -1px;
 }
-form > div:nth-child(3):before{
-    content:"\f023";
+form > div:nth-child(2):before {
+  content: "\f2b6";
 }
-form > div:nth-child(4):before{
-    content:"\f023";
+form > div:nth-child(3):before {
+  content: "\f023";
 }
-form div input{
-    border: none;
-    font-family: "Work Sans", sans-serif;
-    font-size: 15px;
-    margin-left: 10px;
+form > div:nth-child(4):before {
+  content: "\f023";
 }
-div input + .border{
-    position: absolute;
-    left: 50%;
-    bottom: -1px;
-    background-color: #3498db;
-    height: 1px;
-    width: 0;
-    transition: .3s;
-    display: block;
+form div input {
+  border: none;
+  font-family: "Work Sans", sans-serif;
+  font-size: 15px;
+  margin-left: 10px;
+  background-color: #020b14;
 }
-div input:focus + .border{
-    width: 100%;
-    left: 0;
+div input + .border {
+  position: absolute;
+  left: 50%;
+  bottom: -1px;
+  background-color: #3498db;
+  height: 1px;
+  width: 0;
+  transition: 0.3s;
+  display: block;
 }
-form .private-inp{
-    border: none;
-    font-family: "work sans",sans-serif;
-    display: block;
-    margin: auto;
-    background: #2196f3;
-    width: 90%;
-    padding: 10px;
-    border-radius: 7px;
-    margin-bottom: 10px;
-    color: white;
-    font-size: 15px;
-    font-weight: bold;
-    cursor: pointer;
+div input:focus + .border {
+  width: 100%;
+  left: 0;
 }
-form p{
-    margin: 20px;
-    text-align: center;
-    font-size: 12px;
-    color: #777;
-    padding: 15px;
+form .private-inp {
+  border: none;
+  font-family: "work sans", sans-serif;
+  display: block;
+  margin: auto;
+  background: #2196f3;
+  width: 90%;
+  padding: 10px;
+  border-radius: 7px;
+  margin-bottom: 10px;
+  color: white;
+  font-size: 15px;
+  font-weight: bold;
+  cursor: pointer;
 }
-form p a{
-    text-decoration: none;
-    font-weight: bold;
-    color: #2196f3ed;
+form p {
+  margin: 20px;
+  text-align: center;
+  font-size: 12px;
+  color: #fff;
+  padding: 15px;
 }
-.parent h4{
-    text-align: center;
-    color: #020B14;
+form p a {
+  text-decoration: none;
+  font-weight: bold;
+  color: #2196f3ed;
 }
-.social{
-    text-align: center;
-    margin-top: -8px;
+.parent h4 {
+  text-align: center;
+  color: #fff;
 }
-.social i{
-    width: 20px;
-    height: 20px;
-    display: inline-block;
-    padding: 10px;
-    color: #020B14;
+.social {
+  text-align: center;
+  margin-top: -8px;
+}
+.social i {
+  width: 20px;
+  height: 20px;
+  display: inline-block;
+  padding: 10px;
+  color: #fff;
 }
 
 .nav li {
@@ -130,91 +134,159 @@ form p a{
 }
 
 .signup {
-float: right;
-
+  float: right;
 }
-.nav a { 
-    text-decoration: none;
-    color:white; 
-    font-size: 15px;
-    font-weight: bold;
-  }
-.nav a:hover{
-color: rgb(147, 92, 8);
-
-}     
+.nav a {
+  text-decoration: none;
+  color: white;
+  font-size: 15px;
+  font-weight: bold;
+}
+.nav a:hover {
+  color: rgb(147, 92, 8);
+}
 .text-center {
-    text-align: center;
-  }
+  text-align: center;
+}
 
+/* Social Media Icons */
+.social-media-list {
+  position: relative;
+  font-size: 22px;
+  text-align: center;
+  width: 100%;
+  padding: 20px;
+}
 
-  /* Social Media Icons */
-  .social-media-list {
-    position: relative;
-    font-size: 22px;
-    text-align: center;
-    width: 100%;
+.social-media-list li a {
+  color: #fff;
+}
+
+.social-media-list li {
+  position: relative;
+  display: inline-block;
+  height: 60px;
+  width: 60px;
+  margin: 10px 3px;
+  line-height: 60px;
+  border-radius: 50%;
+  color: #fff;
+  background-color: rgb(51, 98, 209);
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+
+.social-media-list li:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 60px;
+  height: 60px;
+  line-height: 60px;
+  border-radius: 50%;
+  opacity: 0;
+  box-shadow: 0 0 0 1px #fff;
+  transition: all 0.2s ease-in-out;
+}
+
+.social-media-list li:hover {
+  background-color: #fff;
+}
+
+.social-media-list li:hover:after {
+  opacity: 1;
+  transform: scale(1.12);
+  transition-timing-function: cubic-bezier(0.37, 0.74, 0.15, 1.65);
+}
+
+.social-media-list li:hover a {
+  color: #000;
+}
+
+.copyright {
+  font: 200 14px "Oswald", sans-serif;
+  color: white;
+  letter-spacing: 1px;
+  text-align: center;
+}
+
+hr {
+  border-color: rgba(255, 255, 255, 0.6);
+}
+
+.whii {
+  padding-top: 5em;
+}
+@media only screen and (max-width: 768px) {
+  .holder {
+    width: 90%;
+    margin: 30px auto;
     padding: 20px;
+  }
 
+  .holder .parent {
+    margin-left: 0;
+    margin-top: 20px;
+    width: 100%;
   }
-  
-  .social-media-list li a {
-    color: #fff;
+
+  form {
+    margin-left: 0;
+    margin-right: 0;
   }
-  
-  .social-media-list li {
-    position: relative; 
-    display: inline-block;
-    height: 60px;
-    width: 60px;
-    margin: 10px 3px;
-    line-height: 60px;
-    border-radius: 50%;
-    color: #fff;
-    background-color: rgb(51, 98, 209);
-    cursor: pointer; 
-    transition: all .2s ease-in-out;
+
+  form > div {
+    margin: 10px;
+    padding: 5px;
   }
-  
-  .social-media-list li:after {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 60px;
-    height: 60px;
-    line-height: 60px;
-    border-radius: 50%;
-    opacity: 0;
-    box-shadow: 0 0 0 1px #fff;
-    transition: all .2s ease-in-out;
+
+  form div input {
+    margin-left: 5px;
   }
-  
-  .social-media-list li:hover {
-    background-color: #fff; 
+
+  form .private-inp {
+    margin-top: 20px;
+    width: 100%;
   }
-  
-  .social-media-list li:hover:after {
-    opacity: 1;  
-    transform: scale(1.12);
-    transition-timing-function: cubic-bezier(0.37,0.74,0.15,1.65);
+
+  form p {
+    margin: 10px;
   }
-  
-  .social-media-list li:hover a {
-    color: #000;
+
+  .social-media-list {
+    margin-top: 10px;
   }
-  
-  .copyright {
-    font: 200 14px 'Oswald', sans-serif;
-    color: white;
-    letter-spacing: 1px;
+  .nav {
+    display: none;
+  }
+
+  .navbar-toggle {
+    display: block;
     text-align: center;
-  }
-  
-  hr {
-    border-color: rgba(255,255,255,.6);
+    cursor: pointer;
+    color: white;
+    font-size: 24px;
+    padding: 10px;
+    background-color: #020b14;
   }
 
-  .whii{
-    padding-top: 5em;
+  nav.ul {
+    width: 100%;
   }
+
+  .nav li {
+    display: block;
+    width: auto;
+    float: none;
+    margin-left: 0;
+    margin-bottom: 10px;
+  }
+
+  .signup {
+    float: none;
+    margin: 0 auto;
+    margin-top: 10px;
+    margin-left: 45%;
+  }
+}

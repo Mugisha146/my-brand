@@ -11,8 +11,13 @@
     ></script>
   </head>
   <body>
+    <!-- navigation toggle button -->
+    <div class="navbar-toggle" onclick="toggleNav()">
+      <i class="fas fa-bars"></i>
+    </div>
+
     <!-- nav -->
-    <div class="nav">
+    <div class="nav" id="navbar">
       <ul class="text-center">
         <li>
           <a href="home.html"><i class="fa-solid fa-house"></i>&nbsp; HOME</a>
@@ -54,7 +59,8 @@
           <img class="img-fluid" src="images/Mugisha photo.jpeg" alt="" />
         </div>
         <p>
-          <span>I’m Mugisha </span><br />A versatile Full Stack Developer<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          <br /><span>I’m Mugisha </span><br />A versatile Full Stack
+          Developer<br />
           With expertise in UI/UX design.
         </p>
         <button type="button" class="cv1">CV</button>
@@ -125,5 +131,15 @@
 
       <hr />
     </div>
+    <script>
+      function toggleNav() {
+        var nav = document.getElementById("navbar");
+        if (nav.style.display === "none") {
+          nav.style.display = "block";
+        } else {
+          nav.style.display = "none";
+        }
+      }
+    </script>
   </body>
 </html>

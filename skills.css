@@ -1,12 +1,15 @@
-@import url('https://fonts.googleapis.com/css?family=Montserrat');
+@import url("https://fonts.googleapis.com/css?family=Montserrat");
 
-body, html {
-  background: #020B14;
-  font-family: 'Montserrat', sans-serif;
+body,
+html {
+  background: #020b14;
+  font-family: "Montserrat", sans-serif;
 }
 
-span, div, p {
-  font-family: 'Montserrat', sans-serif;
+span,
+div,
+p {
+  font-family: "Montserrat", sans-serif;
 }
 
 h1 {
@@ -17,8 +20,8 @@ h1 {
   font-weight: 100;
   margin: 35px;
   margin-left: -30px;
-  margin-bottom:-8%;
-  font-weight:bold;
+  margin-bottom: -8%;
+  font-weight: bold;
 }
 
 .box {
@@ -29,7 +32,7 @@ h1 {
   margin: 150px auto;
   display: block;
   border: 1px solid white;
-  background: #020B14;
+  background: #020b14;
 }
 
 .box .skills {
@@ -40,19 +43,18 @@ h1 {
   padding: 0;
   margin: 0;
 }
-.skills img{
-    width: 20px;
-    height: 20px;
-    border-radius: 30px;
+.skills img {
+  width: 20px;
+  height: 20px;
+  border-radius: 30px;
 }
 .box .skills li {
   text-align: right;
   font-size: 18px;
   margin: 5px 0px;
   color: white;
-  font-weight:bold;
+  font-weight: bold;
   margin-left: 10px;
-  
 }
 
 .box li {
@@ -87,24 +89,24 @@ h1 {
   background: #f9f9f9;
 }
 
-  .box {
-    width: 70%;
-    max-width: 1000px;
-  }
+.box {
+  width: 70%;
+  max-width: 1000px;
+}
 
-  .skills {
-    width: 13%;
-  }
+.skills {
+  width: 13%;
+}
 
-  .level {
-    width: 85%;
-    left: 15%;
-  }
+.level {
+  width: 85%;
+  left: 15%;
+}
 
-.never{
-    color: white;
-text-align: center;
-    margin-top: -6em;
+.never {
+  color: white;
+  text-align: center;
+  margin-top: -6em;
 }
 
 nav.ul {
@@ -112,94 +114,126 @@ nav.ul {
   color: white;
 }
 .nav li {
-    display: inline;
-    color: white;
-    float: left;
-    width: 12%;
-    margin-left: 15px;
+  display: inline;
+  color: white;
+  float: left;
+  width: 12%;
+  margin-left: 15px;
 }
 
 .signup {
-float: right;
-  
+  float: right;
 }
-.nav a { 
-      text-decoration: none;
-      color:white; 
-      font-size: 15px;
-      font-weight: bold;
-    }
-.nav a:hover{
-color: rgb(147, 92, 8);
-
-}     
+.nav a {
+  text-decoration: none;
+  color: white;
+  font-size: 15px;
+  font-weight: bold;
+}
+.nav a:hover {
+  color: rgb(147, 92, 8);
+}
 .text-center {
-    text-align: center;
+  text-align: center;
+}
+
+/* Social Media Icons */
+.social-media-list {
+  position: relative;
+  font-size: 22px;
+  text-align: center;
+  width: 100%;
+  padding: 20px;
+}
+
+.social-media-list li a {
+  color: #fff;
+}
+
+.social-media-list li {
+  position: relative;
+  display: inline-block;
+  height: 60px;
+  width: 60px;
+  margin: 10px 3px;
+  line-height: 60px;
+  border-radius: 50%;
+  color: #fff;
+  background-color: rgb(51, 98, 209);
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+
+.social-media-list li:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 60px;
+  height: 60px;
+  line-height: 60px;
+  border-radius: 50%;
+  opacity: 0;
+  box-shadow: 0 0 0 1px #fff;
+  transition: all 0.2s ease-in-out;
+}
+
+.social-media-list li:hover {
+  background-color: #fff;
+}
+
+.social-media-list li:hover:after {
+  opacity: 1;
+  transform: scale(1.12);
+  transition-timing-function: cubic-bezier(0.37, 0.74, 0.15, 1.65);
+}
+
+.social-media-list li:hover a {
+  color: #000;
+}
+
+.copyright {
+  font: 200 14px "Oswald", sans-serif;
+  color: white;
+  letter-spacing: 1px;
+  text-align: center;
+}
+
+hr {
+  border-color: rgba(255, 255, 255, 0.6);
+}
+
+@media only screen and (max-width: 768px) {
+  .nav {
+    display: none;
   }
 
-  /* Social Media Icons */
-  .social-media-list {
-    position: relative;
-    font-size: 22px;
+  .navbar-toggle {
+    display: block;
     text-align: center;
-    width: 100%;
-    padding: 20px;
-
-  }
-  
-  .social-media-list li a {
-    color: #fff;
-  }
-  
-  .social-media-list li {
-    position: relative; 
-    display: inline-block;
-    height: 60px;
-    width: 60px;
-    margin: 10px 3px;
-    line-height: 60px;
-    border-radius: 50%;
-    color: #fff;
-    background-color: rgb(51, 98, 209);
-    cursor: pointer; 
-    transition: all .2s ease-in-out;
-  }
-  
-  .social-media-list li:after {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 60px;
-    height: 60px;
-    line-height: 60px;
-    border-radius: 50%;
-    opacity: 0;
-    box-shadow: 0 0 0 1px #fff;
-    transition: all .2s ease-in-out;
-  }
-  
-  .social-media-list li:hover {
-    background-color: #fff; 
-  }
-  
-  .social-media-list li:hover:after {
-    opacity: 1;  
-    transform: scale(1.12);
-    transition-timing-function: cubic-bezier(0.37,0.74,0.15,1.65);
-  }
-  
-  .social-media-list li:hover a {
-    color: #000;
-  }
-  
-  .copyright {
-    font: 200 14px 'Oswald', sans-serif;
+    cursor: pointer;
     color: white;
-    letter-spacing: 1px;
-    text-align: center;
+    font-size: 24px;
+    padding: 10px;
+    background-color: #020b14;
   }
-  
-  hr {
-    border-color: rgba(255,255,255,.6);
+
+  nav.ul {
+    width: 100%;
   }
+
+  .nav li {
+    display: block;
+    width: auto;
+    float: none;
+    margin-left: 0;
+    margin-bottom: 10px;
+  }
+
+  .signup {
+    float: none;
+    margin: 0 auto;
+    margin-top: 10px;
+    margin-left: 45%;
+  }
+}
