@@ -221,7 +221,9 @@ hr {
   nav.ul {
     width: 100%;
   }
-
+  .nav {
+    margin-left: -40px;
+  }
   .nav li {
     display: block;
     width: auto;
@@ -235,5 +237,42 @@ hr {
     margin: 0 auto;
     margin-top: 10px;
     margin-left: 45%;
+  }
+  .bar {
+    margin-left: 20%;
+    margin-top: 15px;
+  }
+  .box {
+    width: 100%;
+    margin-top: 50px;
+  }
+  .title-skills {
+    margin-left: 80px;
+  }
+}
+@media only screen and (max-width: 1024px) and (min-width: 768px) {
+  nav.ul {
+    width: 100%;
+  }
+
+  .nav li {
+    display: block;
+    width: auto;
+    float: left;
+    padding: 10px auto;
+  }
+
+  .signup {
+    float: none;
+    margin: 0 auto;
+    margin-top: 10px;
+
+    text-align: center;
+  }
+  .nav {
+    margin-left: -27px;
+  }
+  .bar {
+    margin-left: 15%;
   }
 }

@@ -79,6 +79,7 @@ nav.ul {
   background-color: rgb(3, 57, 57);
   padding: 15px 35px;
   margin-top: 20px;
+  margin-left: 40%;
   border-radius: 50px;
   color: #fff;
   text-decoration: none;
@@ -233,7 +234,9 @@ hr {
     margin-left: 34%;
     margin-bottom: 10px;
   }
-
+  .nav {
+    margin-left: -40px;
+  }
   .signup {
     float: none;
     margin: 0 auto;
@@ -243,5 +246,35 @@ hr {
 
   .all-blog {
     border-radius: 15px;
+  }
+  .blog-slider__actions {
+    display: flex;
+  }
+  .blog-slider__button {
+    display: block;
+    margin-left: -10px;
+  }
+}
+@media only screen and (max-width: 1024px) and (min-width: 768px) {
+  nav.ul {
+    width: 100%;
+  }
+
+  .nav li {
+    display: block;
+    width: auto;
+    float: left;
+    padding: 10px auto;
+  }
+
+  .signup {
+    float: none;
+    margin: 0 auto;
+    margin-top: 10px;
+
+    text-align: center;
+  }
+  .nav {
+    margin-left: -60px;
   }
 }

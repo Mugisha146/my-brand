@@ -11,7 +11,9 @@ body {
   width: 12%;
   margin-left: 15px;
 }
-
+.form-control-label {
+  color: #fff;
+}
 .signup {
   float: right;
 }
@@ -34,14 +36,19 @@ body {
 
 .login-box {
   width: 400px;
-  background: white;
+  height: 370px;
+  background: #020b14;
   border-radius: 10px;
-  padding: 30px;
+  padding: 10px 30px;
+  margin: -40px 0;
+  margin-bottom: -150px;
+
+  border: 5px solid white;
 }
 
 .login-title {
   font-size: 50px;
-  color: #020b14;
+  color: white;
   margin-bottom: 20px;
   font-weight: bold;
   text-align: center;
@@ -53,7 +60,7 @@ body {
 }
 
 .social {
-  color: #020b14;
+  color: white;
   font-size: 20px;
   margin-right: 10px;
 }
@@ -71,7 +78,7 @@ body {
 }
 
 .form-control {
-  border: 2px solid #020b14;
+  border: 2px solid white;
   border-radius: 5px;
   padding: 10px;
   width: 100%;
@@ -89,7 +96,7 @@ body {
 }
 
 .btn-outline-primary:hover {
-  background-color: #020b14;
+  background-color: white;
 }
 
 .login-btm {
@@ -175,7 +182,7 @@ hr {
 }
 
 .social-media-list li:hover a {
-  color: #000;
+  color: white;
 }
 
 .copyright {
@@ -191,15 +198,6 @@ hr {
 
 /* Media Queries for responsiveness */
 @media screen and (max-width: 768px) {
-  .login-container {
-    padding: 5em;
-    margin-left: 0;
-    margin-left: -4em;
-  }
-
-  .login-box {
-    width: 100%;
-  }
   .nav {
     display: none;
   }
@@ -213,7 +211,9 @@ hr {
     padding: 10px;
     background-color: #020b14;
   }
-
+  .nav {
+    margin-left: -40px;
+  }
   nav.ul {
     width: 100%;
   }
@@ -231,5 +231,47 @@ hr {
     margin: 0 auto;
     margin-top: 10px;
     margin-left: 1.6em;
+  }
+  .login-container {
+    padding: 5em;
+    margin-left: 0;
+    margin-left: -4em;
+  }
+
+  .login-box {
+    width: 90%;
+    height: 40%;
+    padding: auto 10px;
+    margin-left: 10px;
+    margin-bottom: 1px;
+  }
+}
+
+@media only screen and (max-width: 1024px) and (min-width: 768px) {
+  nav.ul {
+    width: 100%;
+  }
+
+  .nav li {
+    display: block;
+    width: auto;
+    float: left;
+    padding: 10px auto;
+  }
+
+  .signup {
+    float: none;
+    margin: 0 auto;
+    margin-top: 10px;
+
+    text-align: center;
+  }
+  .nav {
+    margin-left: 6px;
+  }
+  .login-box {
+    padding: auto 0;
+    margin-left: -490%;
+    margin-bottom: 1px;
   }
 }

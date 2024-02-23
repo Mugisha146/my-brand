@@ -254,7 +254,9 @@ hr {
     width: calc(100% - 20px);
     margin-bottom: 20px;
   }
-
+  .nav {
+    margin-left: -40px;
+  }
   .mine-form {
     width: 80%;
     margin-left: 0;
@@ -275,5 +277,29 @@ hr {
     width: 60px;
     height: 60px;
     line-height: 60px;
+  }
+}
+
+@media only screen and (max-width: 1024px) and (min-width: 768px) {
+  nav.ul {
+    width: 100%;
+  }
+
+  .nav li {
+    display: block;
+    width: auto;
+    float: left;
+    padding: 10px auto;
+  }
+
+  .signup {
+    float: none;
+    margin: 0 auto;
+    margin-top: 10px;
+
+    text-align: center;
+  }
+  .nav {
+    margin-left: -27px;
   }
 }
