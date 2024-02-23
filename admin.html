@@ -1,21 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Admin page</title>
-    <link rel="stylesheet" href="admin.css" />
-    <link rel="stylesheet" href="about.css" />
-    <!-- Include your existing CSS file -->
-    <script
-      src="https://kit.fontawesome.com/902bd6162d.js"
-      crossorigin="anonymous"
-    ></script>
-  </head>
-  <body>
-    <!-- New navigation bar -->
-    <div class="navzo">
-      <ul class="text-centerzo">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin</title>
+    <link rel="stylesheet" href="admin.css">
+    <script src="https://kit.fontawesome.com/902bd6162d.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <!-- nav -->
+    <div class="about-content">
+       <!-- navigation toggle button -->
+    <div class="navbar-toggle" onclick="toggleNav()">
+      <i class="fas fa-bars"></i>
+    </div>
+
+    <!-- nav -->
+    <div class="nav" id="navbar">
+      <ul class="text-center">
         <li>
           <a href="home.html"><i class="fa-solid fa-house"></i>&nbsp; HOME</a>
         </li>
@@ -44,53 +46,95 @@
         </li>
       </ul>
       <li>
-        <a href="signup.html" class="signupzo"
+        <a href="signup.html" class="signup"
           ><i class="fa-solid fa-user-plus"></i>&nbsp; SIGN UP</a
         >
       </li>
     </div>
+<!--admin content-->
 
-    <nav role="navigation">
-      <ul class="main">
-        <li class="write"><a href="#">CREATE POST</a></li>
-        <li class="users"><a href="#">PROFILE</a></li>
-        <li class="dashboard"><a href="#">DASHBOARD</a></li>
-        <li class="users"><a href="#">MANAGE USERS</a></li>
-        <li class="logout warn"><a href="#">LOG OUT</a></li>
-      </ul>
-    </nav>
 
-    <main role="main">
-      <section class="panel important">
-        <h2>New Post</h2>
-        <form method="post">
-          <div class="twothirds">
-            Blog Title:<br />
-            <input
-              type="text"
-              name="title"
-              style="color: #a3a4ab"
-              size="40"
-            /><br /><br />
-            Content:<br />
-            <textarea
-              name="newstext"
-              rows="15"
-              cols="67"
-              style="color: #a3a4ab"
-            ></textarea
-            ><br />
-          </div>
-          <div>
-            <input
-              type="submit"
-              name="submit"
-              style="color: #a3a4ab"
-              value="Post"
-            />
-          </div>
-        </form>
-      </section>
-    </main>
-  </body>
-</html>
+
+
+
+        <div class="admin-content">
+          <div class="title">
+            <h1>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ADMIN DASHBOARD</h1>
+<img src="images/Mugisha photo.jpeg" alt="" />
+<h6>Mugisha</h6>
+</div>
+<div class="box3">
+<div class="dash-menu">
+  <a href="#"><i class="fa-solid fa-table-columns"></i>&nbsp;DASHBOARD</a>
+  <a href="#"><i class="fa-solid fa-people-roof"></i>&nbsp;USERS</a>
+  <a href="#"><i class="fa-solid fa-blog"></i>&nbsp;POST BLOGS</a>
+  <a href="#"><i class="fa-solid fa-business-time"></i>&nbsp;PORTFOLIO</a>
+  <a href="#"><i class="fa-solid fa-address-card"></i>&nbsp;EDIT ABOUT ME</a>
+  <a href="#"><i class="fa-solid fa-kitchen-set"></i>&nbsp;ADD SKILLS</a>
+  <a href="#"><i class="fa-solid fa-right-from-bracket"></i>&nbsp;LOG OUT</a>
+</div>
+<div class="user-message">
+  <h1>User Messages</h1>
+  <button class="search1" type="button">Search</button>
+  <div class="all-message">
+  <div class="user1">
+    <img src="images/Mugisha photo.jpeg" alt="" />
+    <h6>Keza kelly</h6>
+  </div>
+   <div class="user1">
+    <img src="images/Mugisha photo.jpeg" alt="" />
+     <h6>Keza kelly</h6>
+  </div>
+   <div class="user1">
+    <img src="images/Mugisha photo.jpeg" alt="" />
+     <h6>Keza kelly</h6>
+  </div>
+   <div class="user1">
+    <img src="images/Mugisha photo.jpeg" alt="" />
+    <h6>Keza kelly</h6>
+  </div></div>
+  <div class="butt">
+  <button class="see" type="button">See More...</button>
+</div></div>
+<div class="dash-count">
+  <div class="total-user">
+    <label for="">Total User</label>
+    <h1>80</h1>
+  </div>
+    <div class="user-request">
+    <label for="">User Request</label>
+    <h1>10</h1>
+  </div>
+    <div class="total-blogs">
+    <label for="">Total Blogs</label>
+    <h1>50</h1>
+  </div>
+    <div class="project">
+    <label for="">Project</label>
+    <h1>80</h1>
+  </div>
+</div>
+</div>
+        </div> 
+
+
+
+
+
+
+
+
+
+
+            <script>
+      function toggleNav() {
+        var nav = document.getElementById("navbar");
+        if (nav.style.display === "none") {
+          nav.style.display = "block";
+        } else {
+          nav.style.display = "none";
+        }
+      }
+    </script>
+    </body>
+    </html>
