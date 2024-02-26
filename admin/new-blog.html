@@ -1,10 +1,10 @@
-<!DOCTYPE html>
+     <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Admin</title>
-    <link rel="stylesheet" href="admin.css">
+    <link rel="stylesheet" href="new-blog.css">
     <script src="https://kit.fontawesome.com/902bd6162d.js" crossorigin="anonymous"></script>
 </head>
 <body>
@@ -19,36 +19,34 @@
     <div class="nav" id="navbar">
       <ul class="text-center">
         <li>
-          <a href="home.html"><i class="fa-solid fa-house"></i>&nbsp; HOME</a>
+          <a href="../home.html"><i class="fa-solid fa-house"></i>&nbsp; HOME</a>
         </li>
         <li>
-          <a href="about.html"
+          <a href="../about.html"
             ><i class="fa-solid fa-address-card"></i>&nbsp; ABOUT ME</a
           >
         </li>
         <li>
-          <a href="skills.html"
+          <a href="../skills.html"
             ><i class="fa-solid fa-flask"></i>&nbsp; SKILLS</a
           >
         </li>
         <li>
-          <a href="blog.html"><i class="fa-solid fa-blog"></i>&nbsp; BLOG</a>
+          <a href="../blog.html"><i class="fa-solid fa-blog"></i>&nbsp; BLOG</a>
         </li>
         <li>
-          <a href="portfolio.html"
+          <a href="../portfolio.html"
             ><i class="fa-solid fa-briefcase"></i>&nbsp; PORTFOLIO</a
           >
         </li>
         <li>
-          <a href="contact.html"
+          <a href="../contact.html"
             ><i class="fa-solid fa-phone"></i>&nbsp; CONTACT</a
           >
         </li>
       </ul>
       <li>
-        <a href="signup.html" class="signup"
-          ><i class="fa-solid fa-user-plus"></i>&nbsp; SIGN UP</a
-        >
+        <a href="../login.html" class="signup">&nbsp; Login</a>
       </li>
     </div>
 <!--admin content-->
@@ -60,42 +58,31 @@
         <div class="admin-content">
           <div class="title">
             <h1>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ADMIN DASHBOARD</h1>
-<img src="images/Mugisha photo.jpeg" alt="" />
+<img src="../images/Mugisha photo.jpeg" alt="" />
 <h6>Mugisha</h6>
 </div>
 <div class="box3">
 <div class="dash-menu">
-  <a href="#"><i class="fa-solid fa-table-columns"></i>&nbsp;DASHBOARD</a>
-  <a href="#"><i class="fa-solid fa-people-roof"></i>&nbsp;USERS</a>
-  <a href="#"><i class="fa-solid fa-blog"></i>&nbsp;POST BLOGS</a>
-  <a href="#"><i class="fa-solid fa-business-time"></i>&nbsp;PORTFOLIO</a>
-  <a href="#"><i class="fa-solid fa-address-card"></i>&nbsp;EDIT ABOUT ME</a>
-  <a href="#"><i class="fa-solid fa-kitchen-set"></i>&nbsp;ADD SKILLS</a>
-  <a href="#"><i class="fa-solid fa-right-from-bracket"></i>&nbsp;LOG OUT</a>
+  <a href="admin.html"><i class="fa-solid fa-table-columns"></i>&nbsp;DASHBOARD</a>
+  <a href="user.html"><i class="fa-solid fa-people-roof"></i>&nbsp;USERS</a>
+  <a href="new-blog.html"><i class="fa-solid fa-blog"></i>&nbsp;POST BLOGS</a>
+  <a href="add-project.html"><i class="fa-solid fa-business-time"></i>&nbsp;PORTFOLIO</a>
+  <a href="add-skills.html"><i class="fa-solid fa-kitchen-set"></i>&nbsp;ADD SKILLS</a>
+  <a href="../home.html"><i class="fa-solid fa-right-from-bracket"></i>&nbsp;LOG OUT</a>
 </div>
 <div class="user-message">
-  <h1>User Messages</h1>
-  <button class="search1" type="button">Search</button>
-  <div class="all-message">
-  <div class="user1">
-    <img src="images/Mugisha photo.jpeg" alt="" />
-    <h6>Keza kelly</h6>
-  </div>
-   <div class="user1">
-    <img src="images/Mugisha photo.jpeg" alt="" />
-     <h6>Keza kelly</h6>
-  </div>
-   <div class="user1">
-    <img src="images/Mugisha photo.jpeg" alt="" />
-     <h6>Keza kelly</h6>
-  </div>
-   <div class="user1">
-    <img src="images/Mugisha photo.jpeg" alt="" />
-    <h6>Keza kelly</h6>
-  </div></div>
-  <div class="butt">
-  <button class="see" type="button">See More...</button>
-</div></div>
+
+ <h1>New Blog Post</h1>
+    <!-- Add a form for comments if needed -->
+    <form class="ppp">
+    <label for="post-title">Post Title:</label><br>
+    <input type="text" id="post-title" name="post-title" placeholder="Enter the title of your post"><br>
+    <label for="post-content">Post Content:</label><br>
+    <textarea id="post-content" name="post-content" placeholder="Write your blog post content here"></textarea><br>
+    <button type="submit">Submit</button>
+</form>
+</div>
+
 <div class="dash-count">
   <div class="total-user">
     <label for="">Total User</label>
@@ -114,18 +101,6 @@
     <h1>80</h1>
   </div>
 </div>
-</div>
-        </div> 
-
-
-
-
-
-
-
-
-
-
             <script>
       function toggleNav() {
         var nav = document.getElementById("navbar");

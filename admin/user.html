@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin</title>
+    <link rel="stylesheet" href="user.css">
+    <script src="https://kit.fontawesome.com/902bd6162d.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <!-- nav -->
+    <div class="about-content">
+       <!-- navigation toggle button -->
+    <div class="navbar-toggle" onclick="toggleNav()">
+      <i class="fas fa-bars"></i>
+    </div>
+
+    <!-- nav -->
+    <div class="nav" id="navbar">
+      <ul class="text-center">
+        <li>
+          <a href="../home.html"><i class="fa-solid fa-house"></i>&nbsp; HOME</a>
+        </li>
+        <li>
+          <a href="../about.html"
+            ><i class="fa-solid fa-address-card"></i>&nbsp; ABOUT ME</a
+          >
+        </li>
+        <li>
+          <a href="../skills.html"
+            ><i class="fa-solid fa-flask"></i>&nbsp; SKILLS</a
+          >
+        </li>
+        <li>
+          <a href="../blog.html"><i class="fa-solid fa-blog"></i>&nbsp; BLOG</a>
+        </li>
+        <li>
+          <a href="../portfolio.html"
+            ><i class="fa-solid fa-briefcase"></i>&nbsp; PORTFOLIO</a
+          >
+        </li>
+        <li>
+          <a href="../contact.html"
+            ><i class="fa-solid fa-phone"></i>&nbsp; CONTACT</a
+          >
+        </li>
+      </ul>
+      <li>
+        <a href="../login.html" class="signup">&nbsp; Login</a>
+      </li>
+    </div>
+<!--admin content-->
+
+
+
+
+
+        <div class="admin-content">
+          <div class="title">
+            <h1>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ADMIN DASHBOARD</h1>
+<img src="../images/Mugisha photo.jpeg" alt="" />
+<h6>Mugisha</h6>
+</div>
+<div class="box3">
+<div class="dash-menu">
+  <a href="admin.html"><i class="fa-solid fa-table-columns"></i>&nbsp;DASHBOARD</a>
+  <a href="user.html"><i class="fa-solid fa-people-roof"></i>&nbsp;USERS</a>
+  <a href="new-blog.html"><i class="fa-solid fa-blog"></i>&nbsp;POST BLOGS</a>
+  <a href="add-project.html"><i class="fa-solid fa-business-time"></i>&nbsp;PORTFOLIO</a>
+  <a href="add-skills.html"><i class="fa-solid fa-kitchen-set"></i>&nbsp;ADD SKILLS</a>
+  <a href="../home.html"><i class="fa-solid fa-right-from-bracket"></i>&nbsp;LOG OUT</a>
+</div>
+<div class="user-message">
+  <h1>User Management</h1>
+  <div class="all-message">
+    <div class="user-management">
+      <table border="1">
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Action</th>
+          </tr>
+        </thead>
+        <tbody>
+
+             <tr>
+            <td>1</td>
+            <td>John Doe</td>
+            <td>john@example.com</td>
+            <td>
+              <button>Message</button>
+              <button>Delete</button>
+            </td>
+          </tr>
+             <tr>
+            <td>1</td>
+            <td>John Doe</td>
+            <td>john@example.com</td>
+            <td>
+              <button>Message</button>
+              <button>Delete</button>
+            </td>
+          </tr>
+             <tr>
+            <td>1</td>
+            <td>John Doe</td>
+            <td>john@example.com</td>
+            <td>
+              <button>Message</button>
+              <button>Delete</button>
+            </td>
+          </tr>
+             <tr>
+            <td>1</td>
+            <td>John Doe</td>
+            <td>john@example.com</td>
+            <td>
+              <button>Message</button>
+              <button>Delete</button>
+            </td>
+          </tr>
+        
+          <!-- More user data rows -->
+        </tbody>
+      </table>
+    </div>
+  </div>
+  <div class="butt">
+    <button class="see" type="button">See More...</button>
+  </div>
+</div>
+
+
+
+<div class="dash-count">
+  <div class="total-user">
+    <label for="">Total User</label>
+    <h1>80</h1>
+  </div>
+    <div class="user-request">
+    <label for="">User Request</label>
+    <h1>10</h1>
+  </div>
+    <div class="total-blogs">
+    <label for="">Total Blogs</label>
+    <h1>50</h1>
+  </div>
+    <div class="project">
+    <label for="">Project</label>
+    <h1>80</h1>
+  </div>
+</div>
+</div>
+        </div> 
+            <script>
+      function toggleNav() {
+        var nav = document.getElementById("navbar");
+        if (nav.style.display === "none") {
+          nav.style.display = "block";
+        } else {
+          nav.style.display = "none";
+        }
+      }
+    </script>
+    </body>
+    </html>

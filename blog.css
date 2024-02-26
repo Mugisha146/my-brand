@@ -10,13 +10,13 @@ body {
 }
 
 .nav {
-  padding: 1.5em;
   color: white;
 }
 
 nav.ul {
-  width: 100%;
+  width: 50%;
   color: white;
+ 
 }
 
 .nav li {
@@ -29,8 +29,15 @@ nav.ul {
 
 .signup {
   float: right;
+  border:1px solid #fff;
+  padding: 10px;
+  margin-top: -18px;
+  border-radius: 5px;
+  text-align: center;
 }
-
+.signup:hover{
+  background-color: #fff;
+}
 .nav a {
   text-decoration: none;
   color: white;
@@ -39,8 +46,12 @@ nav.ul {
 }
 
 .nav a:hover {
-  color: rgb(147, 92, 8);
+  color: rgb(0, 0, 0);
+  background-color: #fff;
+  border-radius: 5px;
+  padding: 10px;
 }
+
 
 .all-blog {
   width: 100%;
@@ -103,6 +114,61 @@ nav.ul {
   height: 50px;
   border-radius: 50%;
 }
+
+.content-2 {
+  text-align: center;
+  background-color: #020b14;
+  padding-top: 40px;
+  margin-top: 40px;
+}
+
+.content-2 p {
+  color: whitesmoke;
+  font-weight: lighter;
+  font-size: 20px;
+  margin-left: 1em;
+  
+}
+
+.sub {
+  background-color: rgb(19, 129, 89);
+  color: black;
+  font-weight: bold;
+  width: 150px;
+  height: 50px;
+  border-radius: 10px;
+  font-weight: bolder;
+  font-size: 15px;
+  margin-top: -100px;
+}
+
+.mine-form {
+  font-size: 20px;
+  width: 25%;
+  margin-left: 6%;
+  padding: 3%;
+  float: right;
+}
+
+.sub-field {
+  margin-left: 17%;
+  margin-top: 20px;
+  width: 30%;
+margin-left: 35%;
+}
+input,
+textarea {
+  width: 100%;
+  padding: 10px;
+  background-color: transparent;
+  border: 1px solid #ffffff;
+  border-radius: 2px;
+  color: white;
+  margin-bottom: 20px;
+}
+
+
+
 
 /* Social Media Icons */
 .social-media-list {
@@ -254,6 +320,7 @@ hr {
     display: block;
     margin-left: -10px;
   }
+ 
 }
 @media only screen and (max-width: 1024px) and (min-width: 768px) {
   nav.ul {

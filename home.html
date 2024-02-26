@@ -11,14 +11,10 @@
     ></script>
   </head>
   <body>
-    <!-- navigation toggle button -->
     <div class="navbar-toggle" onclick="toggleNav()">
       <i class="fas fa-bars"></i>
     </div>
-
-    <!-- nav -->
     <div class="nav" id="navbar">
-      <h3>El3</h3>
       <ul class="text-center">
         <li>
           <a href="home.html"><i class="fa-solid fa-house"></i>&nbsp; HOME</a>
@@ -48,66 +44,32 @@
         </li>
       </ul>
       <li>
-        <a href="signup.html" class="signup"
-          ><i class="fa-solid fa-user-plus"></i>&nbsp; SIGN UP</a
-        >
+        <a href="login.html" class="signup">&nbsp; Login</a>
       </li>
     </div>
-    <!-- content -->
     <div class="content">
       <div class="mine-text">
-        <div class="mine-image">
           <img class="img-fluid" src="images/Mugisha photo.jpeg" alt="" />
-        </div>
-        <p>
-          <br /><span>MUGISHA Emmanuel </span><br />A versatile Full Stack
-          Developer<br />
-          With expertise in UI/UX design.
-        </p>
-        <button type="button" class="cv1">CV</button>
-      </div>
-      <div class="center-content" style="letter-spacing: 0.1em">
-        <div class="mine-form">
-          <p>
-            <i class="fa-regular fa-share-from-square"></i>&nbsp; Let's
-            Collaborate
-          </p>
-          <form>
-            <div class="form-field">
-              <label for="name">Name</label>
-              <input type="text" id="name" placeholder="Enter your name" />
-            </div>
-            <div class="form-field">
-              <label for="email">Email</label>
-              <input type="text" id="email" placeholder="Enter your email" />
-            </div>
-            <div class="form-field">
-              <label for="message">Message</label>
-              <textarea
-                id="message"
-                rows="10"
-                placeholder="Enter your message"
-              ></textarea>
-            </div>
-            <button class="btn">Send Message</button>
-          </form>
+          <div class="ddd">
+          <h1>I'm<br><span><strong>MUGISHA Emmanuel</strong> </span></h1>
+          <h3>Full-Stack
+          Developer & UI/UX design</h3>
+        <a href="#" class="cv1">Download CV</button>  </a>
+<a href="#videoModal" class="video-link"><i class="fa-solid fa-play"></i>&nbsp;Play Video</a>
+
+  <div id="videoModal" class="modal">
+    <div class="modal-content">
+      <video id="modalVideo" controls>
+        <source src="movie.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+    </div>
+  </div>
+
         </div>
       </div>
-    </div>
-    <div class="content-2">
-      <p>
-        Subscribed to get email notifications when a new article is posted on
-        the site:
-      </p>
-      <form>
-        <div class="sub-field">
-          <input type="text" id="name" placeholder="Enter your name" />
-        </div>
-      </form>
-      <button type="button" class="sub">Subscribing</button>
-    </div>
     <div class="social-media-icon">
-      <hr />
+     
       <ul class="social-media-list">
         <li>
           <a href="#" target="_blank" class="contact-icon">
@@ -129,8 +91,6 @@
         &copy; EL3.COM &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; FOLLOW ME ON SOCIAL
         NETWORKS
       </div>
-
-      <hr />
     </div>
     <script>
       function toggleNav() {
@@ -141,6 +101,16 @@
           nav.style.display = "none";
         }
       }
+      var modal = document.getElementById("videoModal");
+var video = document.getElementById("modalVideo");
+document.querySelector(".video-link").addEventListener("click", function () {
+  modal.style.display = "block";
+  video.play();
+});
+video.addEventListener("ended", function () {
+  modal.style.display = "none";
+});
+
     </script>
   </body>
 </html>
