@@ -8,8 +8,9 @@ body {
 }
 
 nav.ul {
-  width: 100%;
+  width: 50%;
   color: white;
+ 
 }
 
 .nav li {
@@ -22,8 +23,15 @@ nav.ul {
 
 .signup {
   float: right;
+  border:1px solid #fff;
+  padding: 10px;
+  margin-top: -18px;
+  border-radius: 5px;
+  text-align: center;
 }
-
+.signup:hover{
+  background-color: #fff;
+}
 .nav a {
   text-decoration: none;
   color: white;
@@ -32,8 +40,12 @@ nav.ul {
 }
 
 .nav a:hover {
-  color: rgb(147, 92, 8);
+  color: rgb(0, 0, 0);
+  background-color: #fff;
+  border-radius: 5px;
+  padding: 10px;
 }
+
 
 .text-center {
   text-align: center;

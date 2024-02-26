@@ -4,6 +4,16 @@ body {
   margin: 0;
 }
 
+
+.form-control-label {
+  color: #fff;
+}
+nav.ul {
+  width: 50%;
+  color: white;
+ 
+}
+
 .nav li {
   display: inline;
   color: white;
@@ -11,13 +21,18 @@ body {
   width: 12%;
   margin-left: 15px;
 }
-.form-control-label {
-  color: #fff;
-}
+
 .signup {
   float: right;
+  border:1px solid #fff;
+  padding: 10px;
+  margin-top: -8px;
+  border-radius: 5px;
+  text-align: center;
 }
-
+.signup:hover{
+  background-color: #fff;
+}
 .nav a {
   text-decoration: none;
   color: white;
@@ -26,12 +41,16 @@ body {
 }
 
 .nav a:hover {
-  color: rgb(147, 92, 8);
+  color: rgb(0, 0, 0);
+  background-color: #fff;
+  border-radius: 5px;
+  padding: 10px;
 }
+
 
 .login-container {
   padding: 9em;
-  margin-left: 25em;
+  margin-left: 22em;
 }
 
 .login-box {
@@ -271,7 +290,7 @@ hr {
   }
   .login-box {
     padding: auto 0;
-    margin-left: -490%;
+    margin-left: -270%;
     margin-bottom: 1px;
   }
 }

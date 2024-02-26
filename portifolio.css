@@ -115,6 +115,14 @@ body {
 .card p {
   font-weight: 200;
 }
+.nav{
+margin-top: 20px;
+}
+nav.ul {
+  width: 50%;
+  color: white;
+ 
+}
 
 .nav li {
   display: inline;
@@ -126,6 +134,14 @@ body {
 
 .signup {
   float: right;
+  border:1px solid #fff;
+  padding: 10px;
+  margin-top: -8px;
+  border-radius: 5px;
+  text-align: center;
+}
+.signup:hover{
+  background-color: #fff;
 }
 .nav a {
   text-decoration: none;
@@ -133,9 +149,14 @@ body {
   font-size: 15px;
   font-weight: bold;
 }
+
 .nav a:hover {
-  color: rgb(147, 92, 8);
+  color: rgb(0, 0, 0);
+  background-color: #fff;
+  border-radius: 5px;
+  padding: 10px;
 }
+
 .text-center {
   text-align: center;
 }
