@@ -45,7 +45,7 @@ body {
 
 .portfolio__container {
   display: flex;
-  align-items: stretch; /* Ensure all items stretch to the same height */
+  align-items: stretch;
   justify-content: space-around;
   text-align: center;
   flex-direction: row;
@@ -58,7 +58,7 @@ body {
 }
 
 .card {
-  display: flex; /* Use flexbox for card layout */
+  display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
@@ -71,8 +71,8 @@ body {
 }
 
 .card img {
-  max-width: 100%; /* Ensure images fill the available space */
-  height: auto; /* Maintain aspect ratio */
+  max-width: 100%; 
+  height: auto;
   margin-bottom: 1rem;
 }
 
@@ -95,7 +95,7 @@ body {
 
 .portfolio__container {
   flex-direction: row;
-  align-items: stretch; /* Ensure all items stretch to the same height */
+  align-items: stretch; 
   flex-wrap: wrap;
   width: 100%;
 }
@@ -227,7 +227,6 @@ hr {
   border-color: rgba(255, 255, 255, 0.6);
 }
 
-/* Media Queries for responsiveness */
 @media screen and (max-width: 768px) {
   .container {
     padding-top: 3em;
@@ -244,41 +243,51 @@ hr {
   .card img {
     border-radius: 10px;
   }
-  .nav {
+   nav {
     display: none;
+    float: left;
+
   }
 
   .navbar-toggle {
     display: block;
-    text-align: center;
+    text-align: left;
     cursor: pointer;
     color: white;
     font-size: 24px;
     padding: 10px;
-    background-color: #020b14;
+    background-color: #042749;
   }
 
   nav.ul {
     width: 100%;
+    list-style-type: none;
+    padding: 0;
+   
   }
 
   .nav li {
     display: block;
+      display: flex;
     width: auto;
     float: none;
-    margin-left: 0;
+    margin-left: 10px;
     margin-bottom: 10px;
+   
   }
 
   .signup {
-    float: none;
+    float: left;
     margin: 0 auto;
     margin-top: 10px;
-    margin-left: 39%;
+    margin-left: 2px;
   }
   .portfolio,
   .portfolio__container {
     margin-left: -1em;
+  }
+  .copyright{
+    font-size: 10px;
   }
 }
 @media only screen and (max-width: 1024px) and (min-width: 768px) {

@@ -275,43 +275,53 @@ hr {
 
 /* Media Queries for responsiveness */
 @media only screen and (max-width: 768px) {
-  .nav {
+  nav {
     display: none;
+    float: left;
+
   }
 
   .navbar-toggle {
     display: block;
-    text-align: center;
+    text-align: left;
     cursor: pointer;
     color: white;
     font-size: 24px;
     padding: 10px;
-    background-color: #020b14;
+    background-color: #042749;
   }
 
   nav.ul {
     width: 100%;
+    list-style-type: none;
+    padding: 0;
+   
   }
 
   .nav li {
     display: block;
+      display: flex;
     width: auto;
     float: none;
-    margin-left: 34%;
+    margin-left: 10px;
     margin-bottom: 10px;
+   
   }
-  .nav {
-    margin-left: -40px;
-  }
+.nav{
+  margin-left: -40px;
+}
   .signup {
-    float: none;
+    float: left;
     margin: 0 auto;
     margin-top: 10px;
-    margin-left: 1.9em;
+    margin-left: 43px;
   }
 
   .all-blog {
     border-radius: 15px;
+    padding: 10px;
+    
+
   }
   .blog-slider__actions {
     display: flex;
@@ -320,7 +330,21 @@ hr {
     display: block;
     margin-left: -10px;
   }
- 
+.content-2 p{
+  margin-top: 10px;
+  font-size: 16px;
+}
+  .copyright{
+    font-size: 10px;
+  }
+form #name{
+  width: 290%;
+  margin-left: -100px;
+}
+.sub{
+  width: 30%;
+  height: 10%;
+}
 }
 @media only screen and (max-width: 1024px) and (min-width: 768px) {
   nav.ul {
@@ -343,5 +367,9 @@ hr {
   }
   .nav {
     margin-left: -60px;
+  }
+  form #name{
+    width: 250%;
+  margin-left: -160px;
   }
 }

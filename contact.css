@@ -215,37 +215,48 @@ hr {
 @media only screen and (max-width: 768px) {
   .nav {
     display: none;
+    float: left;
+
   }
 
   .navbar-toggle {
     display: block;
-    text-align: center;
+    text-align: left;
     cursor: pointer;
     color: white;
     font-size: 24px;
     padding: 10px;
-    background-color: #020b14;
+    background-color: #042749;
   }
 
   nav.ul {
     width: 100%;
+    list-style-type: none;
+    padding: 0;
+   
   }
 
   .nav li {
     display: block;
+      display: flex;
     width: auto;
     float: none;
-    margin-left: 0;
+    margin-left: 10px;
     margin-bottom: 10px;
+   
   }
-
+.nav{
+  margin-left: -40px;
+}
   .signup {
-    float: none;
+    float: left;
     margin: 0 auto;
     margin-top: 10px;
-    margin-left: 45%;
+    margin-left: 43px;
   }
+
   .intro {
+ 
     margin: 1rem 1rem 1rem 1rem;
     padding-top: 5rem;
     padding-bottom: 0.5em;
@@ -253,6 +264,7 @@ hr {
   }
 
   .contact-wrapper {
+      margin-top: 45%;
     flex-direction: column;
     align-items: center;
   }
