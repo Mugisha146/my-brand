@@ -102,7 +102,6 @@ textarea {
   width: 20%;
   height: auto;
   color: #a0cefc;
-  border: 1px solid #a0cefc;
   padding: 10px;
   font-size: 20px;
   font-weight: bold;
@@ -129,14 +128,14 @@ textarea {
   color: #a0cefc;
 }
 .prev-message {
-  color: #fff9f9; /* Adjust color */
-  font-size: 12px; /* Adjust font size */
-  margin-bottom: 5px; /* Add spacing */
+  color: #fff9f9; 
+  font-size: 12px; 
+  margin-bottom: 5px; 
 }
 
 .message-count {
-  color: #ffffff; /* Adjust color */
-  font-size: 12px; /* Adjust font size */
+  color: #ffffff; 
+  font-size: 12px; 
 }
 .user1 {
   display: flex;
@@ -164,7 +163,7 @@ textarea {
   font-size: 14px;
 }
 
-/* Other styles remain unchanged */
+
 
 .user1 .info .prev-message {
   color: #fffefe;
@@ -216,8 +215,8 @@ textarea {
 
 .user1 h6 {
   margin: 0;
-  color: #000000; /* Adjust text color */
-  font-size: 16px; /* Adjust font size */
+  color: #000000; 
+  font-size: 16px;
 }
 
 .user1 .time,
@@ -226,7 +225,7 @@ textarea {
 .message-count {
   white-space: nowrap;
   overflow: hidden;
-  text-overflow: ellipsis; /* Add ellipsis for overflow */
+  text-overflow: ellipsis; 
  
 }
 
@@ -291,48 +290,57 @@ nav.ul {
 
 
 @media only screen and (max-width: 768px) {
-  .nav {
+    .nav {
     display: none;
+    float: left;
+
   }
 
   .navbar-toggle {
     display: block;
-    text-align: center;
+    text-align: left;
     cursor: pointer;
     color: white;
     font-size: 24px;
     padding: 10px;
-    background-color: #020b14;
+    background-color: #042749;
   }
 
   nav.ul {
     width: 100%;
+    list-style-type: none;
+    padding: 0;
+   
   }
 
   .nav li {
     display: block;
+      display: flex;
     width: auto;
     float: none;
-    margin-left: 0;
+    margin-left: 10px;
     margin-bottom: 10px;
+   
   }
-.nav{
-  margin-left: -40px;
-}
+
   .signup {
-    float: none;
+    float: left;
     margin: 0 auto;
     margin-top: 10px;
-    margin-left: 45%;
+    margin-left: -3px;
   }
+.title h1{
+  font-size: 16px;
+}
   
-  /* Adjust admin-content */
   .box3 {
   display: flex;
   flex-direction: column;
+  align-content: space-between;
   }
   .dash-menu{
     width: auto;
+    margin-bottom: 10px;
   }
   .dash-count{
     width: auto;
@@ -376,51 +384,51 @@ nav.ul {
   }
   
   .title img {
-    width: 60px; /* Adjust profile image size for tablets */
-    margin-top: -60px; /* Adjust profile image position */
+    width: 60px; 
+    margin-top: -60px; 
     margin-right: 10px;
   }
 
   .title h1 {
-    padding: 10px; /* Adjust title padding */
+    padding: 10px; 
   }
 
   .title h6 {
-    margin-top: 5px; /* Adjust profile name position */
+    margin-top: 5px; 
     margin-right: 20px;
   }
 
   .admin-content {
-    padding: 20px; /* Add padding to admin content */
+    padding: 20px; 
   }
 
   .box3 {
-    flex-direction: column; /* Stack boxes vertically */
-    margin-right: 0; /* Remove margin */
+    flex-direction: column; 
+    margin-right: 0; 
   }
 
   .dash-menu {
-    width: 100%; /* Occupy full width */
-    margin-bottom: 20px; /* Add spacing */
+    width: 100%;
+    margin-bottom: 20px;
   }
 
   .user-message,
   .dash-count {
-    width: 100%; /* Occupy full width */
-    margin-right: 0; /* Remove margin */
+    width: 100%;
+    margin-right: 0;
   }
 
   .user-message {
-    padding: 20px; /* Add padding */
+    padding: 20px; 
   }
 
   .all-message {
-    max-height: 200px; /* Limit message container height */
-    overflow-y: auto; /* Add vertical scroll */
+    max-height: 200px; 
+    overflow-y: auto; 
   }
 
   .butt {
-    text-align: center; /* Center button */
+    text-align: center;
   }
 }
 

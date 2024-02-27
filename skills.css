@@ -118,8 +118,11 @@ padding-left: 20px;
  
 }
 .bar{
-   border-radius: 50%;
-   
+  
+  height: 20px;
+  text-align: center;
+   border-radius: 2%;
+ margin-left: 10px;
 }
 .never {
   color: white;
@@ -237,50 +240,65 @@ hr {
 }
 
 @media only screen and (max-width: 768px) {
-  .nav {
+nav {
     display: none;
+    float: left;
+
   }
 
   .navbar-toggle {
     display: block;
-    text-align: center;
+    text-align: left;
     cursor: pointer;
     color: white;
     font-size: 24px;
     padding: 10px;
-    background-color: #020b14;
+    background-color: #042749;
   }
 
   nav.ul {
     width: 100%;
-  }
-  .nav {
-    margin-left: -40px;
-  }
-  .nav li {
-    display: block;
-    width: auto;
-    float: none;
-    margin-left: 0;
-    margin-bottom: 10px;
+    list-style-type: none;
+    padding: 0;
+   
   }
 
-  .signup {
+  .nav li {
+    display: block;
+      display: flex;
+    width: auto;
     float: none;
+    margin-left: 10px;
+    margin-bottom: 10px;
+   
+  }
+.nav{
+  margin-left: -40px;
+}
+  .signup {
+    float: left;
     margin: 0 auto;
     margin-top: 10px;
-    margin-left: 45%;
+    margin-left: 43px;
   }
+
   .bar {
     margin-left: 20%;
     margin-top: 15px;
   }
   .box {
-    width: 100%;
+    width: 90%;
     margin-top: 50px;
   }
   .title-skills {
     margin-left: 80px;
+    margin-top: -80px;
+  }
+  .never h2{
+    font-size: 16px;
+  }
+  .copyright{
+  font-size: 10px;
   }
 }
 @media only screen and (max-width: 1024px) and (min-width: 768px) {
