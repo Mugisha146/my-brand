@@ -272,6 +272,12 @@ hr {
   color: #fff;
   margin-bottom: 10px;
 }
+.error-message {
+  display: flex;
+    color: red;
+    font-size: 16px;
+    margin-left: 55%;
+}
 
 /* Media Queries for responsiveness */
 @media only screen and (max-width: 768px) {

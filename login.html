@@ -59,22 +59,25 @@
                 <a href="#" class="social"><i class="fa-brands fa-linkedin"></i></a>
             </div>
             <div class="login-form">
-                <form>
-                    <div class="form-group">
-                        <label class="form-control-label">USERNAME</label>
-                        <input type="text" class="form-control" placeholder="Enter your username">
-                    </div>
-                    <div class="form-group">
-                        <label class="form-control-label">PASSWORD</label>
-                        <input type="password" class="form-control" placeholder="Enter your password">
-                    </div>
-                    <div class="login-btm">
-                        <div class="login-text"></div>
-                        <div class="login-button">
-                            <button type="submit" class="btn btn-outline-primary">LOGIN</button>
-                        </div>
-                    </div>
-                </form>
+               <form id="login-form">
+    <div class="form-group">
+        <label class="form-control-label">USERNAME</label>
+        <input type="text" id="username" class="form-control" placeholder="Enter your username">
+        <div id="username-error" class="error-message"></div>
+    </div>
+    <div class="form-group">
+        <label class="form-control-label">PASSWORD</label>
+        <input type="password" id="password" class="form-control" placeholder="Enter your password">
+        <div id="password-error" class="error-message"></div>
+    </div>
+    <div class="login-btm">
+        <div class="login-text"></div>
+        <div class="login-button">
+            <button type="submit" class="btn btn-outline-primary">LOGIN</button>
+        </div>
+    </div>
+</form>
+
             </div>
         </div>
     </div>
@@ -95,6 +98,34 @@
         <hr>
     </div>
      <script>
+      document.getElementById('login-form').addEventListener('submit', function(event) {
+    var usernameInput = document.getElementById('username');
+    var passwordInput = document.getElementById('password');
+    var usernameError = document.getElementById('username-error');
+    var passwordError = document.getElementById('password-error');
+    var isValid = true;
+
+    // Validation for username field
+    if (usernameInput.value.trim() === '') {
+        usernameError.textContent = 'Username is required';
+        isValid = false;
+    } else {
+        usernameError.textContent = '';
+    }
+
+    // Validation for password field
+    if (passwordInput.value.trim() === '') {
+        passwordError.textContent = 'Password is required';
+        isValid = false;
+    } else {
+        passwordError.textContent = '';
+    }
+
+    if (!isValid) {
+        event.preventDefault(); // Prevent form submission if not valid
+    }
+});
+
       function toggleNav() {
         var nav = document.getElementById("navbar");
         if (nav.style.display === "none") {

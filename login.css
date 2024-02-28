@@ -77,6 +77,11 @@ nav.ul {
   margin-bottom: 20px;
   text-align: center;
 }
+.error-message {
+    color: red;
+    font-size: 12px;
+    margin-top: 5px;
+}
 
 .social {
   color: white;

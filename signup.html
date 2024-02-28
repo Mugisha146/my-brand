@@ -56,33 +56,33 @@
       <div class="holder">
         <div class="parent">
           <h3>SIGN UP</h3>
-          <form action="">
-            <div>
-              &nbsp;&nbsp;<input type="text" placeholder="Name *" required />
-              <span class="border"></span>
-            </div>
-            <div>
-              &nbsp;&nbsp;<input type="email" placeholder="Email *" required />
-              <span class="border"></span>
-            </div>
-            <div>
-             &nbsp;&nbsp; <input type="password" placeholder="Password *" required />
-              <span class="border"></span>
-            </div>
-            <div>
-              &nbsp;&nbsp;<input
-                type="password"
-                placeholder="Confirm Password *"
-                required
-              />
-              <span class="border"></span>
-            </div>
-            <input type="submit" value="LOGIN" class="private-inp" />
-            <p>
-              Have Account?
-              <a href="login.html" style="color: white">Login Here</a>
-            </p>
-          </form>
+        <form id="signup-form" action="">
+    <div>
+        &nbsp;&nbsp;<input type="text" id="name" placeholder="Name *" required />
+        <span class="border"></span>
+        <div id="name-error" class="error-message"></div>
+    </div>
+    <div>
+        &nbsp;&nbsp;<input type="email" id="email" placeholder="Email *" required />
+        <span class="border"></span>
+        <div id="email-error" class="error-message"></div>
+    </div>
+    <div>
+        &nbsp;&nbsp;<input type="password" id="password" placeholder="Password *" required />
+        <span class="border"></span>
+        <div id="password-error" class="error-message"></div>
+    </div>
+    <div>
+        &nbsp;&nbsp;<input type="password" id="confirm-password" placeholder="Confirm Password *" required />
+        <span class="border"></span>
+        <div id="confirm-password-error" class="error-message"></div>
+    </div>
+    <input type="submit" value="SIGN UP" class="private-inp" />
+    <p>
+        Have Account? <a href="login.html" style="color: white">Login Here</a>
+    </p>
+</form>
+
           <h4>Or Sign Up With</h4>
           <div class="social">
             <a href="#" class="social"><i class="fa-brands fa-github"></i></a>
@@ -120,6 +120,62 @@
       </div>
     </div>
       <script>
+document.getElementById('signup-form').addEventListener('submit', function(event) {
+    var nameInput = document.getElementById('name');
+    var emailInput = document.getElementById('email');
+    var passwordInput = document.getElementById('password');
+    var confirmPasswordInput = document.getElementById('confirm-password');
+    var nameError = document.getElementById('name-error');
+    var emailError = document.getElementById('email-error');
+    var passwordError = document.getElementById('password-error');
+    var confirmPasswordError = document.getElementById('confirm-password-error');
+    var isValid = true;
+
+    // Validation for name field
+    if (nameInput.value.trim() === '') {
+        nameError.textContent = 'Name is required';
+        isValid = false;
+    } else {
+        nameError.textContent = '';
+    }
+
+    // Validation for email field
+    if (emailInput.value.trim() === '') {
+        emailError.textContent = 'Email is required';
+        isValid = false;
+    } else {
+        emailError.textContent = '';
+        var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        if (!emailRegex.test(emailInput.value.trim())) {
+            emailError.textContent = 'Please enter a valid email address';
+            isValid = false;
+        }
+    }
+
+    // Validation for password field
+    if (passwordInput.value.trim() === '') {
+        passwordError.textContent = 'Password is required';
+        isValid = false;
+    } else {
+        passwordError.textContent = '';
+    }
+
+    // Validation for confirm password field
+    if (confirmPasswordInput.value.trim() === '') {
+        confirmPasswordError.textContent = 'Confirm Password is required';
+        isValid = false;
+    } else if (confirmPasswordInput.value.trim() !== passwordInput.value.trim()) {
+        confirmPasswordError.textContent = 'Passwords do not match';
+        isValid = false;
+    } else {
+        confirmPasswordError.textContent = '';
+    }
+
+    if (!isValid) {
+        event.preventDefault(); // Prevent form submission if not valid
+    }
+});
+
       function toggleNav() {
         var nav = document.getElementById("navbar");
         if (nav.style.display === "none") {

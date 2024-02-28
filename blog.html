@@ -78,13 +78,13 @@
         Enter email below to Subscribe and get email notifications to read a new article when is posted on 
         the website:
       </p>
-      <form>
-        <div class="sub-field">
-          <input type="text"  id="name" placeholder="Enter your email" />
-        </div>
-         <input type="submit" class="sub" value="Subscribe">
-      </form>
-     
+   <form id="subscribe-form">
+    <div class="sub-field">
+        <input type="email" id="email" placeholder="Enter your email" required />
+        <div id="email-error" class="error-message"></div>
+    </div>
+    <input type="submit" class="sub" value="Subscribe">
+</form>
     </div-->
   <div class="social-media-icon">
     <hr>
@@ -97,16 +97,34 @@
     <hr>
   </div>
 </div>
-  <script>
-      function toggleNav() {
-        var nav = document.getElementById("navbar");
-        if (nav.style.display === "none") {
-          nav.style.display = "block";
-        } else {
-          nav.style.display = "none";
-        }
-      }
-    </script>
+<script>
+  document
+  .getElementById("subscribe-form")
+  .addEventListener("submit", function (event) {
+    var emailInput = document.getElementById("email");
+    var emailError = document.getElementById("email-error");
+    var email = emailInput.value.trim();
+    var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+    if (!emailRegex.test(email)) {
+      emailError.textContent = "Please enter a valid email address.";
+      emailInput.focus();
+      event.preventDefault();
+    } else {
+      emailError.textContent = "";
+    }
+  });
+
+  function toggleNav() {
+  var nav = document.getElementById("navbar");
+  if (nav.style.display === "none") {
+    nav.style.display = "block";
+  } else {
+    nav.style.display = "none";
+  }
+}
+
+</script>
 </body>
 </html>
 

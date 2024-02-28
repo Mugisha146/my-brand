@@ -26,6 +26,13 @@ body {
   margin-top: 25px;
   border-radius: 7px;
 }
+
+.error-message {
+    color: red;
+    font-size: 12px;
+    margin-top: 5px;
+}
+
 .holder .parent h3 {
   text-align: center;
   font-size: 25px;
