@@ -146,6 +146,15 @@ textarea {
   color: #fff;
   text-decoration: none;
 }
+.error-message {
+    color: red;
+    font-size: 12px;
+    margin-top: 5px;
+}
+
+.error {
+    border: 1px solid red;
+}
 
 .social-media-list {
   position: relative;

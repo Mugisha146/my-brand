@@ -55,18 +55,22 @@
     
     <!-- Left contact page --> 
       
-    <form>
-      <div class="form-field">
-          <input type="text" id="name" placeholder="Enter your name">
-      </div>
-      <div class="form-field">
-          <input type="text" id="email" placeholder="Enter your email">
-      </div>
-      <div class="form-field">
-          <textarea id="message" rows="10" placeholder="Enter your message"></textarea>
-      </div>
-      <button class="btn">Send Message</button>
-  </form>
+   <form id="contact-form">
+    <div class="form-field">
+        <input type="text" id="name" placeholder="Enter your name">
+        <div class="error-message" id="name-error"></div>
+    </div>
+    <div class="form-field">
+        <input type="email" id="email" placeholder="Enter your email">
+        <div class="error-message" id="email-error"></div>
+    </div>
+    <div class="form-field">
+        <textarea id="message" rows="10" placeholder="Enter your message"></textarea>
+        <div class="error-message" id="message-error"></div>
+    </div>
+    <button type="submit" class="btn">Send Message</button>
+</form>
+
         <div class="direct-contact-container">
   
           <ul class="contact-list">
@@ -100,15 +104,75 @@
     
   </section>  
 </div>
-  <script>
-      function toggleNav() {
-        var nav = document.getElementById("navbar");
-        if (nav.style.display === "none") {
-          nav.style.display = "block";
-        } else {
-          nav.style.display = "none";
-        }
-      }
-    </script>
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+  document.getElementById("contact-form");
+  document.addEventListener("submit", function (event) {
+    clearErrors();
+
+    var nameInput = document.getElementById("name");
+    var emailInput = document.getElementById("email");
+    var messageInput = document.getElementById("message");
+
+    var name = nameInput.value.trim();
+    var email = emailInput.value.trim();
+    var message = messageInput.value.trim();
+
+    if (name === "") {
+      showError("name-error", "Please enter your name.");
+      nameInput.classList.add("error");
+      event.preventDefault();
+    }
+
+    if (email === "") {
+      showError("email-error", "Please enter your email.");
+      emailInput.classList.add("error");
+      event.preventDefault();
+    } else if (!validateEmail(email)) {
+      showError("email-error", "Please enter a valid email address.");
+      emailInput.classList.add("error");
+      event.preventDefault();
+    }
+
+    if (message === "") {
+      showError("message-error", "Please enter your message.");
+      messageInput.classList.add("error");
+      event.preventDefault();
+    }
+  });
+
+  function showError(id, message) {
+    var errorElement = document.getElementById(id);
+    errorElement.textContent = message;
+  }
+
+  function clearErrors() {
+    var errorElements = document.querySelectorAll(".error-message");
+    errorElements.forEach(function (element) {
+      element.textContent = "";
+    });
+
+    var inputElements = document.querySelectorAll("input, textarea");
+    inputElements.forEach(function (element) {
+      element.classList.remove("error");
+    });
+  }
+
+  function validateEmail(email) {
+    var regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    return regex.test(email);
+  }
+});
+
+function toggleNav() {
+  var nav = document.getElementById("navbar");
+  if (nav.style.display === "none") {
+    nav.style.display = "block";
+  } else {
+    nav.style.display = "none";
+  }
+}
+
+</script>
 </body>
 </html>
