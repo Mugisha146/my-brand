@@ -72,18 +72,19 @@
 </div>
 <div class="user-message">
      <h1>Add Skill</h1>
-    <!-- Add Skill Form -->
-    <form class="add-skill-form" action="process_add_skill.php" method="POST">
-      <div class="input-field">
+<form class="add-skill-form" id="add-skill-form" action="process_add_skill.php" method="POST">
+    <div class="input-field">
         <label for="skill">Skill:</label>
-        <input type="text" id="skill" name="skill" required>
-      </div>
-      <div class="input-field">
+        <input type="text" id="skill" name="skill" >
+        <div id="skill-error" class="error-message"></div>
+    </div>
+    <div class="input-field">
         <label for="proficiency">Proficiency (in %):</label>
-        <input type="number" id="proficiency" name="proficiency" min="0" max="100" required>
-      </div>
-      <button type="submit">Add Skill</button>
-    </form>
+        <input type="number" id="proficiency" name="proficiency" min="0" max="100" >
+        <div id="proficiency-error" class="error-message"></div>
+    </div>
+    <button type="submit">Add Skill</button>
+</form>
 
 </div>
 <div class="dash-count">
@@ -105,6 +106,36 @@
   </div>
 </div>
             <script>
+             document.addEventListener("DOMContentLoaded", function() {
+        var form = document.getElementById("add-skill-form");
+
+        form.addEventListener("submit", function(event) {
+            var skill = document.getElementById("skill").value.trim();
+            var proficiency = document.getElementById("proficiency").value.trim();
+
+            if (skill === "") {
+                showError("skill-error", "Please enter a skill.");
+                event.preventDefault();
+            } else {
+                clearError("skill-error");
+            }
+
+            if (proficiency === "" || proficiency < 0 || proficiency > 100) {
+                showError("proficiency-error", "Please enter a valid proficiency (0-100).");
+                event.preventDefault();
+            } else {
+                clearError("proficiency-error");
+            }
+        });
+    });
+
+    function showError(elementId, message) {
+        document.getElementById(elementId).innerHTML = message;
+    }
+
+    function clearError(elementId) {
+        document.getElementById(elementId).innerHTML = "";
+    }
       function toggleNav() {
         var nav = document.getElementById("navbar");
         if (nav.style.display === "none") {

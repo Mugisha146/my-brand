@@ -73,14 +73,18 @@
 <div class="user-message">
 
  <h1>New Blog Post</h1>
-    <!-- Add a form for comments if needed -->
-    <form class="ppp">
+    <form class="ppp" id="post-form">
     <label for="post-title">Post Title:</label><br>
-    <input type="text" id="post-title" name="post-title" placeholder="Enter the title of your post"><br>
+    <input type="text" id="post-title" name="post-title" placeholder="Enter the title of your post" ><br>
+    <div id="post-title-error" class="error-message"></div>
+
     <label for="post-content">Post Content:</label><br>
-    <textarea id="post-content" name="post-content" placeholder="Write your blog post content here"></textarea><br>
+    <textarea id="post-content" name="post-content" placeholder="Write your blog post content here" ></textarea><br>
+    <div id="post-content-error" class="error-message"></div>
+
     <button type="submit">Submit</button>
 </form>
+
 </div>
 
 <div class="dash-count">
@@ -102,6 +106,37 @@
   </div>
 </div>
             <script>
+document.addEventListener("DOMContentLoaded", function() {
+        var form = document.getElementById("post-form");
+
+        form.addEventListener("submit", function(event) {
+            var postTitle = document.getElementById("post-title").value.trim();
+            var postContent = document.getElementById("post-content").value.trim();
+
+            if (postTitle === "") {
+                showError("post-title-error", "Please enter a post title.");
+                event.preventDefault();
+            } else {
+                clearError("post-title-error");
+            }
+
+            if (postContent === "") {
+                showError("post-content-error", "Please enter post content.");
+                event.preventDefault();
+            } else {
+                clearError("post-content-error");
+            }
+        });
+    });
+
+    function showError(elementId, message) {
+        document.getElementById(elementId).innerHTML = message;
+    }
+
+    function clearError(elementId) {
+        document.getElementById(elementId).innerHTML = "";
+    }
+
       function toggleNav() {
         var nav = document.getElementById("navbar");
         if (nav.style.display === "none") {

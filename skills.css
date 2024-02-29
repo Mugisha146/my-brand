@@ -167,12 +167,17 @@ nav.ul {
   background-color: #fff;
   border-radius: 5px;
   padding: 10px;
+   transform: scale(1.2);
+  transition: transform 0.5s ease-in-out;
 }
 
 .text-center {
   text-align: center;
 }
-
+.bar:hover{
+   transform: scale(1.2);
+  transition: transform 0.5s ease-in-out;
+}
 /* Social Media Icons */
 .social-media-list {
   position: relative;

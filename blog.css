@@ -50,6 +50,8 @@ nav.ul {
   background-color: #fff;
   border-radius: 5px;
   padding: 10px;
+   transform: scale(1.2);
+  transition: transform 0.5s ease-in-out;
 }
 
 
@@ -276,7 +278,7 @@ hr {
   display: flex;
     color: red;
     font-size: 16px;
-    margin-left: 55%;
+    margin-left: 75%;
 }
 
 /* Media Queries for responsiveness */
