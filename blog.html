@@ -80,7 +80,7 @@
       </p>
    <form id="subscribe-form">
     <div class="sub-field">
-        <input type="email" id="email" placeholder="Enter your email" required />
+        <input type="email" id="email" placeholder="Enter your email" />
         <div id="email-error" class="error-message"></div>
     </div>
     <input type="submit" class="sub" value="Subscribe">
@@ -98,22 +98,41 @@
   </div>
 </div>
 <script>
-  document
-  .getElementById("subscribe-form")
-  .addEventListener("submit", function (event) {
-    var emailInput = document.getElementById("email");
-    var emailError = document.getElementById("email-error");
-    var email = emailInput.value.trim();
-    var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+   document.getElementById("subscribe-form").addEventListener("submit", function(event) {
+        clearErrors();
 
-    if (!emailRegex.test(email)) {
-      emailError.textContent = "Please enter a valid email address.";
-      emailInput.focus();
-      event.preventDefault();
-    } else {
-      emailError.textContent = "";
+        var emailInput = document.getElementById("email");
+        var email = emailInput.value.trim();
+
+      
+        if (email === "") {
+            showError("email-error", "Please enter your email.");
+            emailInput.classList.add("error");
+            event.preventDefault();
+            return false;
+        } else if (!validateEmail(email)) { 
+            showError("email-error", "Please enter a valid email address.");
+            emailInput.classList.add("error");
+            event.preventDefault();
+            return false;
+        }
+    });
+
+   
+    function validateEmail(email) {
+        var re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        return re.test(email);
     }
-  });
+
+ 
+    function clearErrors() {
+        document.getElementById("email-error").innerHTML = "";
+        document.getElementById("email").classList.remove("error");
+    }
+
+    function showError(elementId, message) {
+        document.getElementById(elementId).innerHTML = message;
+    }
 
   function toggleNav() {
   var nav = document.getElementById("navbar");

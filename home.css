@@ -32,25 +32,50 @@ body {
   color: #fff;
   margin-top: 13%;
   font-size: 30px;
+  animation: fadeIn 2s ease-in-out infinite;
 }
+
 span {
   color: #fff;
   float: left;
   font-size: 60px;
   font-weight: bolder;
   color: #95c8fe;
+  animation: typing 4s steps(40) infinite;
+  overflow: hidden;
+  white-space: nowrap;
+  border-right: 0.15em solid orange;
 }
 .text-center {
   text-align: center;
 }
+@keyframes typing {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 100%;
+  }
+}
 
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
 .img-fluid {
   width: 25%;
   float: left;
   padding: 60px;
   border-radius: 50%;
+  animation: fadeIn 2s ease-in-out;
 }
-
+.img-fluid:hover {
+  transform: scale(0.8); /* Zoom out on hover */
+}
 .cv1 {
   display: inline-block;
   font-weight: bold;
@@ -119,6 +144,8 @@ nav.ul {
   background-color: #fff;
   border-radius: 5px;
   padding: 10px;
+  transform: scale(1.2);
+  transition: transform 0.5s ease-in-out;
 }
 
 .content {
@@ -244,8 +271,7 @@ nav.ul {
   text-align: center;
 }
 @media only screen and (max-width: 1024px) {
- 
- nav.ul {
+  nav.ul {
     width: 100%;
   }
 
@@ -269,7 +295,7 @@ nav.ul {
   .mine-text {
     flex-direction: column;
     text-align: center;
-    padding: 0 20px; 
+    padding: 0 20px;
   }
 
   .img-fluid {
@@ -277,26 +303,23 @@ nav.ul {
     padding: 30px;
     margin-left: 45px;
     margin-right: -40px;
-    
   }
 
   .ddd {
     margin-top: 8%;
-   
   }
-.ddd h1{
-  margin-left: 30px;
-}
-  .mine-text{
-margin-left: 30px;
+  .ddd h1 {
+    margin-left: 30px;
+  }
+  .mine-text {
+    margin-left: 30px;
   }
   .mine-text h3 {
     font-size: 22px;
- 
   }
 
   .cv1 {
-    margin: 10px auto; 
+    margin: 10px auto;
   }
 
   .video-link {
@@ -304,16 +327,14 @@ margin-left: 30px;
   }
 
   .social-media-list {
-    padding: 15px 0; 
+    padding: 15px 0;
   }
 }
 
 @media only screen and (max-width: 768px) {
- 
-.nav {
+  .nav {
     display: none;
     float: left;
-
   }
 
   .navbar-toggle {
@@ -330,21 +351,19 @@ margin-left: 30px;
     width: 100%;
     list-style-type: none;
     padding: 0;
-   
   }
 
   .nav li {
     display: block;
-      display: flex;
+    display: flex;
     width: auto;
     float: none;
     margin-left: 10px;
     margin-bottom: 10px;
-   
   }
-.nav{
-  margin-left: -40px;
-}
+  .nav {
+    margin-left: -40px;
+  }
   .signup {
     float: left;
     margin: 0 auto;
@@ -352,14 +371,13 @@ margin-left: 30px;
     margin-left: 43px;
   }
 
-span{
-  font-size: 30px;
-}
-.ddd h3{
-  width: 100%;
-  padding-left: 15px;
-  
-}
+  span {
+    font-size: 30px;
+  }
+  .ddd h3 {
+    width: 100%;
+    padding-left: 15px;
+  }
 
   .mine-text {
     display: flex;
@@ -369,24 +387,23 @@ span{
   }
 
   .img-fluid {
-    width: 50%; 
+    width: 50%;
     margin: 0 auto;
-    padding: 20px; 
+    padding: 20px;
   }
 
   .ddd {
-    margin-top: 10%; 
+    margin-top: 10%;
     margin-left: -30px;
-   
   }
 
   .mine-text h3 {
-    margin-top: 8%; 
-    font-size: 16px; 
+    margin-top: 8%;
+    font-size: 16px;
   }
 
   .cv1 {
-    margin: 20px auto; 
+    margin: 20px auto;
   }
 
   .video-link {
@@ -396,37 +413,35 @@ span{
   .social-media-list {
     padding: 20px 0;
   }
-   .copyright{
+  .copyright {
     font-size: 11px;
   }
 }
 
 @media only screen and (max-width: 480px) {
-
   .img-fluid {
-    width: 100%; 
-    padding: 10px 0; 
+    width: 100%;
+    padding: 10px 0;
   }
 
   .ddd {
     margin-top: 6%;
-
-
   }
 
   .mine-text h1 {
-    font-size: 40px; 
+    font-size: 40px;
   }
 
   .mine-text h3 {
-    font-size: 20px; 
-    margin-top: 10px; 
+    font-size: 20px;
+    margin-top: 10px;
   }
 
-  .cv1 { .copyright{
-    font-size: 11px;
-  }
-    margin: 10px auto; 
+  .cv1 {
+    .copyright {
+      font-size: 11px;
+    }
+    margin: 10px auto;
   }
 
   .video-link {
@@ -434,12 +449,12 @@ span{
   }
 
   .social-media-list {
-    padding: 10px 0; 
+    padding: 10px 0;
   }
-  .social-media-icon{
-margin-left: 10%;
+  .social-media-icon {
+    margin-left: 10%;
   }
-  .copyright{
+  .copyright {
     font-size: 11px;
   }
 }

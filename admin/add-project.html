@@ -72,18 +72,24 @@
 </div>
 <div class="user-message">
         <h1>Add Project</h1>
-        <form action="submit_project.php" method="POST" enctype="multipart/form-data">
-            <label for="project_name">Project Name:</label>
-            <input type="text" id="project_name" name="project_name" required>
+   <form id="project_form" action="submit_project.php" method="POST" enctype="multipart/form-data">
+    <label for="project_name">Project Name:</label>
+    <input type="text" id="project_name" name="project_name" >
+    <div id="project_name_error" class="error-message"></div>
 
-            <label for="project_description">Project Description:</label>
-            <textarea id="project_description" name="project_description" required></textarea>
+    <label for="project_description">Project Description:</label>
+    <textarea id="project_description" name="project_description" ></textarea>
+    <div id="project_description_error" class="error-message"></div>
 
-            <label for="project_image">Project Image:</label>
-            <input type="file" id="project_image" name="project_image" accept="image/*" required>
+    <label for="project_image">Project Image:</label>
+    <input type="file" id="project_image" name="project_image" accept="image/*" >
+    <div id="project_image_error" class="error-message"></div>
 
-            <button type="submit">Submit</button>
-        </form>
+    <button type="submit">Submit</button>
+</form>
+
+
+
 </div>
 
 
@@ -107,7 +113,39 @@
 </div>
 </div>
         </div> 
-            <script>
+           <script>
+    document.getElementById("project_form").addEventListener("submit", function(event) {
+        var projectName = document.getElementById("project_name").value;
+        var projectDescription = document.getElementById("project_description").value;
+        var projectImage = document.getElementById("project_image").files;
+
+        // Clear previous error messages
+        document.getElementById("project_name_error").innerHTML = "";
+        document.getElementById("project_description_error").innerHTML = "";
+        document.getElementById("project_image_error").innerHTML = "";
+
+        // Check if projectName is empty
+        if (projectName.trim() === "") {
+            document.getElementById("project_name_error").innerHTML = "Please enter a project name.";
+            event.preventDefault();
+            return false;
+        }
+
+        // Check if projectDescription is empty
+        if (projectDescription.trim() === "") {
+            document.getElementById("project_description_error").innerHTML = "Please enter a project description.";
+            event.preventDefault();
+            return false;
+        }
+
+        // Check if projectImage is empty
+        if (projectImage.length === 0) {
+            document.getElementById("project_image_error").innerHTML = "Please select a project image.";
+            event.preventDefault();
+            return false;
+        }
+    });
+
       function toggleNav() {
         var nav = document.getElementById("navbar");
         if (nav.style.display === "none") {
