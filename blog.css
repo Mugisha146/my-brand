@@ -16,7 +16,6 @@ body {
 nav.ul {
   width: 50%;
   color: white;
- 
 }
 
 .nav li {
@@ -29,13 +28,13 @@ nav.ul {
 
 .signup {
   float: right;
-  border:1px solid #fff;
+  border: 1px solid #fff;
   padding: 10px;
   margin-top: -18px;
   border-radius: 5px;
   text-align: center;
 }
-.signup:hover{
+.signup:hover {
   background-color: #fff;
 }
 .nav a {
@@ -50,10 +49,9 @@ nav.ul {
   background-color: #fff;
   border-radius: 5px;
   padding: 10px;
-   transform: scale(1.2);
+  transform: scale(1.2);
   transition: transform 0.5s ease-in-out;
 }
-
 
 .all-blog {
   width: 100%;
@@ -62,7 +60,6 @@ nav.ul {
   background: #020b14;
   padding: 25px;
   border-radius: 25px;
-  border: 2px solid #b8d8fa;
   padding: 20px;
 }
 
@@ -87,21 +84,6 @@ nav.ul {
   font-size: 24px;
 }
 
-.blog-slider__button {
-  display: inline-flex;
-  background-color: rgb(3, 57, 57);
-  padding: 15px 35px;
-  margin-top: 20px;
-  margin-left: 40%;
-  border-radius: 50px;
-  color: #fff;
-  text-decoration: none;
-  font-weight: 500;
-  justify-content: center;
-  text-align: center;
-  letter-spacing: 1px;
-}
-
 .blog-slider__button:hover {
   background-color: rgb(8, 128, 158);
 }
@@ -118,61 +100,58 @@ nav.ul {
 }
 
 .content-2 {
+  margin-top: 50px;
   text-align: center;
   background-color: #020b14;
-  padding-top: 40px;
-  margin-top: 40px;
+  margin: auto;
+  padding-left: 30px;
+  margin-left: 60px;
+  float: left;
 }
 
 .content-2 p {
+  width: 100%;
   color: whitesmoke;
   font-weight: lighter;
-  font-size: 20px;
-  margin-left: 1em;
-  
+  font-size: 16px;
+  margin-top: 50px;
 }
 
-.sub {
-  background-color: rgb(19, 129, 89);
-  color: black;
-  font-weight: bold;
-  width: 150px;
-  height: 50px;
+
+#email {
+  width: 70%;
   border-radius: 10px;
-  font-weight: bolder;
-  font-size: 15px;
-  margin-top: -100px;
-}
-
-.mine-form {
-  font-size: 20px;
-  width: 25%;
-  margin-left: 6%;
-  padding: 3%;
-  float: right;
-}
-
-.sub-field {
-  margin-left: 17%;
-  margin-top: 20px;
-  width: 30%;
-margin-left: 35%;
 }
 input,
 textarea {
-  width: 100%;
-  padding: 10px;
+  padding: 20px;
   background-color: transparent;
   border: 1px solid #ffffff;
   border-radius: 2px;
   color: white;
   margin-bottom: 20px;
+  float: left;
 }
 
-
-
+.sub {
+  background-color: rgb(21, 136, 59);
+  color: #020b14;
+  font-weight: bold;
+  border-radius: 10px;
+  width: 25%;
+  margin-left: 20px;
+}
+.sub :hover {
+  transform: scale(1.2);
+  transition: transform 0.5s ease-in-out;
+}
 
 /* Social Media Icons */
+.social-media-icon {
+  width: 50%;
+  float: right;
+
+}
 .social-media-list {
   position: relative;
   font-size: 22px;
@@ -228,10 +207,11 @@ textarea {
 }
 
 .copyright {
-  font: 200 14px "Oswald", sans-serif;
+  font: 200 10px "Oswald", sans-serif;
   color: white;
   letter-spacing: 1px;
   text-align: center;
+  font-weight: bold;
 }
 
 hr {
@@ -239,54 +219,214 @@ hr {
 }
 
 .blog-slider__actions button {
-  background-color: #dbecff;
+  background-color: #020b14;
   align-items: center;
-  color: #0d0925;
+  color: #dbecff;
   font-weight: 900;
   border: none;
   padding: 10px 20px;
   border-radius: 5px;
-  margin-right: 10px;
+
   cursor: pointer;
 }
 
 .blog-slider__actions button:hover {
-  background-color: #b8d8fa;
   border-radius: 30px;
-}
-
-.blog-slider__code {
-  color: white;
-  margin-bottom: 15px;
-  display: block;
-  font-weight: 500;
 }
 
 .kk {
   padding-top: 5em;
+  padding-bottom: 5em;
 }
 
-.blog-slider__title {
-  color: #fff;
-}
-
-.blog-slider__text {
-  color: #fff;
-  margin-bottom: 10px;
-}
 .error-message {
   display: flex;
-    color: red;
-    font-size: 16px;
-    margin-left: 75%;
+  color: red;
+  font-size: 16px;
+  margin-left: 100px;
+}
+section {
+  margin: 0px;
+  padding: 0px;
+  font-family: "poppins";
+  box-sizing: border-box;
+}
+a {
+  text-decoration: none;
+}
+ul {
+  list-style: none;
 }
 
+#blog {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.blog-heading h3 {
+  font-size: 2.4rem;
+  color: white;
+  font-weight: 800;
+  line-height: 2.4rem;
+}
+
+.blog-box-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  margin-top: 50px;
+  max-width: 1350px;
+  width: 90%;
+}
+.blog-box {
+  max-width: 100%;
+  width: 100%;
+  height: 100%;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  transition: all ease 0.3s;
+  border: 1px solid gray;
+  border-radius: 10px;
+}
+.blog-box:hover {
+  box-shadow: 16px 20px 50px rgba(0, 0, 0, 0.12);
+  background-color: #14314e;
+  border-radius: 10px;
+}
+.blog-box-img {
+  width: 100%;
+  height: 100%;
+  max-height: 300px;
+  overflow: hidden;
+  display: flex;
+  position: relative;
+}
+.blog-box-img img {
+  width: 100%;
+  height: 100%;
+  margin-top: 10px;
+  border-radius: 5px;
+  object-fit: cover;
+  object-position: center;
+  transition: all ease 0.3s;
+}
+.blog-img-link {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 50px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  background-color: #ffffff;
+  color: #252525;
+  box-shadow: 2px 2px 30px rgba(20, 97, 212, 0.12);
+  display: none;
+  animation: fade 0.3s;
+}
+.blog-box:hover .blog-box-img img {
+  filter: blur(3px);
+}
+.blog-box:hover .blog-box-img a {
+  display: flex;
+}
+.blog-box-text {
+  display: flex;
+  flex-direction: column;
+  padding: 30px 10px 20px 10px;
+}
+.blog-box-text strong,
+.blog-box-text p {
+  color: #fffefe;
+  font-size: 0.9rem;
+  font-weight: 400;
+}
+.blog-box-text a {
+  font-size: 1.4rem;
+  color: #ffffff;
+  font-weight: 800;
+  line-height: 1.8rem;
+  margin: 5px 0px 10px 0px;
+}
+@keyframes fade {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+.blog-box-text p {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+}
+.blog-author {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin-top: 20px;
+}
+.blog-author-img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  overflow: hidden;
+  margin-right: 10px;
+}
+.blog-author-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+.blog-author-text {
+  display: flex;
+  flex-direction: column;
+}
+.blog-author-text strong {
+  color: #ffffff;
+  font-weight: 800;
+}
+.blog-author-text span {
+  color: #ffffff;
+  font-size: 0.8rem;
+  font-weight: 500;
+}
+.seemore {
+  width: 5%;
+  height: 30%;
+  margin-right: 5px;
+  background-color: #020b14;
+  border: 1px solid gray;
+  color: white;
+  text-align: center;
+  font-size: 30px;
+  font-weight: bold;
+  position: absolute;
+  top: 75%;
+  right: 0;
+  transform: translateY(-2%);
+}
+.seemore:hover {
+  background-color: wheat;
+  color: #020b14;
+  border: 1px solid #020b14;
+    transform: scale(1.2);
+  transition: transform 0.5s ease-in-out;
+  border-radius: 10px;
+}
 /* Media Queries for responsiveness */
 @media only screen and (max-width: 768px) {
   nav {
     display: none;
     float: left;
-
   }
 
   .navbar-toggle {
@@ -303,21 +443,19 @@ hr {
     width: 100%;
     list-style-type: none;
     padding: 0;
-   
   }
 
   .nav li {
     display: block;
-      display: flex;
+    display: flex;
     width: auto;
     float: none;
     margin-left: 10px;
     margin-bottom: 10px;
-   
   }
-.nav{
-  margin-left: -40px;
-}
+  .nav {
+    margin-left: -40px;
+  }
   .signup {
     float: left;
     margin: 0 auto;
@@ -328,8 +466,6 @@ hr {
   .all-blog {
     border-radius: 15px;
     padding: 10px;
-    
-
   }
   .blog-slider__actions {
     display: flex;
@@ -338,21 +474,21 @@ hr {
     display: block;
     margin-left: -10px;
   }
-.content-2 p{
-  margin-top: 10px;
-  font-size: 16px;
-}
-  .copyright{
+  .content-2 p {
+    margin-top: 10px;
+    font-size: 16px;
+  }
+  .copyright {
     font-size: 10px;
   }
-form #name{
-  width: 290%;
-  margin-left: -100px;
-}
-.sub{
-  width: 30%;
-  height: 10%;
-}
+  form #name {
+    width: 290%;
+    margin-left: -100px;
+  }
+  .sub {
+    width: 30%;
+    height: 10%;
+  }
 }
 @media only screen and (max-width: 1024px) and (min-width: 768px) {
   nav.ul {
@@ -376,8 +512,23 @@ form #name{
   .nav {
     margin-left: -60px;
   }
-  form #name{
+  form #name {
     width: 250%;
-  margin-left: -160px;
+    margin-left: -160px;
+  }
+}
+@media (max-width: 920px) {
+  .blog-box-container {
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 10px 0px;
+  }
+}
+@media (max-width: 600px) {
+  .blog-heading h3 {
+    font-size: 1.6rem;
+    line-height: 1.6rem;
+  }
+  .blog-box-container {
+    grid-template-columns: 1fr;
   }
 }
