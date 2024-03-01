@@ -61,8 +61,8 @@
             <div class="login-form">
                <form id="login-form">
     <div class="form-group">
-        <label class="form-control-label">USERNAME</label>
-        <input type="text" id="username" class="form-control" placeholder="Enter your username">
+        <label class="form-control-label">EMAIL</label>
+        <input type="text" id="username" class="form-control" placeholder="Enter your email">
         <div id="username-error" class="error-message"></div>
     </div>
     <div class="form-group">
@@ -98,31 +98,43 @@
         <hr>
     </div>
      <script>
-      document.getElementById('login-form').addEventListener('submit', function(event) {
-    var usernameInput = document.getElementById('username');
-    var passwordInput = document.getElementById('password');
-    var usernameError = document.getElementById('username-error');
-    var passwordError = document.getElementById('password-error');
-    var isValid = true;
+             document.getElementById('login-form').addEventListener('submit', function(event) {
+            event.preventDefault();
 
-    if (usernameInput.value.trim() === '') {
-        usernameError.textContent = 'Username is required';
-        isValid = false;
-    } else {
-        usernameError.textContent = '';
-    }
+            var usernameInput = document.getElementById('username');
+            var passwordInput = document.getElementById('password');
+            var usernameError = document.getElementById('username-error');
+            var passwordError = document.getElementById('password-error');
+            var isValid = true;
 
-    if (passwordInput.value.trim() === '') {
-        passwordError.textContent = 'Password is required';
-        isValid = false;
-    } else {
-        passwordError.textContent = '';
-    }
+            if (usernameInput.value.trim() === '') {
+                usernameError.textContent = 'Email is required';
+                isValid = false;
+            } else {
+                usernameError.textContent = '';
+            }
 
-    if (!isValid) {
-        event.preventDefault();
-    }
-});
+            if (passwordInput.value.trim() === '') {
+                passwordError.textContent = 'Password is required';
+                isValid = false;
+            } else {
+                passwordError.textContent = '';
+            }
+
+            if (isValid) {
+                var userData = JSON.parse(localStorage.getItem('userData'));
+                if (userData && userData.email === usernameInput.value.trim() && userData.password === passwordInput.value.trim()) {
+                  if(userData.role=='Admin'){
+                    window.location.href = 'admin/admin.html';
+                   }else{
+                     window.location.href = 'home.html';
+                   }
+                } else {
+                    usernameError.textContent = 'Invalid email or password';
+                    passwordError.textContent = 'Invalid email or password';
+                }
+            }
+        });
 
       function toggleNav() {
         var nav = document.getElementById("navbar");

@@ -71,14 +71,15 @@
   <a href="../home.html"><i class="fa-solid fa-right-from-bracket"></i>&nbsp;LOG OUT</a>
 </div>
 <div class="user-message">
-
  <h1>New Blog Post</h1>
     <form class="ppp" id="post-form">
-    <label for="post-title">Post Title:</label><br>
+    <label for="post-title">Blog Title:</label><br>
     <input type="text" id="post-title" name="post-title" placeholder="Enter the title of your post" ><br>
     <div id="post-title-error" class="error-message"></div>
-
-    <label for="post-content">Post Content:</label><br>
+<label for="project_image">Blog Image:</label>
+    <input type="file" id="project_image" name="project_image" accept="image/*" >
+    <div id="project_image_error" class="error-message"></div>
+    <label for="post-content">Blog Content:</label><br>
     <textarea id="post-content" name="post-content" placeholder="Write your blog post content here" ></textarea><br>
     <div id="post-content-error" class="error-message"></div>
 
@@ -105,6 +106,43 @@
     <h1>80</h1>
   </div>
 </div>
+</div>
+<div class="update-and-delete">
+   <!--Update an existing article -->
+    <div class="update-article">
+        <h2 style="text-align: center;color: aliceblue;">Update Existing Article</h2>
+        <form class="update-form" id="update-form">
+            <label for="update-article-id">Article ID:</label><br>
+            <input type="text" id="update-article-id" name="update-article-id" placeholder="Enter the ID of the article to update"><br>
+            <div id="update-article-id-error" class="error-message"></div>
+
+            <label for="update-title">New Title:</label><br>
+            <input type="text" id="update-title" name="update-title" placeholder="Enter the new title"><br>
+            <div id="update-title-error" class="error-message"></div>
+<label for="project_image">New Image:</label>
+    <input type="file" id="project_image" name="project_image" accept="image/*" >
+    <div id="project_image_error" class="error-message"></div>
+            <label for="update-content">New Content:</label><br>
+            <textarea id="update-content" name="update-content" placeholder="Enter the new content"></textarea><br>
+            <div id="update-content-error" class="error-message"></div>
+
+            <button type="submit">Update Article</button>
+        </form>
+    </div>
+<!--We know among Software developer in Africa has each company or entity they belongs in but you think it is enough cause when it comes to the collaborate each one do in their way what if we found organisation called Master code Membership in Africa?-->
+    <!--Delete an existing article -->
+    <div class="delete-article">
+        <h2 style="text-align: center;color: aliceblue;">Delete Existing Article</h2>
+        <form class="delete-form" id="delete-form">
+            <label for="delete-article-id">Article ID:</label><br>
+            <input type="text" id="delete-article-id" name="delete-article-id" placeholder="Enter the ID of the article to delete"><br>
+            <div id="delete-article-id-error" class="error-message"></div>
+
+            <button type="submit">Delete Article</button>
+        </form>
+    </div>
+
+</div></div>
             <script>
 document.addEventListener("DOMContentLoaded", function() {
         var form = document.getElementById("post-form");
@@ -137,6 +175,66 @@ document.addEventListener("DOMContentLoaded", function() {
         document.getElementById(elementId).innerHTML = "";
     }
 
+
+
+
+    document.addEventListener("DOMContentLoaded", function() {
+    // Update Form Submission
+    var updateForm = document.getElementById("update-form");
+
+    updateForm.addEventListener("submit", function(event) {
+        var articleId = document.getElementById("update-article-id").value.trim();
+        var newTitle = document.getElementById("update-title").value.trim();
+        var newContent = document.getElementById("update-content").value.trim();
+
+        // Validation for article ID
+        if (articleId === "") {
+            showError("update-article-id-error", "Please enter the article ID.");
+            event.preventDefault();
+        } else {
+            clearError("update-article-id-error");
+        }
+
+        // Validation for new title
+        if (newTitle === "") {
+            showError("update-title-error", "Please enter the new title.");
+            event.preventDefault();
+        } else {
+            clearError("update-title-error");
+        }
+
+        // Validation for new content
+        if (newContent === "") {
+            showError("update-content-error", "Please enter the new content.");
+            event.preventDefault();
+        } else {
+            clearError("update-content-error");
+        }
+    });
+
+
+    // Validation Delete Form Submission
+    var deleteForm = document.getElementById("delete-form");
+
+    deleteForm.addEventListener("submit", function(event) {
+        var articleId = document.getElementById("delete-article-id").value.trim();
+        if (articleId === "") {
+            showError("delete-article-id-error", "Please enter the article ID.");
+            event.preventDefault();
+        } else {
+            clearError("delete-article-id-error");
+        }
+    });
+});
+
+function showError(elementId, message) {
+    document.getElementById(elementId).innerHTML = message;
+}
+
+function clearError(elementId) {
+    document.getElementById(elementId).innerHTML = "";
+}
+
       function toggleNav() {
         var nav = document.getElementById("navbar");
         if (nav.style.display === "none") {
@@ -145,6 +243,86 @@ document.addEventListener("DOMContentLoaded", function() {
           nav.style.display = "none";
         }
       }
+
+
+//POST NEW BLOGS
+  document.addEventListener('DOMContentLoaded', function() {
+    var postForm = document.getElementById('post-form');
+    var updateForm = document.getElementById('update-form');
+    var deleteForm = document.getElementById('delete-form');
+
+    postForm.addEventListener('submit', function(event) {
+      event.preventDefault();
+      var title = document.getElementById('post-title').value.trim();
+      var content = document.getElementById('post-content').value.trim();
+      var image = document.getElementById('project_image').files[0];
+
+ 
+      var newBlog = {
+        id: Math.floor(Math.random() * 1000), 
+        title: title,
+        content: content,
+        image: image
+      };
+      var existingBlogs = JSON.parse(localStorage.getItem('blogData')) || [];
+      existingBlogs.push(newBlog);
+      localStorage.setItem('blogData', JSON.stringify(existingBlogs));
+      alert('Blog post added successfully!');
+
+  
+    });
+
+
+
+
+
+
+//UPDATE BLOGS
+    updateForm.addEventListener('submit', function(event) {
+      event.preventDefault();
+    
+      var articleId = document.getElementById('update-article-id').value.trim();
+      var newTitle = document.getElementById('update-title').value.trim();
+      var newContent = document.getElementById('update-content').value.trim();
+      var newImage = document.getElementById('project_image').files[0]; 
+      var existingBlogs = JSON.parse(localStorage.getItem('blogData')) || [];
+      var blogToUpdate = existingBlogs.find(function(blog) {
+        return blog.id === parseInt(articleId);
+      });
+
+      if (blogToUpdate) {
+        blogToUpdate.title = newTitle;
+        blogToUpdate.content = newContent;
+        blogToUpdate.image = newImage;
+        localStorage.setItem('blogData', JSON.stringify(existingBlogs));
+        alert('Blog post updated successfully!');
+      } else {
+        alert('Blog with the specified ID not found!');
+      }
+    });
+
+
+    //DELETE BLOG
+    deleteForm.addEventListener('submit', function(event) {
+      event.preventDefault();
+      var articleId = document.getElementById('delete-article-id').value.trim();
+
+      var existingBlogs = JSON.parse(localStorage.getItem('blogData')) || [];
+
+      var updatedBlogs = existingBlogs.filter(function(blog) {
+        return blog.id !== parseInt(articleId);
+      });
+      if (existingBlogs.length !== updatedBlogs.length) {
+        localStorage.setItem('blogData', JSON.stringify(updatedBlogs));
+        alert('Blog post deleted successfully!');
+      } else {
+        alert('Blog with the specified ID not found!');
+      }
+    });
+  });
+
+
+
     </script>
     </body>
     </html>

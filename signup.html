@@ -68,6 +68,18 @@
         <div id="email-error" class="error-message"></div>
     </div>
     <div>
+              &nbsp;&nbsp; <label for="photo">Photo:</label>
+              <input type="file" id="photo" name="photo" accept="image/*">
+            </div>
+            <div>
+              &nbsp;&nbsp; <label for="role">Role:</label>
+              <select id="role" name="role">
+                <option value="Admin">Admin</option>
+                <option value="Collaborator">Collaborator</option>
+                <option value="User">User</option>
+              </select>
+            </div>
+    <div>
         &nbsp;&nbsp;<input type="password" id="password" placeholder="Password *"  />
         <span class="border"></span>
         <div id="password-error" class="error-message"></div>
@@ -120,10 +132,21 @@
       </div>
     </div>
       <script>
+
+      function toggleNav() {
+        var nav = document.getElementById("navbar");
+        if (nav.style.display === "none") {
+          nav.style.display = "block";
+        } else {
+          nav.style.display = "none";
+        }
+      }
 document.getElementById('signup-form').addEventListener('submit', function(event) {
     var nameInput = document.getElementById('name');
     var emailInput = document.getElementById('email');
     var passwordInput = document.getElementById('password');
+    var photo = document.getElementById('photo').files[0]; 
+    var role = document.getElementById('role').value;
     var confirmPasswordInput = document.getElementById('confirm-password');
     var nameError = document.getElementById('name-error');
     var emailError = document.getElementById('email-error');
@@ -159,7 +182,20 @@ document.getElementById('signup-form').addEventListener('submit', function(event
     } else {
         passwordError.textContent = '';
     }
-
+ // Validation for password field
+    if (photo.value.trim() === '') {
+        photoError.textContent = 'photo is required';
+        isValid = false;
+    } else {
+        photoError.textContent = '';
+    }
+     // Validation for password field
+    if (role.value.trim() === '') {
+        roleError.textContent = 'role is required';
+        isValid = false;
+    } else {
+        roleError.textContent = '';
+    }
     // Validation for confirm password field
     if (confirmPasswordInput.value.trim() === '') {
         confirmPasswordError.textContent = 'Confirm Password is required';
@@ -172,18 +208,28 @@ document.getElementById('signup-form').addEventListener('submit', function(event
     }
 
     if (!isValid) {
-        event.preventDefault(); // Prevent form submission if not valid
+        event.preventDefault(); 
     }
 });
-
-      function toggleNav() {
-        var nav = document.getElementById("navbar");
-        if (nav.style.display === "none") {
-          nav.style.display = "block";
-        } else {
-          nav.style.display = "none";
-        }
-      }
+      document.getElementById('signup-form').addEventListener('submit', function(event) {
+          event.preventDefault();
+          
+          var name = document.getElementById('name').value.trim();
+          var email = document.getElementById('email').value.trim();
+          var password = document.getElementById('password').value.trim();
+          var photo = document.getElementById('photo').files[0]; 
+          var role = document.getElementById('role').value;
+          var userData = {
+              name: name,
+              email: email,
+              password: password,
+              photo:photo,
+              role:role,
+          };
+          
+          localStorage.setItem('userData', JSON.stringify(userData));
+          window.location.href = 'login.html';
+      });
     </script>
   </body>
 </html>

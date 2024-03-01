@@ -1,156 +1,437 @@
-
-
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <script src="https://kit.fontawesome.com/902bd6162d.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="blog.css">
-</head>
-<body>
-<div class="about-content">
-       <!-- navigation toggle button -->
-    <div class="navbar-toggle" onclick="toggleNav()">
-      <i class="fas fa-bars"></i>
-    </div>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      src="https://kit.fontawesome.com/902bd6162d.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="blog.css" />
+  </head>
+  <body>
+    <div class="about-content">
+      <!-- navigation toggle button -->
+      <div class="navbar-toggle" onclick="toggleNav()">
+        <i class="fas fa-bars"></i>
+      </div>
 
-    <!-- nav -->
-    <div class="nav" id="navbar">
-      <ul class="text-center">
+      <!-- nav -->
+      <div class="nav" id="navbar">
+        <ul class="text-center">
+          <li>
+            <a href="home.html"><i class="fa-solid fa-house"></i>&nbsp; HOME</a>
+          </li>
+          <li>
+            <a href="about.html"
+              ><i class="fa-solid fa-address-card"></i>&nbsp; ABOUT ME</a
+            >
+          </li>
+          <li>
+            <a href="skills.html"
+              ><i class="fa-solid fa-flask"></i>&nbsp; SKILLS</a
+            >
+          </li>
+          <li>
+            <a href="blog.html"><i class="fa-solid fa-blog"></i>&nbsp; BLOG</a>
+          </li>
+          <li>
+            <a href="portfolio.html"
+              ><i class="fa-solid fa-briefcase"></i>&nbsp; PORTFOLIO</a
+            >
+          </li>
+          <li>
+            <a href="contact.html"
+              ><i class="fa-solid fa-phone"></i>&nbsp; CONTACT</a
+            >
+          </li>
+        </ul>
         <li>
-          <a href="home.html"><i class="fa-solid fa-house"></i>&nbsp; HOME</a>
+          <a href="login.html" class="signup">&nbsp; Login</a>
         </li>
-        <li>
-          <a href="about.html"
-            ><i class="fa-solid fa-address-card"></i>&nbsp; ABOUT ME</a
-          >
-        </li>
-        <li>
-          <a href="skills.html"
-            ><i class="fa-solid fa-flask"></i>&nbsp; SKILLS</a
-          >
-        </li>
-        <li>
-          <a href="blog.html"><i class="fa-solid fa-blog"></i>&nbsp; BLOG</a>
-        </li>
-        <li>
-          <a href="portfolio.html"
-            ><i class="fa-solid fa-briefcase"></i>&nbsp; PORTFOLIO</a
-          >
-        </li>
-        <li>
-          <a href="contact.html"
-            ><i class="fa-solid fa-phone"></i>&nbsp; CONTACT</a
-          >
-        </li>
-      </ul>
-      <li>
-       <a href="login.html" class="signup">&nbsp; Login</a>
-      </li>
-    </div>
-<div class="kk">
-  <div class="all-blog">
-    <div class="title-text">
-        <h1>Recently Post</h1>
-    </div>
-    <div class="blog-slider">
-        <!-- Blog Slider Content -->
-        <div class="blog-slider__item">
-            <div class="blog-slider__content">
-                <span class="blog-slider__code">26 December 2023</span>
-                <div class="blog-slider__photo"><img class="profile-pic" src="images/Mugisha photo.jpeg" alt=""></div>
-                <div class="blog-slider__title">World coding Challenges</div>
-                <div class="blog-slider__text">Codeforces is one of the most used and well-known coding challenge and practice websites in the world, and it is sponsored by Telegram</div>
-                <div class="blog-slider__actions">
-                    <button class="blog-slider__like-button"><i class="fa-regular fa-thumbs-up"></i>&nbsp;Like</button>
-                    <button class="blog-slider__share-button"><i class="fa-solid fa-share"></i>&nbsp;Share</button>
-                    <button class="blog-slider__comment-button"><i class="fa-regular fa-comment"></i>&nbsp;Comment</button>
+      </div>
+      <div class="kk">
+        <section id="blog">
+          <div class="blog-heading">
+            <h3>Recently Blog</h3>
+          </div>
+          <div class="blog-box-container">
+            <div class="blog-box">
+              <div class="blog-author">
+                <div class="blog-author-img">
+                  <img alt="" src="images/Mugisha photo.jpeg" />
                 </div>
+                <div class="blog-author-text">
+                  <strong>Mugisha Emmanuel</strong>
+                  <span>Dec 02, 2024</span>
+                </div>
+              </div>
+              <div class="blog-box-img">
+                <img alt="blog" src="images/coding.jpeg" />
+                <a href="#" class="blog-img-link">
+                  <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                </a>
+              </div>
+              <div class="blog-box-text">
+                <a href="#"
+                  >The ICPC International Collegiate Programming Contest</a
+                >
+                <p>
+                  The International Collegiate Programming Contest is an
+                  algorithmic programming contest for college students. Teams of
+                  three, representing their university, work to solve the most
+                  real-world problems, fostering collaboration, creativity,
+                  innovation, and the ability to perform under pressure. Through
+                  training and competition, teams challenge each other to raise
+                  the bar on the possible. Quite simply, it is the oldest,
+                  largest, and most prestigious programming contest in the
+                  world.
+                </p>
+                <div class="blog-slider__actions">
+                  <button class="blog-slider__like-button">
+                    <i class="fa-regular fa-thumbs-up"></i>&nbsp;Like
+                  </button>
+                  <button class="blog-slider__share-button">
+                    <i class="fa-solid fa-share"></i>&nbsp;Share
+                  </button>
+                  <button class="blog-slider__comment-button">
+                    <i class="fa-regular fa-comment"></i>&nbsp;Comment
+                  </button>
+                </div>
+              </div>
             </div>
-        </div>
-    </div> 
-    <a href="#" target="_blank" rel="noopener noreferrer" class="blog-slider__button">Read More...</a>
-  </div>
+            <div class="blog-box">
+              <div class="blog-author">
+                <div class="blog-author-img">
+                  <img alt="" src="images/Mugisha photo.jpeg" />
+                </div>
+                <div class="blog-author-text">
+                  <strong>Mugisha Emmanuel</strong>
+                  <span>Dec 02, 2024</span>
+                </div>
+              </div>
+              <div class="blog-box-img">
+                <img alt="blog" src="images/coding.jpeg" />
+                <a href="#" class="blog-img-link">
+                  <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                </a>
+              </div>
+              <div class="blog-box-text">
+                <a href="#"
+                  >The ICPC International Collegiate Programming Contest</a
+                >
+                <p>
+                  The International Collegiate Programming Contest is an
+                  algorithmic programming contest for college students. Teams of
+                  three, representing their university, work to solve the most
+                  real-world problems, fostering collaboration, creativity,
+                  innovation, and the ability to perform under pressure. Through
+                  training and competition, teams challenge each other to raise
+                  the bar on the possible. Quite simply, it is the oldest,
+                  largest, and most prestigious programming contest in the
+                  world.
+                </p>
+                <div class="blog-slider__actions">
+                  <button class="blog-slider__like-button">
+                    <i class="fa-regular fa-thumbs-up"></i>&nbsp;Like
+                  </button>
+                  <button class="blog-slider__share-button">
+                    <i class="fa-solid fa-share"></i>&nbsp;Share
+                  </button>
+                  <button class="blog-slider__comment-button">
+                    <i class="fa-regular fa-comment"></i>&nbsp;Comment
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div class="blog-box">
+              <div class="blog-author">
+                <div class="blog-author-img">
+                  <img alt="" src="images/Mugisha photo.jpeg" />
+                </div>
+                <div class="blog-author-text">
+                  <strong>Mugisha Emmanuel</strong>
+                  <span>Dec 02, 2024</span>
+                </div>
+              </div>
+              <div class="blog-box-img">
+                <img alt="blog" src="images/coding.jpeg" />
+                <a href="#" class="blog-img-link">
+                  <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                </a>
+              </div>
+              <div class="blog-box-text">
+                <a href="#"
+                  >The ICPC International Collegiate Programming Contest</a
+                >
+                <p>
+                  The International Collegiate Programming Contest is an
+                  algorithmic programming contest for college students. Teams of
+                  three, representing their university, work to solve the most
+                  real-world problems, fostering collaboration, creativity,
+                  innovation, and the ability to perform under pressure. Through
+                  training and competition, teams challenge each other to raise
+                  the bar on the possible. Quite simply, it is the oldest,
+                  largest, and most prestigious programming contest in the
+                  world.
+                </p>
+                <div class="blog-slider__actions">
+                  <button class="blog-slider__like-button">
+                    <i class="fa-regular fa-thumbs-up"></i>&nbsp;Like
+                  </button>
+                  <button class="blog-slider__share-button">
+                    <i class="fa-solid fa-share"></i>&nbsp;Share
+                  </button>
+                  <button class="blog-slider__comment-button">
+                    <i class="fa-regular fa-comment"></i>&nbsp;Comment
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <button type="button" class="seemore">
+            <i class="fa-solid fa-angles-right"></i>
+          </button>
+        </section>
+      </div>
       <div class="content-2">
-      <p>
-        Enter email below to Subscribe and get email notifications to read a new article when is posted on 
-        the website:
-      </p>
-   <form id="subscribe-form">
-    <div class="sub-field">
-        <input type="email" id="email" placeholder="Enter your email" />
-        <div id="email-error" class="error-message"></div>
+        <p>
+          Subscribe to get email notifications when a new article is posted on
+          website:
+        </p>
+        <form id="subscribe-form">
+            <div id="email-error" class="error-message"></div>
+          <input type="email" id="email" placeholder="Enter your email" />
+          <input type="submit" class="sub" value="Subscribe" />
+        </form>
+      </div>
+      <div class="social-media-icon">
+        <ul class="social-media-list">
+          <li>
+            <a href="#" target="_blank" class="contact-icon"
+              ><i class="fa-brands fa-github"></i
+            ></a>
+          </li>
+          <li>
+            <a href="#" target="_blank" class="contact-icon"
+              ><i class="fa-brands fa-linkedin"></i
+            ></a>
+          </li>
+          <li>
+            <a href="#" target="_blank" class="contact-icon"
+              ><i class="fa-brands fa-instagram"></i
+            ></a>
+          </li>
+        </ul>
+        <div class="copyright">
+          &copy; EL3.COM &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; FOLLOW ME ON SOCIAL
+          NETWORKS
+        </div>
+      </div>
     </div>
-    <input type="submit" class="sub" value="Subscribe">
-</form>
-    </div-->
-  <div class="social-media-icon">
-    <hr>
-    <ul class="social-media-list">
-      <li><a href="#" target="_blank" class="contact-icon"><i class="fa-brands fa-github"></i></a></li>
-      <li><a href="#" target="_blank" class="contact-icon"><i class="fa-brands fa-linkedin"></i></a></li>
-      <li><a href="#" target="_blank" class="contact-icon"><i class="fa-brands fa-instagram"></i></a></li>       
-    </ul>
-    <div class="copyright"> &copy; EL3.COM &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; FOLLOW ME ON SOCIAL NETWORKS</div>
-    <hr>
-  </div>
-</div>
-<script>
-   document.getElementById("subscribe-form").addEventListener("submit", function(event) {
-        clearErrors();
+    <script>
 
-        var emailInput = document.getElementById("email");
-        var email = emailInput.value.trim();
+      //VALIDATION
+      document
+        .getElementById("subscribe-form")
+        .addEventListener("submit", function (event) {
+          clearErrors();
 
-      
-        if (email === "") {
+          var emailInput = document.getElementById("email");
+          var email = emailInput.value.trim();
+
+          if (email === "") {
             showError("email-error", "Please enter your email.");
             emailInput.classList.add("error");
             event.preventDefault();
             return false;
-        } else if (!validateEmail(email)) { 
+          } else if (!validateEmail(email)) {
             showError("email-error", "Please enter a valid email address.");
             emailInput.classList.add("error");
             event.preventDefault();
             return false;
-        }
-    });
+          }
+        });
 
-   
-    function validateEmail(email) {
+      function validateEmail(email) {
         var re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
         return re.test(email);
-    }
+      }
 
- 
-    function clearErrors() {
+      function clearErrors() {
         document.getElementById("email-error").innerHTML = "";
         document.getElementById("email").classList.remove("error");
-    }
+      }
 
-    function showError(elementId, message) {
+      function showError(elementId, message) {
         document.getElementById(elementId).innerHTML = message;
-    }
+      }
 
-  function toggleNav() {
-  var nav = document.getElementById("navbar");
-  if (nav.style.display === "none") {
-    nav.style.display = "block";
-  } else {
-    nav.style.display = "none";
+/*
+      //DISPLAY BLOG
+       document.addEventListener('DOMContentLoaded', function() {
+  var blogBoxes = document.querySelectorAll('.blog-box');
+  var blogData = JSON.parse(localStorage.getItem('blogData')) || [];
+
+  function renderBlogPost(blog) {
+    var blogBox = document.createElement('div');
+    blogBox.classList.add('blog-box');
+
+    var blogAuthor = document.createElement('div');
+    blogAuthor.classList.add('blog-author');
+
+  
+    var authorImg = document.createElement('div');
+    authorImg.classList.add('blog-author-img');
+    var img = document.createElement('img');
+    img.src = 'images/Mugisha photo.jpeg'; 
+    authorImg.appendChild(img);
+
+    var authorText = document.createElement('div');
+    authorText.classList.add('blog-author-text');
+    var strong = document.createElement('strong');
+    strong.textContent = blog.author;
+    var span = document.createElement('span');
+    span.textContent = blog.date;
+    authorText.appendChild(strong);
+    authorText.appendChild(span);
+
+    blogAuthor.appendChild(authorImg);
+    blogAuthor.appendChild(authorText);
+
+    var blogImg = document.createElement('div');
+    blogImg.classList.add('blog-box-img');
+    var imgLink = document.createElement('a');
+    imgLink.href = '#'; // Change this to the appropriate link
+    var arrowIcon = document.createElement('i');
+    arrowIcon.classList.add('fa-solid', 'fa-arrow-up-right-from-square');
+    imgLink.appendChild(arrowIcon);
+    blogImg.appendChild(imgLink);
+
+    var blogText = document.createElement('div');
+    blogText.classList.add('blog-box-text');
+    var titleLink = document.createElement('a');
+    titleLink.href = '#'; // Change this to the appropriate link
+    titleLink.textContent = blog.title;
+    var contentParagraph = document.createElement('p');
+    contentParagraph.textContent = blog.content;
+
+  
+    blogText.appendChild(titleLink);
+    blogText.appendChild(contentParagraph);
+
+   
+    var actionsDiv = document.createElement('div');
+    actionsDiv.classList.add('blog-slider__actions');
+    var likeButton = document.createElement('button');
+    likeButton.classList.add('blog-slider__like-button');
+    likeButton.innerHTML = '<i class="fa-regular fa-thumbs-up"></i>&nbsp;Like'; 
+    var shareButton = document.createElement('button');
+    shareButton.classList.add('blog-slider__share-button');
+    shareButton.innerHTML = '<i class="fa-solid fa-share"></i>&nbsp;Share';
+    var commentButton = document.createElement('button');
+    commentButton.classList.add('blog-slider__comment-button');
+    commentButton.innerHTML = '<i class="fa-regular fa-comment"></i>&nbsp;Comment'; 
+
+  
+    actionsDiv.appendChild(likeButton);
+    actionsDiv.appendChild(shareButton);
+    actionsDiv.appendChild(commentButton);
+
+  
+    blogBox.appendChild(blogAuthor);
+    blogBox.appendChild(blogImg);
+    blogBox.appendChild(blogText);
+    blogBox.appendChild(actionsDiv);
+
+    var blogContainer = document.querySelector('.blog-box-container');
+    blogContainer.appendChild(blogBox);
   }
-}
 
-</script>
-</body>
+  blogData.forEach(function(blog) {
+    renderBlogPost(blog);
+  });
+/*
+  // Function to add a new blog post
+  function addNewBlogPost(blog) {
+    renderBlogPost(blog);
+
+    // Optionally, you can also update the localStorage with the new blog post data
+    localStorage.setItem('blogData', JSON.stringify(blogData));
+  }
+
+  var postForm = document.getElementById('post-form');
+  postForm.addEventListener('submit', function(event) {
+    event.preventDefault();
+
+    // Get data from the form
+    var title = document.getElementById('post-title').value.trim();
+    var content = document.getElementById('post-content').value.trim();
+    var image = document.getElementById('project_image').files[0]; // Get the selected file
+
+    // Construct a new blog object
+    var newBlog = {
+      id: Math.floor(Math.random() * 1000), // Generate a random ID
+      author: 'Mugisha Emmanuel', // Change this to the appropriate author
+      date: new Date().toLocaleDateString(), // Use current date
+      title: title,
+      content: content,
+      image: image // Add logic to handle image if needed
+    };
+
+    // Add the new blog to the existing blogs
+    blogData.push(newBlog);
+
+    // Call the function to add the new blog post to the DOM
+    addNewBlogPost(newBlog);
+
+    // Show a success message or perform any other necessary actions
+    alert('Blog post added successfully!');
+  });*/
+
+
+//});     
+
+
+
+
+/*
+ function displayBlogs() {
+                var blogContainer = document.querySelector('.blog-box-container');
+                var blogs = JSON.parse(localStorage.getItem('blogData')) || [];
+
+                // Clear existing content
+                blogContainer.innerHTML = '';
+
+                // Loop through blogs and render each one
+                blogs.forEach(function(blog) {
+                    var blogBox = document.createElement('div');
+                    blogBox.classList.add('blog-box');
+
+                    // Create and append blog content here
+
+                    blogContainer.appendChild(blogBox);
+                });
+            }
+
+            // Call displayBlogs when the page loads
+            window.onload = displayBlogs;
+
+      function toggleNav() {
+        var nav = document.getElementById("navbar");
+        if (nav.style.display === "none") {
+          nav.style.display = "block";
+        } else {
+          nav.style.display = "none";
+        }
+      }*/
+    </script>
+  </body>
 </html>
-
-
-
-
-
-
-
-
