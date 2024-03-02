@@ -207,7 +207,7 @@
           website:
         </p>
         <form id="subscribe-form">
-            <div id="email-error" class="error-message"></div>
+          <div id="email-error" class="error-message"></div>
           <input type="email" id="email" placeholder="Enter your email" />
           <input type="submit" class="sub" value="Subscribe" />
         </form>
@@ -237,7 +237,6 @@
       </div>
     </div>
     <script>
-
       //VALIDATION
       document
         .getElementById("subscribe-form")
@@ -274,156 +273,124 @@
         document.getElementById(elementId).innerHTML = message;
       }
 
-/*
       //DISPLAY BLOG
-       document.addEventListener('DOMContentLoaded', function() {
-  var blogBoxes = document.querySelectorAll('.blog-box');
-  var blogData = JSON.parse(localStorage.getItem('blogData')) || [];
+      document.addEventListener("DOMContentLoaded", function () {
+        var blogBoxes = document.querySelectorAll(".blog-box");
+        var blogData = JSON.parse(localStorage.getItem("blogData")) || [];
 
-  function renderBlogPost(blog) {
-    var blogBox = document.createElement('div');
-    blogBox.classList.add('blog-box');
+        function renderBlogPost(blog) {
+          var blogBox = document.createElement("div");
+          blogBox.classList.add("blog-box");
 
-    var blogAuthor = document.createElement('div');
-    blogAuthor.classList.add('blog-author');
+          var blogAuthor = document.createElement("div");
+          blogAuthor.classList.add("blog-author");
 
-  
-    var authorImg = document.createElement('div');
-    authorImg.classList.add('blog-author-img');
-    var img = document.createElement('img');
-    img.src = 'images/Mugisha photo.jpeg'; 
-    authorImg.appendChild(img);
+          var authorImg = document.createElement("div");
+          authorImg.classList.add("blog-author-img");
+          var img = document.createElement("img");
+          img.src = "images/Mugisha photo.jpeg";
+          authorImg.appendChild(img);
 
-    var authorText = document.createElement('div');
-    authorText.classList.add('blog-author-text');
-    var strong = document.createElement('strong');
-    strong.textContent = blog.author;
-    var span = document.createElement('span');
-    span.textContent = blog.date;
-    authorText.appendChild(strong);
-    authorText.appendChild(span);
+          var authorText = document.createElement("div");
+          authorText.classList.add("blog-author-text");
+          var strong = document.createElement("strong");
+          strong.textContent = blog.author;
+          var span = document.createElement("span");
+          span.textContent = blog.date;
+          authorText.appendChild(strong);
+          authorText.appendChild(span);
 
-    blogAuthor.appendChild(authorImg);
-    blogAuthor.appendChild(authorText);
+          blogAuthor.appendChild(authorImg);
+          blogAuthor.appendChild(authorText);
 
-    var blogImg = document.createElement('div');
-    blogImg.classList.add('blog-box-img');
-    var imgLink = document.createElement('a');
-    imgLink.href = '#'; // Change this to the appropriate link
-    var arrowIcon = document.createElement('i');
-    arrowIcon.classList.add('fa-solid', 'fa-arrow-up-right-from-square');
-    imgLink.appendChild(arrowIcon);
-    blogImg.appendChild(imgLink);
+          var blogImg = document.createElement("div");
+          blogImg.classList.add("blog-box-img");
 
-    var blogText = document.createElement('div');
-    blogText.classList.add('blog-box-text');
-    var titleLink = document.createElement('a');
-    titleLink.href = '#'; // Change this to the appropriate link
-    titleLink.textContent = blog.title;
-    var contentParagraph = document.createElement('p');
-    contentParagraph.textContent = blog.content;
+          var img = document.createElement("img");
+          img.alt = "blog";
 
-  
-    blogText.appendChild(titleLink);
-    blogText.appendChild(contentParagraph);
+          // Retrieve the image source from local storage
+          var storedImage = localStorage.getItem("storedImage");
+          if (storedImage) {
+            img.src = storedImage;
+          } else {
+            // Set a default image source if there's none in local storage
+            img.src = "images/membership.jpeg";
+          }
 
-   
-    var actionsDiv = document.createElement('div');
-    actionsDiv.classList.add('blog-slider__actions');
-    var likeButton = document.createElement('button');
-    likeButton.classList.add('blog-slider__like-button');
-    likeButton.innerHTML = '<i class="fa-regular fa-thumbs-up"></i>&nbsp;Like'; 
-    var shareButton = document.createElement('button');
-    shareButton.classList.add('blog-slider__share-button');
-    shareButton.innerHTML = '<i class="fa-solid fa-share"></i>&nbsp;Share';
-    var commentButton = document.createElement('button');
-    commentButton.classList.add('blog-slider__comment-button');
-    commentButton.innerHTML = '<i class="fa-regular fa-comment"></i>&nbsp;Comment'; 
+          var imgLink = document.createElement("a");
+          imgLink.href = "#";
+          imgLink.classList.add("blog-img-link");
 
-  
-    actionsDiv.appendChild(likeButton);
-    actionsDiv.appendChild(shareButton);
-    actionsDiv.appendChild(commentButton);
+          var arrowIcon = document.createElement("i");
+          arrowIcon.classList.add("fa-solid", "fa-arrow-up-right-from-square");
 
-  
-    blogBox.appendChild(blogAuthor);
-    blogBox.appendChild(blogImg);
-    blogBox.appendChild(blogText);
-    blogBox.appendChild(actionsDiv);
+          imgLink.appendChild(arrowIcon);
+          blogImg.appendChild(img);
+          blogImg.appendChild(imgLink);
 
-    var blogContainer = document.querySelector('.blog-box-container');
-    blogContainer.appendChild(blogBox);
-  }
+          var blogText = document.createElement("div");
+          blogText.classList.add("blog-box-text");
+          var titleLink = document.createElement("a");
+          titleLink.href = "#"; // link
+          titleLink.textContent = blog.title;
+          var contentParagraph = document.createElement("p");
+          contentParagraph.textContent = blog.content;
+          blogText.appendChild(titleLink);
+          blogText.appendChild(contentParagraph);
+          var actionsDiv = document.createElement("div");
+          actionsDiv.classList.add("blog-slider__actions");
+          var likeButton = document.createElement("button");
+          likeButton.classList.add("blog-slider__like-button");
+          likeButton.innerHTML =
+            '<i class="fa-regular fa-thumbs-up"></i>&nbsp;Like';
+          var shareButton = document.createElement("button");
+          shareButton.classList.add("blog-slider__share-button");
+          shareButton.innerHTML =
+            '<i class="fa-solid fa-share"></i>&nbsp;Share';
+          var commentButton = document.createElement("button");
+          commentButton.classList.add("blog-slider__comment-button");
+          commentButton.innerHTML =
+            '<i class="fa-regular fa-comment"></i>&nbsp;Comment';
+          actionsDiv.appendChild(likeButton);
+          actionsDiv.appendChild(shareButton);
+          actionsDiv.appendChild(commentButton);
+          blogBox.appendChild(blogAuthor);
+          blogBox.appendChild(blogImg);
+          blogBox.appendChild(blogText);
+          blogBox.appendChild(actionsDiv);
+          var blogContainer = document.querySelector(".blog-box-container");
+          blogContainer.appendChild(blogBox);
+        }
 
-  blogData.forEach(function(blog) {
-    renderBlogPost(blog);
-  });
-/*
-  // Function to add a new blog post
-  function addNewBlogPost(blog) {
-    renderBlogPost(blog);
+        blogData.forEach(function (blog) {
+          renderBlogPost(blog);
+        });
 
-    // Optionally, you can also update the localStorage with the new blog post data
-    localStorage.setItem('blogData', JSON.stringify(blogData));
-  }
+        function addNewBlogPost(blog) {
+          renderBlogPost(blog);
+          localStorage.setItem("blogData", JSON.stringify(blogData));
+        }
 
-  var postForm = document.getElementById('post-form');
-  postForm.addEventListener('submit', function(event) {
-    event.preventDefault();
-
-    // Get data from the form
-    var title = document.getElementById('post-title').value.trim();
-    var content = document.getElementById('post-content').value.trim();
-    var image = document.getElementById('project_image').files[0]; // Get the selected file
-
-    // Construct a new blog object
-    var newBlog = {
-      id: Math.floor(Math.random() * 1000), // Generate a random ID
-      author: 'Mugisha Emmanuel', // Change this to the appropriate author
-      date: new Date().toLocaleDateString(), // Use current date
-      title: title,
-      content: content,
-      image: image // Add logic to handle image if needed
-    };
-
-    // Add the new blog to the existing blogs
-    blogData.push(newBlog);
-
-    // Call the function to add the new blog post to the DOM
-    addNewBlogPost(newBlog);
-
-    // Show a success message or perform any other necessary actions
-    alert('Blog post added successfully!');
-  });*/
-
-
-//});     
-
-
-
-
-/*
- function displayBlogs() {
-                var blogContainer = document.querySelector('.blog-box-container');
-                var blogs = JSON.parse(localStorage.getItem('blogData')) || [];
-
-                // Clear existing content
-                blogContainer.innerHTML = '';
-
-                // Loop through blogs and render each one
-                blogs.forEach(function(blog) {
-                    var blogBox = document.createElement('div');
-                    blogBox.classList.add('blog-box');
-
-                    // Create and append blog content here
-
-                    blogContainer.appendChild(blogBox);
-                });
-            }
-
-            // Call displayBlogs when the page loads
-            window.onload = displayBlogs;
-
+        var postForm = document.getElementById("post-form");
+        postForm.addEventListener("submit", function (event) {
+          event.preventDefault();
+          var title = document.getElementById("post-title").value.trim();
+          var content = document.getElementById("post-content").value.trim();
+          var image = document.getElementById("project_image").files[0];
+          var newBlog = {
+            id: Math.floor(Math.random() * 1000),
+            author: "Mugisha Emmanuel",
+            date: new Date().toLocaleDateString(),
+            title: title,
+            content: content,
+            image: image,
+          };
+          blogData.push(newBlog);
+          addNewBlogPost(newBlog);
+          alert("Blog post added successfully!");
+        });
+      });
       function toggleNav() {
         var nav = document.getElementById("navbar");
         if (nav.style.display === "none") {
@@ -431,7 +398,7 @@
         } else {
           nav.style.display = "none";
         }
-      }*/
+      }
     </script>
   </body>
 </html>
