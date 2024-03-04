@@ -117,7 +117,6 @@ nav.ul {
   margin-top: 50px;
 }
 
-
 #email {
   width: 70%;
   border-radius: 10px;
@@ -150,7 +149,6 @@ textarea {
 .social-media-icon {
   width: 50%;
   float: right;
-
 }
 .social-media-list {
   position: relative;
@@ -203,7 +201,7 @@ textarea {
 }
 
 .social-media-list li:hover a {
-  color: white;
+  color: rgb(0, 0, 0);
 }
 
 .copyright {
@@ -274,6 +272,8 @@ ul {
 .blog-box-container {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
+  grid-column-gap: 20px;
+  grid-row-gap: 20px;
   margin-top: 50px;
   max-width: 1350px;
   width: 90%;
@@ -418,7 +418,7 @@ ul {
   background-color: wheat;
   color: #020b14;
   border: 1px solid #020b14;
-    transform: scale(1.2);
+  transform: scale(1.2);
   transition: transform 0.5s ease-in-out;
   border-radius: 10px;
 }

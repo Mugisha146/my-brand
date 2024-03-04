@@ -1,0 +1,105 @@
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #020b14;
+  color: white;
+}
+.title {
+  margin: 50px;
+}
+.info {
+  display: flex;
+  flex-direction: column;
+  float: left;
+  margin: 20px;
+  margin-left: 10%;
+}
+
+.info img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  margin-bottom: 10px;
+}
+
+.info h1 {
+  margin: 5px 0;
+}
+
+.info p {
+  margin: 5px 0;
+}
+
+.butt button {
+  display: inline-block; 
+  padding: 10px 20px; 
+  background-color: #007bff; 
+  color: #fff;
+  border: none;
+  border-radius: 5px; 
+  cursor: pointer;
+  transition: background-color 0.3s; 
+  margin: 5px;
+}
+
+.butt button:hover {
+  background-color: #0056b3; 
+}
+
+.info-details {
+  display: flex;
+  flex-direction: column;
+  margin-top: 20px;
+  text-align: center;
+}
+
+.edit-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.setting-info {
+  margin-bottom: 10px;
+}
+
+.setting-info button {
+  margin: 5px;
+}
+
+.form-info {
+  border: 1px solid #ccc;
+  padding: 20px;
+}
+
+.form-info h2 {
+  margin-bottom: 10px;
+}
+
+.form-info label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.form-info input[type="text"],
+.form-info input[type="email"] {
+  width: 100%;
+  padding: 5px;
+  margin-bottom: 10px;
+}
+
+.form-info input[type="submit"] {
+  width: 100%;
+  padding: 10px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+}
+
+.form-info input[type="submit"]:hover {
+  background-color: #0056b3;
+}

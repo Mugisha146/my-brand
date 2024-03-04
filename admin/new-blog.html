@@ -130,7 +130,16 @@
         </form>
     </div>
 <!--We know among Software developer in Africa has each company or entity they belongs in but you think it is enough cause when it comes to the collaborate each one do in their way what if we found organisation called Master code Membership in Africa?-->
-    <!--Delete an existing article -->
+<!-- Display Blogs -->
+<div class="blog-list">
+    <h2 style="text-align: center;color: aliceblue;">Blog List</h2>
+    <ul id="blog-list-container">
+        <!-- Blogs will be dynamically added here -->
+    </ul>
+</div>   
+
+
+<!--Delete an existing article -->
     <div class="delete-article">
         <h2 style="text-align: center;color: aliceblue;">Delete Existing Article</h2>
         <form class="delete-form" id="delete-form">
@@ -320,6 +329,24 @@ function clearError(elementId) {
       }
     });
   });
+// Function to display blogs
+function displayBlogs() {
+    var existingBlogs = JSON.parse(localStorage.getItem('blogData')) || [];
+
+    var blogListContainer = document.getElementById('blog-list-container');
+    blogListContainer.innerHTML = ''; // Clear previous entries
+
+    existingBlogs.forEach(function(blog) {
+        var li = document.createElement('li');
+        li.textContent = 'ID: ' + blog.id + ', Title: ' + blog.title;
+        blogListContainer.appendChild(li);
+    });
+}
+
+// Call the function to display blogs on page load
+document.addEventListener('DOMContentLoaded', function() {
+    displayBlogs();
+});
 
 
 

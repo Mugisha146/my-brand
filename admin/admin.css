@@ -89,7 +89,7 @@ body {
   left: 10px;
   top: 35%;
   transform: translateY(-50%);
-  color: #000000; 
+  color: #000000;
 }
 
 textarea {
@@ -128,14 +128,14 @@ textarea {
   color: #a0cefc;
 }
 .prev-message {
-  color: #fff9f9; 
-  font-size: 12px; 
-  margin-bottom: 5px; 
+  color: #fff9f9;
+  font-size: 12px;
+  margin-bottom: 5px;
 }
 
 .message-count {
-  color: #ffffff; 
-  font-size: 12px; 
+  color: #ffffff;
+  font-size: 12px;
 }
 .user1 {
   display: flex;
@@ -163,8 +163,6 @@ textarea {
   font-size: 14px;
 }
 
-
-
 .user1 .info .prev-message {
   color: #fffefe;
   font-size: 12px;
@@ -183,13 +181,11 @@ textarea {
   display: block;
 }
 
-
 .user1 .time-and-count {
   display: flex;
   flex-direction: column;
   align-items: flex-end;
   margin-left: auto;
- 
 }
 
 .user1 .time {
@@ -212,10 +208,9 @@ textarea {
   justify-content: center;
 }
 
-
 .user1 h6 {
   margin: 0;
-  color: #000000; 
+  color: #000000;
   font-size: 16px;
 }
 
@@ -225,10 +220,8 @@ textarea {
 .message-count {
   white-space: nowrap;
   overflow: hidden;
-  text-overflow: ellipsis; 
- 
+  text-overflow: ellipsis;
 }
-
 
 .see {
   padding: 10px 20px;
@@ -243,7 +236,6 @@ textarea {
 .see:hover {
   background-color: #86fde2;
 }
-
 
 nav.ul {
   width: 50%;
@@ -287,13 +279,77 @@ nav.ul {
   text-align: center;
 }
 
+.Btn {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  width: 45px;
+  height: 45px;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  transition-duration: 0.3s;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.199);
+  background-color: rgb(255, 65, 65);
+}
 
+/* plus sign */
+.sign {
+  width: 100%;
+  transition-duration: 0.3s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.sign svg {
+  width: 17px;
+}
+
+.sign svg path {
+  fill: white;
+}
+/* text */
+.text {
+  position: absolute;
+  right: 0%;
+  width: 0%;
+  opacity: 0;
+  color: white;
+  font-size: 1.2em;
+  font-weight: 600;
+  transition-duration: 0.3s;
+}
+/* hover effect on button width */
+.Btn:hover {
+  width: 125px;
+  border-radius: 40px;
+  transition-duration: 0.3s;
+}
+
+.Btn:hover .sign {
+  width: 30%;
+  transition-duration: 0.3s;
+  padding-left: 20px;
+}
+/* hover effect button's text */
+.Btn:hover .text {
+  opacity: 1;
+  width: 70%;
+  transition-duration: 0.3s;
+  padding-right: 10px;
+}
+/* button click effect*/
+.Btn:active {
+  transform: translate(2px, 2px);
+}
 
 @media only screen and (max-width: 768px) {
-    .nav {
+  .nav {
     display: none;
     float: left;
-
   }
 
   .navbar-toggle {
@@ -310,17 +366,15 @@ nav.ul {
     width: 100%;
     list-style-type: none;
     padding: 0;
-   
   }
 
   .nav li {
     display: block;
-      display: flex;
+    display: flex;
     width: auto;
     float: none;
     margin-left: 10px;
     margin-bottom: 10px;
-   
   }
 
   .signup {
@@ -329,30 +383,30 @@ nav.ul {
     margin-top: 10px;
     margin-left: -3px;
   }
-.title h1{
-  font-size: 16px;
-}
-  
-  .box3 {
-  display: flex;
-  flex-direction: column;
-  align-content: space-between;
+  .title h1 {
+    font-size: 16px;
   }
-  .dash-menu{
+
+  .box3 {
+    display: flex;
+    flex-direction: column;
+    align-content: space-between;
+  }
+  .dash-menu {
     width: auto;
     margin-bottom: 10px;
   }
-  .dash-count{
+  .dash-count {
     width: auto;
   }
-  .title img{
+  .title img {
     margin-right: 10px;
   }
-  .title h6{
+  .title h6 {
     margin-top: -30px;
-    margin-right:0 ;
+    margin-right: 0;
   }
-  .user1{
+  .user1 {
     display: inline;
   }
 }
@@ -379,32 +433,32 @@ nav.ul {
   .nav {
     margin-left: -27px;
   }
-   .user1{
+  .user1 {
     display: inline;
   }
-  
+
   .title img {
-    width: 60px; 
-    margin-top: -60px; 
+    width: 60px;
+    margin-top: -60px;
     margin-right: 10px;
   }
 
   .title h1 {
-    padding: 10px; 
+    padding: 10px;
   }
 
   .title h6 {
-    margin-top: 5px; 
+    margin-top: 5px;
     margin-right: 20px;
   }
 
   .admin-content {
-    padding: 20px; 
+    padding: 20px;
   }
 
   .box3 {
-    flex-direction: column; 
-    margin-right: 0; 
+    flex-direction: column;
+    margin-right: 0;
   }
 
   .dash-menu {
@@ -419,17 +473,15 @@ nav.ul {
   }
 
   .user-message {
-    padding: 20px; 
+    padding: 20px;
   }
 
   .all-message {
-    max-height: 200px; 
-    overflow-y: auto; 
+    max-height: 200px;
+    overflow-y: auto;
   }
 
   .butt {
     text-align: center;
   }
 }
-
-
