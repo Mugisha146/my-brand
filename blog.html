@@ -302,7 +302,6 @@
 
           var blogImg = document.createElement("div");
           blogImg.classList.add("blog-box-img");
-
           var img = document.createElement("img");
           img.alt = "blog";
 
@@ -311,10 +310,8 @@
           if (storedImage) {
             img.src = storedImage;
           } else {
-            // Set a default image source if there's none in local storage
             img.src = "images/membership.jpeg";
           }
-
           var imgLink = document.createElement("a");
           imgLink.href = "#";
           imgLink.classList.add("blog-img-link");
