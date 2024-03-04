@@ -327,6 +327,25 @@ nav.ul {
 #post-content-error {
   color: red;
 }
+.blog-list {
+  margin: 0;
+  padding: 0;
+}
+
+.blog-list li {
+  margin-bottom: 10px;
+  /* Add more styles for list items if needed */
+}
+
+#blog-list-container {
+  padding: 20px;
+  color: #020b14;
+  background-color: #f0f0f0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  list-style: none;
+  /* Add more styles for the container if needed */
+}
 
 /* Existing CSS styles */
 

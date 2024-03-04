@@ -196,9 +196,6 @@
               </div>
             </div>
           </div>
-          <button type="button" class="seemore">
-            <i class="fa-solid fa-angles-right"></i>
-          </button>
         </section>
       </div>
       <div class="content-2">
@@ -310,7 +307,7 @@
           img.alt = "blog";
 
           // Retrieve the image source from local storage
-          var storedImage = localStorage.getItem("storedImage");
+          var storedImage = localStorage.getItem("blogData.image");
           if (storedImage) {
             img.src = storedImage;
           } else {

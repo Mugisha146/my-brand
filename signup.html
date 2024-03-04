@@ -49,7 +49,7 @@
         </li>
       </ul>
       <li>
-        <a href="admin/admin.html" class="signup">&nbsp; ADMIN</a>
+        <a href="login.html" class="signup">&nbsp; Admin</a>
       </li>
     </div>
     <div class="whii">
@@ -139,7 +139,6 @@ document.getElementById('signup-form').addEventListener('submit', function(event
     var nameInput = document.getElementById('name');
     var emailInput = document.getElementById('email');
     var passwordInput = document.getElementById('password');
-    var photo = document.getElementById('photo').files[0]; 
     var role = document.getElementById('role').value;
     var confirmPasswordInput = document.getElementById('confirm-password');
     var nameError = document.getElementById('name-error');
@@ -176,13 +175,6 @@ document.getElementById('signup-form').addEventListener('submit', function(event
     } else {
         passwordError.textContent = '';
     }
- // Validation for password field
-    if (photo.value.trim() === '') {
-        photoError.textContent = 'photo is required';
-        isValid = false;
-    } else {
-        photoError.textContent = '';
-    }
      // Validation for password field
     if (role.value.trim() === '') {
         roleError.textContent = 'role is required';
@@ -211,13 +203,11 @@ document.getElementById('signup-form').addEventListener('submit', function(event
           var name = document.getElementById('name').value.trim();
           var email = document.getElementById('email').value.trim();
           var password = document.getElementById('password').value.trim();
-          var photo = document.getElementById('photo').files[0]; 
           var role = document.getElementById('role').value;
           var userData = {
               name: name,
               email: email,
               password: password,
-              photo:photo,
               role:role,
           };
           
