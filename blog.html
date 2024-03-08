@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Blogs</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -95,18 +95,21 @@
                   world.
                 </p>
                 <div class="blog-slider__actions">
-                  <button class="blog-slider__like-button">
-                    <i class="fa-regular fa-thumbs-up"></i>&nbsp;Like
-                  </button>
-                  <button class="blog-slider__share-button">
-                    <i class="fa-solid fa-share"></i>&nbsp;Share
-                  </button>
-                  <button class="blog-slider__comment-button">
-                    <i class="fa-regular fa-comment"></i>&nbsp;Comment
-                  </button>
-                </div>
-              </div>
-            </div>
+                  <!-- First blog box -->
+<button class="blog-slider__like-button" id="likeButton1">
+  <i class="fa-regular fa-thumbs-up"></i>&nbsp;Like
+  <span id="likeCount1">0</span>
+</button>
+<button class="blog-slider__share-button" id="shareButton1">
+  <i class="fa-solid fa-share"></i>&nbsp;Share
+</button>
+<button class="blog-slider__comment-button" id="showCommentForm">
+  <i class="fa-regular fa-comment"></i>&nbsp;Comment
+</button>                                                                                                                                                                               
+       <!-- Container for comment form -->
+  <div id="commentFormContainer"></div>
+            </div> </div> </div>
+
             <div class="blog-box">
               <div class="blog-author">
                 <div class="blog-author-img">
@@ -139,18 +142,21 @@
                   world.
                 </p>
                 <div class="blog-slider__actions">
-                  <button class="blog-slider__like-button">
-                    <i class="fa-regular fa-thumbs-up"></i>&nbsp;Like
-                  </button>
-                  <button class="blog-slider__share-button">
-                    <i class="fa-solid fa-share"></i>&nbsp;Share
-                  </button>
-                  <button class="blog-slider__comment-button">
-                    <i class="fa-regular fa-comment"></i>&nbsp;Comment
-                  </button>
-                </div>
+                  <!-- Second blog box -->
+<button class="blog-slider__like-button" id="likeButton2">
+  <i class="fa-regular fa-thumbs-up"></i>&nbsp;Like
+  <span id="likeCount2">0</span>
+</button>
+<button class="blog-slider__share-button" id="shareButton2">
+  <i class="fa-solid fa-share"></i>&nbsp;Share
+</button>
+<button class="blog-slider__comment-button" id="showCommentForm">
+  <i class="fa-regular fa-comment"></i>&nbsp;Comment
+</button> 
+ <!-- Container for comment form -->
+  <!--div id="commentFormContainer"></div-->
               </div>
-            </div>
+            </div> </div>
             <div class="blog-box">
               <div class="blog-author">
                 <div class="blog-author-img">
@@ -183,20 +189,25 @@
                   world.
                 </p>
                 <div class="blog-slider__actions">
-                  <button class="blog-slider__like-button">
-                    <i class="fa-regular fa-thumbs-up"></i>&nbsp;Like
-                  </button>
-                  <button class="blog-slider__share-button">
-                    <i class="fa-solid fa-share"></i>&nbsp;Share
-                  </button>
-                  <button class="blog-slider__comment-button">
-                    <i class="fa-regular fa-comment"></i>&nbsp;Comment
-                  </button>
-                </div>
+                  
+<!-- Third blog box -->
+<button class="blog-slider__like-button" id="likeButton3">
+  <i class="fa-regular fa-thumbs-up"></i>&nbsp;Like
+  <span id="likeCount3">0</span>
+</button>
+<button class="blog-slider__share-button" id="shareButton3">
+  <i class="fa-solid fa-share"></i>&nbsp;Share
+</button>
+<button class="blog-slider__comment-button" id="showCommentForm">
+  <i class="fa-regular fa-comment"></i>&nbsp;Comment
+</button> 
+ <!-- Container for comment form -->
+  <!--div id="commentFormContainer"></div-->
               </div>
             </div>
           </div>
         </section>
+        <a href="#" class="seemore">Read More</a>
       </div>
       <div class="content-2">
         <p>
@@ -369,6 +380,7 @@
           localStorage.setItem("blogData", JSON.stringify(blogData));
         }
 
+        //for add new blog
         var postForm = document.getElementById("post-form");
         postForm.addEventListener("submit", function (event) {
           event.preventDefault();
@@ -388,6 +400,301 @@
           alert("Blog post added successfully!");
         });
       });
+
+
+      //read more button
+      let loadmore=document.querySelector('.seemore');
+      let currentItem=3;
+      loadmore.addEventListener('click',function(){
+        let boxes=[...document.querySelectorAll('.blog-box-container .blog-box')];
+        for(let i =currentItem; i<currentItem+3;i++){
+          boxes[i].style.display='block';
+        }
+        currentItem+=3;
+        if(currentItem >=boxes.length){
+          loadmore.style.display='none';
+        }});
+
+
+
+      //like,share,comment
+      // JavaScript code for counting likes
+       // JavaScript code for counting likes for the first blog box
+  let likeCount1 = 0;
+  const likeButton1 = document.getElementById("likeButton1");
+  const likeCountElement1 = document.getElementById("likeCount1");
+
+  likeButton1.addEventListener("click", () => {
+    likeCount1++;
+    likeCountElement1.textContent = likeCount1;
+  });
+
+  // JavaScript code for sharing blog for the first blog box
+  const shareButton1 = document.getElementById("shareButton1");
+
+  shareButton1.addEventListener("click", async () => {
+    const shareData = {
+      title: "The ICPC International Collegiate Programming Contest",
+      text: "Check out this interesting blog about the ICPC!",
+      url: window.location.href,
+    };
+
+    try {
+      await navigator.share(shareData);
+      console.log("Shared successfully");
+    } catch (error) {
+      console.error("Error sharing:", error);
+    }
+  });
+
+
+
+  
+  //second blog
+   // JavaScript code for counting likes for the first blog box
+  let likeCount2 = 0;
+  const likeButton2 = document.getElementById("likeButton2");
+  const likeCountElement2 = document.getElementById("likeCount2");
+
+  likeButton2.addEventListener("click", () => {
+    likeCount2++;
+    likeCountElement2.textContent = likeCount2;
+  });
+
+  // JavaScript code for sharing blog for the first blog box
+  const shareButton2 = document.getElementById("shareButton2");
+
+  shareButton2.addEventListener("click", async () => {
+    const shareData = {
+      title: "The ICPC International Collegiate Programming Contest",
+      text: "Check out this interesting blog about the ICPC!",
+      url: window.location.href,
+    };
+
+    try {
+      await navigator.share(shareData);
+      console.log("Shared successfully");
+    } catch (error) {
+      console.error("Error sharing:", error);
+    }
+  });
+
+
+
+  //third blog
+   // JavaScript code for counting likes for the first blog box
+  let likeCount3 = 0;
+  const likeButton3 = document.getElementById("likeButton3");
+  const likeCountElement3 = document.getElementById("likeCount3");
+
+  likeButton3.addEventListener("click", () => {
+    likeCount3++;
+    likeCountElement3.textContent = likeCount3;
+  });
+
+  // JavaScript code for sharing blog for the first blog box
+  const shareButton3 = document.getElementById("shareButton3");
+
+  shareButton3.addEventListener("click", async () => {
+    const shareData = {
+      title: "The ICPC International Collegiate Programming Contest",
+      text: "Check out this interesting blog about the ICPC!",
+      url: window.location.href,
+    };
+
+    try {
+      await navigator.share(shareData);
+      console.log("Shared successfully");
+    } catch (error) {
+      console.error("Error sharing:", error);
+    }
+  });
+
+
+  // Function to initialize like, share, and comment functionalities for a single blog box
+function initializeBlogBoxFunctionalities(postId, likeButtonId, likeCountId, shareButtonId, commentButtonId, commentCountId, commentFormId, commentInputId, commentSectionId) {
+  // JavaScript code for counting likes
+  let likeCount = parseInt(localStorage.getItem(`likeCount_${postId}`)) || 0;
+  const likeButton = document.getElementById(likeButtonId);
+  const likeCountElement = document.getElementById(likeCountId);
+
+  likeButton.addEventListener("click", () => {
+    likeCount++;
+    likeCountElement.textContent = likeCount;
+    localStorage.setItem(`likeCount_${postId}`, likeCount);
+  });
+
+  // JavaScript code for sharing blog
+  const shareButton = document.getElementById(shareButtonId);
+
+  shareButton.addEventListener("click", async () => {
+    const shareData = {
+      title: "The ICPC International Collegiate Programming Contest",
+      text: "Check out this interesting blog about the ICPC!",
+      url: window.location.href,
+    };
+
+    try {
+      await navigator.share(shareData);
+      console.log("Shared successfully");
+    } catch (error) {
+      console.error("Error sharing:", error);
+    }
+  });
+}
+
+
+// Initialize functionalities for the first blog box
+initializeBlogBoxFunctionalities(
+  "post1",
+  "likeButton1",
+  "likeCount1",
+  "shareButton1",
+);
+
+// Initialize functionalities for the second blog box
+initializeBlogBoxFunctionalities(
+  "post2",
+  "likeButton2",
+  "likeCount2",
+  "shareButton2",
+);
+
+// Initialize functionalities for the third blog box
+initializeBlogBoxFunctionalities(
+  "post3",
+  "likeButton3",
+  "likeCount3",
+  "shareButton3",
+);
+
+
+//DISPLAY TOGGLE ON COMMENT
+      document
+        .getElementById("showCommentForm")
+        .addEventListener("click", function (event) {
+          event.preventDefault(); // Prevent the default action
+
+          // Add your code to handle changing password here
+          var commentFormContainer =
+            document.getElementById("commentFormContainer");
+          changePasswordForm.reset(); // Reset the form
+
+          // Get the modal and its close button
+          var modal = document.getElementById("card");
+          var closeButton = modal.querySelector(".close");
+
+          // Display the modal
+          modal.style.display = "block";
+
+          // When the user clicks on <span> (x), close the modal
+          closeButton.onclick = function () {
+            modal.style.display = "none";
+          };
+
+          // When the user clicks anywhere outside of the modal, close it
+          window.onclick = function (event) {
+            if (event.target == modal) {
+              modal.style.display = "none";
+            }
+          }
+        });
+
+
+
+
+
+    // Function to show comment form when the comment button is clicked
+    document.getElementById("showCommentForm").addEventListener("click", function() {
+      // HTML content of the comment form
+      const commentFormHTML = `
+        <div class="card">
+          <span class="title">Leave a Comment</span>
+          <form class="form">
+            <div class="group">
+              <input placeholder="" type="text" required="" />
+              <label for="name">Name</label>
+            </div>
+            <div class="group">
+              <input placeholder="" type="email" id="email" name="email" required="" />
+              <label for="email">Email</label>
+            </div>
+            <div class="group">
+              <textarea placeholder="" id="comment" name="comment" rows="5" required=""></textarea>
+              <label for="comment">Comment</label>
+            </div>
+            <button type="submit">Submit</button>
+          </form>
+          <div class="comments-container" id="commentsContainer">
+            <!-- Comments will be displayed here -->
+          </div>
+        </div>
+      `;
+      
+      // Insert the comment form HTML into the commentFormContainer
+      document.getElementById("commentFormContainer").innerHTML = commentFormHTML;
+      
+      // Add event listener for form submission
+      document.querySelector(".form").addEventListener("submit", function(event) {
+        event.preventDefault();
+
+        const name = this.querySelector('input[type="text"]').value;
+        const email = this.querySelector('input[type="email"]').value;
+        const comment = this.querySelector("textarea").value;
+
+        if (name && email && comment) {
+          const commentElement = document.createElement("div");
+          commentElement.classList.add("comment");
+          commentElement.innerHTML = `
+            <div><strong>${name}</strong> (${email})</div>
+            <div>${comment}</div>
+            <button class="replyBtn">Reply</button>
+          `;
+          document.getElementById("commentsContainer").prepend(commentElement);
+
+          // Clear form fields
+          this.reset();
+        } else {
+          alert("Please fill in all fields.");
+        }
+      });
+      
+      // Add event listeners for reply functionality
+      document.getElementById("commentsContainer").addEventListener("click", function(event) {
+        if (event.target.classList.contains("replyBtn")) {
+          const comment = event.target.closest(".comment");
+          const name = comment.querySelector("strong").innerText;
+          const replyTextarea = document.createElement("textarea");
+          replyTextarea.placeholder = `Reply to ${name}`;
+          comment.appendChild(replyTextarea);
+          const replyButton = document.createElement("button");
+          replyButton.innerText = "Submit Reply";
+          replyButton.classList.add("replySubmit");
+          comment.appendChild(replyButton);
+          event.target.remove();
+        }
+      });
+      
+      // Add event listener for submitting replies
+      document.getElementById("commentsContainer").addEventListener("click", function(event) {
+        if (event.target.classList.contains("replySubmit")) {
+          const replyTextarea = event.target.previousElementSibling;
+          const reply = replyTextarea.value;
+          if (reply) {
+            const replyElement = document.createElement("div");
+            replyElement.classList.add("reply");
+            replyElement.innerHTML = `<strong>You:</strong> ${reply}`;
+            event.target.parentElement.insertBefore(replyElement, replyTextarea);
+            replyTextarea.remove();
+            event.target.remove();
+          } else {
+            alert("Please enter a reply.");
+          }
+        }
+      });
+    });
+
+//toggle on nav
       function toggleNav() {
         var nav = document.getElementById("navbar");
         if (nav.style.display === "none") {

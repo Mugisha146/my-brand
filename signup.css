@@ -28,9 +28,9 @@ body {
 }
 
 .error-message {
-    color: red;
-    font-size: 12px;
-    margin-top: 5px;
+  color: red;
+  font-size: 12px;
+  margin-top: 5px;
 }
 
 .holder .parent h3 {
@@ -43,7 +43,7 @@ body {
   background-color: #020b14;
   color: white;
   float: right;
-  border:1px solid #fff;
+  border: 1px solid #fff;
   padding: 10px;
   margin-top: -8px;
   border-radius: 5px;
@@ -148,7 +148,6 @@ h4 {
 nav.ul {
   width: 50%;
   color: white;
- 
 }
 
 .nav li {
@@ -171,10 +170,13 @@ nav.ul {
   background-color: #fff;
   border-radius: 5px;
   padding: 10px;
-   transform: scale(1.2);
+  transform: scale(1.2);
   transition: transform 0.5s ease-in-out;
 }
-
+#role {
+  background-color: #020b14;
+  color: #fff;
+}
 .text-center {
   text-align: center;
 }
@@ -289,14 +291,13 @@ hr {
     margin-top: 10px;
     margin-left: -30px;
   }
-    .nav {
+  .nav {
     display: none;
     float: left;
-
   }
-.copyright{
-  font-size: 10px;
-}
+  .copyright {
+    font-size: 10px;
+  }
   .navbar-toggle {
     display: block;
     text-align: left;
@@ -311,28 +312,25 @@ hr {
     width: 100%;
     list-style-type: none;
     padding: 0;
-   
   }
 
   .nav li {
     display: block;
-      display: flex;
+    display: flex;
     width: auto;
     float: none;
     margin-left: 10px;
     margin-bottom: 10px;
-   
   }
-.nav{
-  margin-left: -40px;
-}
+  .nav {
+    margin-left: -40px;
+  }
   .signup {
     float: left;
     margin: 0 auto;
     margin-top: 10px;
     margin-left: 43px;
   }
-
 }
 
 @media only screen and (max-width: 1024px) and (min-width: 768px) {
