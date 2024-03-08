@@ -9,13 +9,13 @@
 </head>
 <body>
 <div class="about-content">
-       <!-- navigation toggle button -->
+      <!-- navigation toggle button -->
     <div class="navbar-toggle" onclick="toggleNav()">
       <i class="fas fa-bars"></i>
     </div>
 
     <!-- nav -->
-       <div class="nav" id="navbar">
+      <div class="nav" id="navbar">
     
       <ul class="text-center">
         <li>
@@ -59,7 +59,7 @@
                 <a href="#" class="social"><i class="fa-brands fa-linkedin"></i></a>
             </div>
             <div class="login-form">
-               <form id="login-form">
+              <form id="login-form">
     <div class="form-group">
         <label class="form-control-label">EMAIL</label>
         <input type="text" id="username" class="form-control" placeholder="Enter your email">
@@ -69,22 +69,22 @@
         <label class="form-control-label">PASSWORD</label>
         <input type="password" id="password" class="form-control" placeholder="Enter your password">
         <div id="password-error" class="error-message"></div>
-    </div>
-    <div class="login-btm">
-        <div class="login-text"></div>
-        <div class="login-button">
-            <button type="submit" class="btn btn-outline-primary">LOGIN</button>
-        </div>
-    </div>
+</div>
+<div class="login-btm">
+<div class="login-text"></div>
+<div class="login-button">
+<button type="submit" class="btn btn-outline-primary">LOGIN</button>
+</div>
+</div>
 </form>
 
-            </div>
-        </div>
-    </div>
-    <div class="social-media-icon">
-        <ul class="social-media-list">
-          <li><a href="#" target="_blank" class="contact-icon">
-              <i class="fa-brands fa-github"></i></a>
+</div>
+</div>
+</div>
+<div class="social-media-icon">
+<ul class="social-media-list">
+<li><a href="#" target="_blank" class="contact-icon">
+<i class="fa-brands fa-github"></i></a>
           </li>
           <li><a href="#" target="_blank" class="contact-icon">
               <i class="fa-brands fa-linkedin"></i></a>
@@ -95,8 +95,8 @@
         </ul>
         <div class="copyright"> &copy; EL3.COM &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; FOLLOW ME ON SOCIAL NETWORKS</div>
     </div>
-     <script>
-             document.getElementById('login-form').addEventListener('submit', function(event) {
+    <script>
+            document.getElementById('login-form').addEventListener('submit', function(event) {
             event.preventDefault();
 
             var usernameInput = document.getElementById('username');
@@ -124,9 +124,9 @@
                 if (userData && userData.email === usernameInput.value.trim() && userData.password === passwordInput.value.trim()) {
                   if(userData.email=='emmyzizo1@gmail.com'){
                     window.location.href = 'admin/admin.html';
-                   }else{
-                     window.location.href = 'home.html';
-                   }
+                  }else{
+                    window.location.href = 'home.html';
+                  }
                 } else {
                     usernameError.textContent = 'Invalid email or password';
                     passwordError.textContent = 'Invalid email or password';
