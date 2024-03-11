@@ -1,10 +1,9 @@
-* {
-  color: #fff;
-}
 body {
   font-family: "Work Sans", sans-serif;
   box-sizing: border-box;
-  background-color: #020b14;
+  background-color: #ffffff;
+  margin: 0;
+  padding: 0;
 }
 :focus {
   outline: none;
@@ -12,13 +11,13 @@ body {
 .holder {
   width: 30%;
   height: auto;
-  background: #020b14;
+  background: #d5eaff;
   margin: auto;
   outline: 5px solid #ffffff;
   border-radius: 10px;
 }
 .holder .parent {
-  background-color: #020b14;
+  background-color: #d5eaff;
   width: calc(100% - 50px);
   height: calc(100% - 50px);
   display: inline-block;
@@ -51,7 +50,6 @@ body {
 }
 form {
   display: block;
-  border-bottom: 1px dashed #020b14;
   margin-left: 20px;
   margin-right: 20px;
 }
@@ -84,17 +82,7 @@ form div input {
   font-family: "Work Sans", sans-serif;
   font-size: 15px;
   margin-left: 10px;
-  background-color: #020b14;
-}
-div input + .border {
-  position: absolute;
-  left: 50%;
-  bottom: -1px;
-  background-color: #3498db;
-  height: 1px;
-  width: 0;
-  transition: 0.3s;
-  display: block;
+  background-color: #d5eaff;
 }
 div input:focus + .border {
   width: 100%;
@@ -105,12 +93,27 @@ form .private-inp {
   font-family: "work sans", sans-serif;
   display: block;
   margin: auto;
-  background: #2196f3;
+  background: #ffffff;
   width: 90%;
   padding: 10px;
   border-radius: 7px;
   margin-bottom: 10px;
-  color: white;
+  color: #020b14;
+  font-size: 15px;
+  font-weight: bold;
+  cursor: pointer;
+}
+form .private-inp:hover {
+  border: none;
+  font-family: "work sans", sans-serif;
+  display: block;
+  margin: auto;
+  background: #020b14;
+  width: 90%;
+  padding: 10px;
+  border-radius: 7px;
+  margin-bottom: 10px;
+  color: #ffffff;
   font-size: 15px;
   font-weight: bold;
   cursor: pointer;
@@ -119,7 +122,7 @@ form p {
   margin: 20px;
   text-align: center;
   font-size: 12px;
-  color: #fff;
+  color: #ffffff;
   padding: 15px;
 }
 form p a {
@@ -140,77 +143,141 @@ form p a {
   height: 20px;
   display: inline-block;
   padding: 10px;
-  color: #fff;
+  color: #020b14;
 }
 h4 {
   margin-top: -10px;
 }
 nav.ul {
   width: 50%;
-  color: white;
+  color: #020b14;
 }
-
+.nav {
+  margin: 0;
+  padding: 0;
+  background: #020b14;
+  list-style-type: none;
+  overflow: hidden;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 999;
+  box-shadow: 0 0 0 1px #5e6875;
+}
 .nav li {
   display: inline;
-  color: white;
+  color: #020b14;
   float: left;
   width: 12%;
   margin-left: 15px;
 }
 
+.signup {
+  float: right;
+  border: 1px solid #e5e6e7;
+  padding: 10px;
+  margin-top: -8px;
+  border-radius: 5px;
+  text-align: center;
+}
+.signup:hover {
+  background-color: #020b14;
+}
 .nav a {
   text-decoration: none;
-  color: white;
+  color: #ffffff;
   font-size: 15px;
   font-weight: bold;
+  padding: 10px;
+  border-radius: 5px;
+  margin-left: 15px;
+  margin-right: 15px;
+  margin-top: 15px;
+  margin-bottom: 15px;
+  display: inline-block;
 }
 
 .nav a:hover {
-  color: rgb(0, 0, 0);
-  background-color: #fff;
+  color: #020b14;
+  background-color: #ffffff;
   border-radius: 5px;
   padding: 10px;
   transform: scale(1.2);
   transition: transform 0.5s ease-in-out;
 }
-#role {
+.nav a:active {
+  color: #020b14;
+  background-color: #ffffff;
+  border-radius: 5px;
+  padding: 10px;
+  transform: scale(1.2);
+  transition: transform 0.5s ease-in-out;
+}
+
+.navbar-toggle {
+  display: none;
   background-color: #020b14;
-  color: #fff;
+  border-color: #020b14;
+  color: #ffffff;
+  border-radius: 5px;
+  padding: 10px;
+  margin-left: 15px;
+  margin-right: 15px;
+  margin-top: 25px;
+  margin-bottom: 15px;
+}
+
+#role {
+  background-color: #d5eaff;
+  color: #40454b;
 }
 .text-center {
   text-align: center;
 }
-
-/* Social Media Icons */
+.social-media-icon {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  padding: 10px 10px;
+  font-weight: bold;
+  background-color: #f6fbff;
+  color: white;
+  text-decoration: none;
+}
 .social-media-list {
-  position: relative;
   font-size: 22px;
   text-align: center;
-  width: 100%;
-  padding: 20px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  margin-right: 10px;
+  margin-left: 10px;
+  margin-right: 10px;
+  margin-left: 10px;
+  margin-bottom: 10px;
 }
 
 .social-media-list li a {
-  color: #fff;
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 22px;
+  font-weight: bold;
 }
 
 .social-media-list li {
-  position: relative;
   display: inline-block;
   height: 60px;
   width: 60px;
-  margin: 10px 3px;
+  margin: 1px 3px;
   line-height: 60px;
   border-radius: 50%;
-  color: #fff;
-  background-color: rgb(51, 98, 209);
+  background-color: #020b14;
+  color: #fefeff;
   cursor: pointer;
   transition: all 0.2s ease-in-out;
+  text-align: center;
+  box-shadow: 0 0 0 1px #5e6875;
 }
 
 .social-media-list li:after {
-  content: "";
-  position: absolute;
   top: 0;
   left: 0;
   width: 60px;
@@ -218,12 +285,12 @@ nav.ul {
   line-height: 60px;
   border-radius: 50%;
   opacity: 0;
-  box-shadow: 0 0 0 1px #fff;
+  box-shadow: 0 0 0 1px #020b14;
   transition: all 0.2s ease-in-out;
 }
 
 .social-media-list li:hover {
-  background-color: #fff;
+  background-color: rgb(255, 255, 255);
 }
 
 .social-media-list li:hover:after {
@@ -233,22 +300,19 @@ nav.ul {
 }
 
 .social-media-list li:hover a {
-  color: #000;
+  color: #020b14;
 }
 
 .copyright {
   font: 200 14px "Oswald", sans-serif;
-  color: white;
+  font-weight: bold;
+  color: #020b14;
   letter-spacing: 1px;
   text-align: center;
 }
 
-hr {
-  border-color: rgba(255, 255, 255, 0.6);
-}
-
 .whii {
-  padding-top: 5em;
+  padding-top: 7em;
 }
 @media only screen and (max-width: 768px) {
   .holder {

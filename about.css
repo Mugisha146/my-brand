@@ -3,18 +3,33 @@
 }
 
 body {
-  background-color: #020b14;
+  background-color: #ffffff;
   font-family: "Josefin Sans", sans-serif;
+  font-weight: bold;
+  margin: 0;
+  padding: 0;
 }
 
 nav.ul {
   width: 50%;
-  color: white;
+  color: #020b14;
 }
-
+.nav {
+  margin: 0;
+  padding: 0;
+  background: #020b14;
+  list-style-type: none;
+  overflow: hidden;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 999;
+  box-shadow: 0 0 0 1px #5e6875;
+  font-family: "Josefin Sans", sans-serif;
+}
 .nav li {
   display: inline;
-  color: white;
+  color: #020b14;
   float: left;
   width: 12%;
   margin-left: 15px;
@@ -22,78 +37,110 @@ nav.ul {
 
 .signup {
   float: right;
-  border: 1px solid #fff;
+  border: 1px solid #e5e6e7;
   padding: 10px;
-  margin-top: -18px;
+  margin-top: -8px;
   border-radius: 5px;
   text-align: center;
 }
 .signup:hover {
-  background-color: #fff;
+  background-color: #020b14;
 }
 .nav a {
   text-decoration: none;
-  color: white;
+  color: #ffffff;
   font-size: 15px;
   font-weight: bold;
+  padding: 10px;
+  border-radius: 5px;
+  margin-left: 15px;
+  margin-right: 15px;
+  margin-top: 15px;
+  margin-bottom: 15px;
+  display: inline-block;
 }
 
 .nav a:hover {
-  color: rgb(0, 0, 0);
-  background-color: #fff;
+  color: #020b14;
+  background-color: #ffffff;
+  border-radius: 5px;
+  padding: 10px;
+  transform: scale(1.2);
+  transition: transform 0.5s ease-in-out;
+}
+.nav a:active {
+  color: #020b14;
+  background-color: #ffffff;
   border-radius: 5px;
   padding: 10px;
   transform: scale(1.2);
   transition: transform 0.5s ease-in-out;
 }
 
+.navbar-toggle {
+  display: none;
+  background-color: #020b14;
+  border-color: #020b14;
+  color: #ffffff;
+  border-radius: 5px;
+  padding: 10px;
+  margin-left: 15px;
+  margin-right: 15px;
+  margin-top: 25px;
+  margin-bottom: 15px;
+}
 .text-center {
   text-align: center;
 }
 
 .intro {
-  background-color: #020b14;
+  background-color: #ffffff;
   margin: 1rem 3rem 1rem 3rem;
   padding-top: 8rem;
   padding-bottom: 1em;
   border-radius: 3em;
+  
 }
 
 .class1 {
-  color: white;
+  color: #020b14;
   padding-left: 1rem;
   text-align: center;
   font-variant: small-caps;
   font-family: "Times New Roman", Times, serif;
+  font-weight: bold;
 }
 
 #title3 {
-  color: white;
+  color: #020b14;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   font-size: 1.5rem;
   text-align: center;
   padding-top: 1em;
+  font-weight: bold;
 }
 
 #haa {
-  border: 2px white double;
+  border: 2px #020b14 double;
   padding: 2rem;
   margin: 1rem 3rem;
   border-radius: 4px;
 }
 
 #university {
-  color: white;
+  color: #020b14;
   text-decoration: underline;
   font-size: 1rem;
   font-weight: bold;
   font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
     "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+    font-weight: bold;
 }
 
 #detailss {
-  color: whitesmoke;
+  color: #020b14;
   font-style: italic;
+  font-weight: bold;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
     Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
 }
@@ -109,37 +156,50 @@ nav.ul {
   transform: scale(1.2);
   transition: transform 0.5s ease-in-out;
 }
-
-/* Social Media Icons */
+.social-media-icon {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  padding: 10px 10px;
+  font-weight: bold;
+  background-color: #f6fbff;
+  color: white;
+  text-decoration: none;
+}
 .social-media-list {
-  position: relative;
   font-size: 22px;
   text-align: center;
-  width: 100%;
-  padding: 20px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  margin-right: 10px;
+  margin-left: 10px;
+  margin-right: 10px;
+  margin-left: 10px;
+  margin-bottom: 10px;
 }
 
 .social-media-list li a {
-  color: #fff;
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 22px;
+  font-weight: bold;
 }
 
 .social-media-list li {
-  position: relative;
   display: inline-block;
   height: 60px;
   width: 60px;
-  margin: 10px 3px;
+  margin: 1px 3px;
   line-height: 60px;
   border-radius: 50%;
-  color: #fff;
-  background-color: rgb(51, 98, 209);
+  background-color: #020b14;
+  color: #fefeff;
   cursor: pointer;
   transition: all 0.2s ease-in-out;
+  text-align: center;
+  box-shadow: 0 0 0 1px #5e6875;
 }
 
 .social-media-list li:after {
-  content: "";
-  position: absolute;
   top: 0;
   left: 0;
   width: 60px;
@@ -147,12 +207,12 @@ nav.ul {
   line-height: 60px;
   border-radius: 50%;
   opacity: 0;
-  box-shadow: 0 0 0 1px #fff;
+  box-shadow: 0 0 0 1px #020b14;
   transition: all 0.2s ease-in-out;
 }
 
 .social-media-list li:hover {
-  background-color: #fff;
+  background-color: rgb(255, 255, 255);
 }
 
 .social-media-list li:hover:after {
@@ -162,20 +222,16 @@ nav.ul {
 }
 
 .social-media-list li:hover a {
-  color: #000;
+  color: #020b14;
 }
 
 .copyright {
   font: 200 14px "Oswald", sans-serif;
-  color: white;
+  font-weight: bold;
+  color: #020b14;
   letter-spacing: 1px;
   text-align: center;
 }
-
-hr {
-  border-color: rgba(255, 255, 255, 0.6);
-}
-
 /* Media Queries for responsiveness */
 @media only screen and (max-width: 768px) {
   nav {

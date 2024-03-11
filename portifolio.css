@@ -8,10 +8,11 @@
 }
 
 body {
-  background-color: #020b14;
+  background-color: #ffffff;
   font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
     Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
-  margin: 0 auto;
+  margin: 0;
+  padding: 0;
 }
 
 .container {
@@ -28,14 +29,15 @@ body {
 }
 
 .portfolio {
-  background-color: #020b14;
+  background-color: #f2fbfd;
   margin-top: 2.5rem;
   padding-top: 3rem;
   flex-direction: column;
   align-items: center;
   width: 100%;
   margin: 0 auto;
-  color: #fff;
+  color: #020b14;
+  overflow: hidden;
 }
 
 .portfolio__header {
@@ -64,8 +66,8 @@ body {
   justify-content: center;
   margin: 1.5rem 0;
   max-width: 360px;
-  box-shadow: rgba(207, 204, 204, 0.4) 0px 2px 5px 0px,
-    rgba(255, 252, 252, 0.5) 0px 2px 15px 0px;
+  box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 5px 0px,
+    rgba(0, 0, 0, 0.5) 0px 2px 15px 0px;
   padding: 1rem;
   gap: 1rem;
 }
@@ -83,9 +85,10 @@ body {
 }
 
 .card p {
-  font-size: 16px;
+  font-family: "Courier New", Courier, monospace;
+  font-size: 13px;
   font-weight: bold;
-  color: whitesmoke;
+  color: #000000;
 }
 
 .text-container {
@@ -118,17 +121,25 @@ body {
 .card p {
   font-weight: 200;
 }
-.nav {
-  margin-top: 20px;
-}
 nav.ul {
   width: 50%;
-  color: white;
+  color: #020b14;
 }
-
+.nav {
+  margin: 0;
+  padding: 0;
+  background: #020b14;
+  list-style-type: none;
+  overflow: hidden;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 999;
+  box-shadow: 0 0 0 1px #5e6875;
+}
 .nav li {
   display: inline;
-  color: white;
+  color: #020b14;
   float: left;
   width: 12%;
   margin-left: 15px;
@@ -136,65 +147,106 @@ nav.ul {
 
 .signup {
   float: right;
-  border: 1px solid #fff;
+  border: 1px solid #e5e6e7;
   padding: 10px;
   margin-top: -8px;
   border-radius: 5px;
   text-align: center;
 }
 .signup:hover {
-  background-color: #fff;
+  background-color: #020b14;
 }
 .nav a {
   text-decoration: none;
-  color: white;
+  color: #ffffff;
   font-size: 15px;
   font-weight: bold;
+  padding: 10px;
+  border-radius: 5px;
+  margin-left: 15px;
+  margin-right: 15px;
+  margin-top: 15px;
+  margin-bottom: 15px;
+  display: inline-block;
 }
 
 .nav a:hover {
-  color: rgb(0, 0, 0);
-  background-color: #fff;
+  color: #020b14;
+  background-color: #ffffff;
+  border-radius: 5px;
+  padding: 10px;
+  transform: scale(1.2);
+  transition: transform 0.5s ease-in-out;
+}
+.nav a:active {
+  color: #020b14;
+  background-color: #ffffff;
   border-radius: 5px;
   padding: 10px;
   transform: scale(1.2);
   transition: transform 0.5s ease-in-out;
 }
 
+.navbar-toggle {
+  display: none;
+  background-color: #020b14;
+  border-color: #020b14;
+  color: #ffffff;
+  border-radius: 5px;
+  padding: 10px;
+  margin-left: 15px;
+  margin-right: 15px;
+  margin-top: 25px;
+  margin-bottom: 15px;
+}
 .text-center {
   text-align: center;
 }
 
-/* Social Media Icons */
+.social-media-icon {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  padding: 10px 10px;
+  font-weight: bold;
+  background-color: #f6fbff;
+  color: white;
+  text-decoration: none;
+}
 .social-media-list {
-  position: relative;
   font-size: 22px;
   text-align: center;
-  width: 100%;
-  padding: 20px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  margin-right: 10px;
+  margin-left: 10px;
+  margin-right: 10px;
+  margin-left: 10px;
+  margin-bottom: 10px;
 }
 
 .social-media-list li a {
-  color: #fff;
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 22px;
+  font-weight: bold;
 }
 
 .social-media-list li {
-  position: relative;
   display: inline-block;
   height: 60px;
   width: 60px;
-  margin: 10px 3px;
+  margin: 1px 3px;
   line-height: 60px;
   border-radius: 50%;
-  color: #fff;
-  background-color: rgb(51, 98, 209);
+  background-color: #020b14;
+  color: #fefeff;
   cursor: pointer;
   transition: all 0.2s ease-in-out;
+  text-align: center;
+  box-shadow: 0 0 0 1px #5e6875;
 }
 
 .social-media-list li:after {
-  content: "";
-  position: absolute;
   top: 0;
   left: 0;
   width: 60px;
@@ -202,12 +254,12 @@ nav.ul {
   line-height: 60px;
   border-radius: 50%;
   opacity: 0;
-  box-shadow: 0 0 0 1px #fff;
+  box-shadow: 0 0 0 1px #020b14;
   transition: all 0.2s ease-in-out;
 }
 
 .social-media-list li:hover {
-  background-color: #fff;
+  background-color: rgb(255, 255, 255);
 }
 
 .social-media-list li:hover:after {
@@ -217,20 +269,16 @@ nav.ul {
 }
 
 .social-media-list li:hover a {
-  color: #000;
+  color: #020b14;
 }
 
 .copyright {
   font: 200 14px "Oswald", sans-serif;
-  color: white;
+  font-weight: bold;
+  color: #020b14;
   letter-spacing: 1px;
   text-align: center;
 }
-
-hr {
-  border-color: rgba(255, 255, 255, 0.6);
-}
-
 @media screen and (max-width: 768px) {
   .container {
     padding-top: 3em;
