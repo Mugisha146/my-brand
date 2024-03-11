@@ -5,20 +5,24 @@
 }
 
 body {
-  background-color: #020b14;
+  background-color: #ffffff;
   font-family: "Josefin Sans", sans-serif;
-  color: white;
+  color: #020b14;
 }
-.title {
-  padding: 5%;
+
+.navbar-toggle {
+  display: none;
+  background-color: #ffffff;
+  border-color: #020b14;
+  color: #020b14;
+  border-radius: 5px;
+  padding: 10px;
+  margin-left: 15px;
+  margin-right: 15px;
+  margin-top: 25px;
+  margin-bottom: 15px;
 }
-.title h1 {
-  color: #86fde2;
-  text-align: center;
-  padding: 20px;
-  margin-bottom: 10px;
-  margin-right: 70px;
-}
+
 .title img {
   max-width: 100%;
   width: 5%;
@@ -43,7 +47,7 @@ body {
   display: flex;
   flex-direction: column;
   width: 20%;
-  border: 1px solid #a0cefc;
+  border: 1px solid #020b14;
   margin-right: 10px;
   border-radius: 20px;
 }
@@ -53,7 +57,7 @@ body {
   margin: auto 20px;
   list-style: none;
   text-decoration: none;
-  color: #a0cefc;
+  color: #020b14;
   font-weight: bold;
 }
 #search1 {
@@ -61,12 +65,12 @@ body {
   height: 30px;
   margin-bottom: 20px;
   padding: 10px;
-  border: 1px solid #a0cefc;
+  border: 1px solid #020b14;
   border-radius: 5px;
   padding-left: 30px;
 }
 .time {
-  color: #a0cefc;
+  color: #020b14;
   font-size: 12px;
   padding-left: 30px;
 }
@@ -74,7 +78,7 @@ body {
   display: flex;
   flex-direction: column;
   flex: 2;
-  border: 1px solid #a0cefc;
+  border: 1px solid #020b14;
   border-radius: 20px;
   padding: 20px;
   margin-right: 10px;
@@ -89,7 +93,7 @@ body {
   left: 10px;
   top: 35%;
   transform: translateY(-50%);
-  color: #000000;
+  color: #020b14;
 }
 
 textarea {
@@ -101,7 +105,7 @@ textarea {
   flex-direction: column;
   width: 20%;
   height: auto;
-  color: #a0cefc;
+  color: #020b14;
   padding: 10px;
   font-size: 20px;
   font-weight: bold;
@@ -116,7 +120,7 @@ textarea {
   flex-direction: column;
   width: auto;
   height: 25%;
-  border: 1px solid #a0cefc;
+  border: 1px solid #020b14;
   margin-bottom: 10px;
   text-align: center;
   border-radius: 20px;
@@ -125,16 +129,16 @@ textarea {
 .user-message h1 {
   text-align: center;
   margin-bottom: 20px;
-  color: #a0cefc;
+  color: #020b14;
 }
 .prev-message {
-  color: #fff9f9;
+  color: #020b14;
   font-size: 12px;
   margin-bottom: 5px;
 }
 
 .message-count {
-  color: #ffffff;
+  color: #020b14;
   font-size: 12px;
 }
 .user1 {
@@ -159,12 +163,12 @@ textarea {
 
 .user1 .info h6 {
   margin: 0;
-  color: #a0cefc;
+  color: #020b14;
   font-size: 14px;
 }
 
 .user1 .info .prev-message {
-  color: #fffefe;
+  color: #020b14;
   font-size: 12px;
   margin-bottom: 5px;
   overflow: hidden;
@@ -189,7 +193,7 @@ textarea {
 }
 
 .user1 .time {
-  color: #dadbdc;
+  color: #020b14;
   font-size: 12px;
   margin-bottom: 5px;
 }
@@ -225,7 +229,7 @@ textarea {
 
 .see {
   padding: 10px 20px;
-  background-color: #a0cefc;
+  background-color: #020b14;
   color: #020b14;
   border: none;
   border-radius: 5px;
@@ -234,49 +238,7 @@ textarea {
 }
 
 .see:hover {
-  background-color: #86fde2;
-}
-
-nav.ul {
-  width: 50%;
-  color: white;
-}
-
-.nav li {
-  display: inline;
-  color: white;
-  float: left;
-  width: 12%;
-  margin-left: 15px;
-}
-
-.signup {
-  float: right;
-  border: 1px solid #fff;
-  padding: 10px;
-  margin-top: -8px;
-  border-radius: 5px;
-  text-align: center;
-}
-.signup:hover {
-  background-color: #fff;
-}
-.nav a {
-  text-decoration: none;
-  color: white;
-  font-size: 15px;
-  font-weight: bold;
-}
-
-.nav a:hover {
-  color: rgb(0, 0, 0);
-  background-color: #fff;
-  border-radius: 5px;
-  padding: 10px;
-}
-
-.text-center {
-  text-align: center;
+  background-color: #020b14;
 }
 
 .Btn {
