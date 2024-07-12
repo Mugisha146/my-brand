@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Edit User Profile</title>
+    <link rel="stylesheet" href="profile.css" />
+    <script
+      src="https://kit.fontawesome.com/902bd6162d.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <div class="data-container">
+      <div class="box">
+        <div class="info">
+          <h1>PERSONAL INFORMATION</h1>
+          <img
+            src="../images/Mugisha photo.jpeg"
+            alt="user-photo"
+          /><!--for those how has photo in localstorage-->
+          <h1 id="name">Mugisha Emmanuel</h1>
+          <p id="role">Full Stack developer</p>
+          <p id="address">Kigali-Rwanda</p>
+          <div class="butt">
+            <button>follow</button><button>message</button>
+          </div>
+        </div>
+      </div>
+      <!--div class="info-details">
+        
+        <label for="name" id="fullNameLabel">Full Name:</label
+        ><!--name from localstorage-->
+      <!--label for="email" id="emailLabel">Email:</label
+        ><!--email from localstorage-->
+      <!--label for="phone" id="phoneLabel">Phone:</label
+        ><!--phone from localstorage-->
+      <!--label for="role" id="roleLabel">Role:</label
+        ><!--role from localstorage-->
+      <!--label for="Address" id="addressLabel">Address:</label
+        ><!--address from localstorage-->
+      <!--/div-->
+
+      <div class="edit-info">
+        <div class="form-info">
+          <h2>EDIT USER PROFILE</h2>
+          <form id="editForm">
+            <label for="name">Full Name:</label>
+            <input type="text" id="fullnameInput" name="name" required />
+            <label for="email">Email:</label>
+            <input type="email" id="emailInput" name="email" required />
+            <label for="phone">Phone:</label>
+            <input type="text" id="phoneInput" name="phone" required />
+            <label for="Address">Address:</label>
+            <input type="text" id="addressInput" name="address" required />
+            <input type="submit" value="Save" />
+          </form>
+        </div>
+      </div>
+      <div class="setting-info">
+        <!--to change password,to delete account,-->
+        <button id="settingsBtn"><B>MANAGE ACCOUNT</B></button>
+        <div id="settingsDropdown" class="dropdown-content">
+          <a href="#" id="changePassword">Change Password</a>
+          <a href="#" id="deleteAccount">Delete Account</a>
+        </div>
+      </div>
+      <a href="../home.html" class="backme">Back home</a>
+    </div>
+    <div id="changePasswordModal" class="modal">
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <h2>Change Password</h2>
+        <form id="changePasswordForm">
+            <label for="OldPasswordInput">OLd Password:</label>
+          <input
+            type="password"
+            id="OldPasswordInput"
+            name="oldPassword"
+            required
+          />
+          <label for="newPasswordInput">New Password:</label>
+          <input
+            type="password"
+            id="newPasswordInput"
+            name="newPassword"
+            required
+          />
+          <label for="confirmPasswordInput">Confirm New Password:</label>
+          <input
+            type="password"
+            id="confirmPasswordInput"
+            name="confirmPassword"
+            required
+          />
+          <input type="submit" value="Change Password" />
+        </form>
+      </div>
+    </div>
+
+    <script>
+      // Function to save user profile data to local storage
+      function saveUserProfile(name, email, phone, address) {
+        localStorage.setItem(
+          "userData",
+          JSON.stringify({ name, email, phone, address })
+        );
+      }
+
+      // Function to load user profile data from local storage
+      function loadUserProfile() {
+        const userData = JSON.parse(localStorage.getItem("userData")) || {};
+        document.getElementById("name").textContent = userData.name || "";
+        document.getElementById("role").textContent = "Full-Stack developer";
+        document.getElementById("address").textContent = userData.address || "";
+
+        document.getElementById("fullnameInput").value = userData.name || "";
+        document.getElementById("emailInput").value = userData.email || "";
+        document.getElementById("phoneInput").value = userData.phone || "";
+        document.getElementById("addressInput").value = userData.address || "";
+
+        /*//loaded user profile data to label
+        document.getElementById("fullNameLabel").textContent =
+          "Full Name: " + (userData.name || "");
+        document.getElementById("emailLabel").textContent =
+          "Email: " + (userData.email || "");
+        document.getElementById("phoneLabel").textContent =
+          "Phone: " + (userData.phone || "");
+        document.getElementById("roleLabel").textContent =
+          "Role: " + (userData.role || "");
+        document.getElementById("addressLabel").textContent =
+          "Address: " + (userData.address || "");
+      */
+      }
+
+      // Function to handle form submission
+      function handleSubmit(event) {
+        event.preventDefault();
+        const fullname = document.getElementById("fullnameInput").value;
+        const email = document.getElementById("emailInput").value;
+        const phone = document.getElementById("phoneInput").value;
+        const address = document.getElementById("addressInput").value;
+        saveUserProfile(fullname, email, phone, address);
+        alert("Profile updated successfully!");
+      }
+
+      // Load user profile data when the page loads
+      window.onload = function () {
+        loadUserProfile();
+        document
+          .getElementById("editForm")
+          .addEventListener("submit", handleSubmit);
+      };
+
+      // Get the button and the dropdown content
+      var settingsBtn = document.getElementById("settingsBtn");
+      var settingsDropdown = document.getElementById("settingsDropdown");
+
+      // Toggle the dropdown menu visibility when the button is clicked
+      settingsBtn.addEventListener("click", function () {
+        settingsDropdown.classList.toggle("show");
+      });
+
+      // Close the dropdown menu if the user clicks outside of it
+      window.addEventListener("click", function (event) {
+        if (!event.target.matches("#settingsBtn")) {
+          var dropdowns = document.getElementsByClassName("dropdown-content");
+          for (var i = 0; i < dropdowns.length; i++) {
+            var openDropdown = dropdowns[i];
+            if (openDropdown.classList.contains("show")) {
+              openDropdown.classList.remove("show");
+            }
+          }
+        }
+      });
+
+      // Event listeners for the menu items
+      document
+        .getElementById("changePassword")
+        .addEventListener("click", function (event) {
+          event.preventDefault(); // Prevent the default action
+          // Add your code to handle changing password here
+        });
+
+      document
+        .getElementById("deleteAccount")
+        .addEventListener("click", function (event) {
+          event.preventDefault(); // Prevent the default action
+          // Add your code to handle deleting account here
+        });
+
+      //change password
+      document
+        .getElementById("changePassword")
+        .addEventListener("click", function (event) {
+          event.preventDefault(); // Prevent the default action
+
+          // Add your code to handle changing password here
+          var changePasswordForm =
+            document.getElementById("changePasswordForm");
+          changePasswordForm.reset(); // Reset the form
+
+          // Get the modal and its close button
+          var modal = document.getElementById("changePasswordModal");
+          var closeButton = modal.querySelector(".close");
+
+          // Display the modal
+          modal.style.display = "block";
+
+          // When the user clicks on <span> (x), close the modal
+          closeButton.onclick = function () {
+            modal.style.display = "none";
+          };
+
+          // When the user clicks anywhere outside of the modal, close it
+          window.onclick = function (event) {
+            if (event.target == modal) {
+              modal.style.display = "none";
+            }
+          };
+
+          // Handle form submission
+  // Handle form submission
+changePasswordForm.onsubmit = function (event) {
+  event.preventDefault(); // Prevent form submission
+
+  // Get old password, new password, and confirm password
+  var oldPassword = changePasswordForm.querySelector("#OldPasswordInput").value;
+  var newPassword = changePasswordForm.querySelector("#newPasswordInput").value;
+  var confirmPassword = changePasswordForm.querySelector("#confirmPasswordInput").value;
+
+  // Validate the new password and confirm password
+  if (oldPassword.trim() === "") {
+    alert("Please enter your old password.");
+    return;
+  }
+
+  if (newPassword.trim() === "") {
+    alert("Please enter a new password.");
+    return;
+  }
+
+  // Retrieve userData from localStorage
+  var userData = JSON.parse(localStorage.getItem("userData"));
+
+  // Check if the old password matches the stored password
+  if (oldPassword !== userData.password) {
+    alert("Incorrect old password.");
+    return;
+  }
+
+  if (newPassword !== confirmPassword) {
+    alert("Passwords do not match. Please retype your new password.");
+    return;
+  }
+
+  // Store the new password in localStorage
+  userData.password = newPassword;
+  localStorage.setItem("userData", JSON.stringify(userData));
+
+  alert("Password changed successfully and stored in localStorage!");
+  window.location.href = "../home.html";
+  // Close the modal
+  modal.style.display = "none";
+};
+
+        });
+
+      //delete account
+      document
+        .getElementById("deleteAccount")
+        .addEventListener("click", function (event) {
+          event.preventDefault(); // Prevent the default action
+
+          // Add your code to handle deleting account here
+          var confirmation = confirm(
+            "Are you sure you want to delete your account?"
+          );
+          if (confirmation) {
+            // Clear the user data from localStorage
+            localStorage.removeItem("userData");
+            // Optionally, perform any additional actions such as redirecting the user or displaying a confirmation message
+            alert("Your account has been successfully deleted.");
+            // Redirect the user to the homepage or any other page
+            window.location.href = "../home.html";
+          }
+        });
+    </script>
+  </body>
+</html>

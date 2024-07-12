@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="admin.css" />
+    <title>admin</title>
+  </head>
+
+  <body>
+    <div class="navbar-toggle" onclick="toggleNav()">
+      <i class="fas fa-bars"></i>
+    </div>
+    <!-- Sidebar -->
+    <div class="sidebar">
+      <a href="#" class="logo">
+        <div class="logo-name">El3.com</div>
+      </a>
+      <ul class="side-menu">
+        <li>
+          <a href="admin.html"><i class="bx bxs-dashboard"></i>Dashboard</a>
+        </li>
+        <li>
+          <a href="new-blog.html"><i class="bx bx-edit icon"></i>Blogs</a>
+        </li>
+        <li>
+          <a href="add-project.html"> <i class="bx bx-receipt"></i>portfolio</a>
+        </li>
+        <li>
+          <a href="add-skills.html">
+            <i class="bx bx-brain icon"></i>&nbsp;Skills</a
+          >
+        </li>
+        <li>
+          <a href="message.html"><i class="bx bx-message-square-dots"></i>Message</a>
+        </li>
+        <li>
+          <a href="user.html"><i class="bx bx-group"></i>Users</a>
+        </li>
+        <li>
+          <a href="profile.html"><i class="bx bx-cog"></i>Settings</a>
+        </li>
+      </ul>
+      <ul class="side-menu">
+        <li>
+          <a href="../home.html" class="logout">
+            <i class="bx bx-log-out-circle"></i>
+            Logout
+          </a>
+        </li>
+      </ul>
+    </div>
+    <!-- End of Sidebar -->
+
+    <!-- Main Content -->
+    <div class="content">
+      <!-- Navbar -->
+      <nav>
+        <i class="bx bx-menu"></i>
+        <form action="#">
+          <div class="form-input">
+            <input type="search" placeholder="Search..." />
+            <button class="search-btn" type="submit">
+              <i class="bx bx-search"></i>
+            </button>
+          </div>
+        </form>
+        <a href="#" class="notif">
+          <i class="bx bx-bell"></i>
+          <span class="count">12</span>
+        </a>
+        <a href="#" class="profile">
+          <img src="/images/Mugisha photo.jpeg" />
+        </a>
+        <span style="margin-left: -20px">Mugisha</span>
+      </nav>
+
+      <!-- End of Navbar -->
+
+      <main>
+        <div class="header">
+          <div class="left">
+            <h1>Admin Dashboard</h1>
+          </div>
+        </div>
+
+        <!-- Insights -->
+        <ul class="insights">
+          <li>
+            <i class="bx bx-group"></i>
+            <span class="info">
+              <h3 style="font-size: 20px">Total Users</h3>
+              <h2>&nbsp;&nbsp;&nbsp;&nbsp;190</h2>
+            </span>
+          </li>
+          <li>
+            <i class="bx bx-edit icon"></i>
+            <span class="info">
+              <h3 style="font-size: 20px">Total Blogs</h3>
+              <h2>&nbsp;&nbsp;&nbsp;&nbsp;10</h2>
+            </span>
+          </li>
+          <li>
+            <i class="bx bx-message-square-detail icon"></i>
+            <span class="info">
+              <h3 style="font-size: 18px">User Request</h3>
+              <h2>&nbsp;&nbsp;&nbsp;&nbsp;70</h2>
+            </span>
+          </li>
+          <li>
+            <i class="bx bx-receipt"></i>
+            <span class="info">
+              <h3 style="font-size: 20px">Projects</h3>
+              <h2>&nbsp;&nbsp;&nbsp;&nbsp;3</h2>
+            </span>
+          </li>
+        </ul>
+        <!-- End of Insights -->
+
+        <div class="bottom-data">
+          <div class="orders">
+            <div class="header">
+              <i class="bx bx-receipt"></i>
+              <h3>Recently Users</h3>
+              <i class="bx bx-filter"></i>
+              <i class="bx bx-search"></i>
+            </div>
+            <table>
+              <thead>
+                <tr>
+                  <th>ID</th>
+                  <th>Name</th>
+                  <th>Email</th>
+                  <th>Action</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>1</td>
+                  <td>John Doe</td>
+                  <td>john@example.com</td>
+                  <td>
+                     <a href="#"> <i class="bx bx-message-square-dots" style="color: rgb(82, 134, 201);"></i></a>
+                    <a href="#"><i class='bx bx-trash icon' style="color: rgb(168, 0, 0);"></i></a>
+                  </td>
+                </tr>
+                <tr>
+                  <td>1</td>
+                  <td>John Doe</td>
+                  <td>john@example.com</td>
+                  <td>
+                   <a href="#"> <i class="bx bx-message-square-dots" style="color: rgb(82, 134, 201);"></i></a>
+                    <a href="#"><i class='bx bx-trash icon' style="color: rgb(168, 0, 0);"></i></a>
+                  </td>
+                </tr>
+                <!--tr>
+                  <td>
+                    <img src="images/profile-1.jpg" />
+                    <p>John Doe</p>
+                  </td>
+                  <td>14-08-2023</td>
+                  <td><span class="status process">Processing</span></td>
+                </tr-->
+                <tr>
+                  <td>1</td>
+                  <td>John Doe</td>
+                  <td>john@example.com</td>
+                  <td>
+                    <a href="#"> <i class="bx bx-message-square-dots" style="color: rgb(82, 134, 201);"></i></a>
+                    <a href="#"><i class='bx bx-trash icon' style="color: rgb(168, 0, 0);"></i></a>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+            <a href="#" class="jj"><i class="bx bx-down-arrow-alt icon"></i></a>
+          </div>
+
+          <!-- Reminders -->
+          <div class="reminders">
+            <div class="header">
+              <i class="bx bx-note"></i>
+              <h3>Collaborators</h3>
+              <i class="bx bx-plus"></i>
+            </div>
+            <ul class="task-list">
+              <li class="completed">
+                <div class="task-title">
+                  <!--i class="bx bx-check-circle"></i-->
+                  <a href="#" class="profile">
+                    <img src="/images/Mugisha photo.jpeg" />
+                  </a>
+                  <p>HABINEZA Emmanuel</p>
+                </div>
+                <i class="bx bx-dots-vertical-rounded"></i>
+              </li>
+              <li class="completed">
+                <div class="task-title">
+                  <!--i class="bx bx-check-circle"></i-->
+                  <a href="#" class="comps">
+                    <img src="/images/Mugisha photo.jpeg" />
+                  </a>
+                  <p>IRUMVA Jean</p>
+                </div>
+                <i class="bx bx-dots-vertical-rounded"></i>
+              </li>
+              <li class="not-completed">
+                <div class="task-title">
+                  <!--i class="bx bx-x-circle"></i-->
+                  <a href="#" class="profile">
+                    <img src="/images/Mugisha photo.jpeg" />
+                  </a>
+                  <p>MUTESI Angel</p>
+                </div>
+                <i class="bx bx-dots-vertical-rounded"></i>
+              </li>
+            </ul>
+          </div>
+
+          <!-- End of Reminders-->
+        </div>
+      </main>
+    </div>
+
+    <script>
+    </script>
+  </body>
+</html>
+
+<!--DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin</title>
+    <link rel="stylesheet" href="admin.css">
+    <script src="https://kit.fontawesome.com/902bd6162d.js" crossorigin="anonymous"></script>
+</head>
+<body>
+  
+    <div class="about-content">
+   
+    <div class="navbar-toggle" onclick="toggleNav()">
+      <i class="fas fa-bars"></i>
+    </div>
+        <div class="admin-content">
+          <div class="title">
+            <h2>El3.com</h2>
+            <h1>ADMIN DASHBOARD</h1>
+<img src="../images/Mugisha photo.jpeg" alt="" />
+<h6>Mugisha</h6>
+</div>
+<div class="box3">
+<div class="dash-menu">
+  <a href="admin.html"><i class="fa-solid fa-table-columns"></i>&nbsp;DASHBOARD</a>
+  <a href="user.html"><i class="fa-solid fa-people-roof"></i>&nbsp;USERS</a>
+  <a href="new-blog.html"><i class="fa-solid fa-blog"></i>&nbsp;POST BLOGS</a>
+  <a href="add-project.html"><i class="fa-solid fa-business-time"></i>&nbsp;PORTFOLIO</a>
+  <a href="add-skills.html"><i class="fa-solid fa-kitchen-set"></i>&nbsp;ADD SKILLS</a>
+  <a href="../home.html"><button class="Btn">
+  
+  <div class="sign"><svg viewBox="0 0 512 512"><path d="M377.9 105.9L500.7 228.7c7.2 7.2 11.3 17.1 11.3 27.3s-4.1 20.1-11.3 27.3L377.9 406.1c-6.4 6.4-15 9.9-24 9.9c-18.7 0-33.9-15.2-33.9-33.9l0-62.1-128 0c-17.7 0-32-14.3-32-32l0-64c0-17.7 14.3-32 32-32l128 0 0-62.1c0-18.7 15.2-33.9 33.9-33.9c9 0 17.6 3.6 24 9.9zM160 96L96 96c-17.7 0-32 14.3-32 32l0 256c0 17.7 14.3 32 32 32l64 0c17.7 0 32 14.3 32 32s-14.3 32-32 32l-64 0c-53 0-96-43-96-96L0 128C0 75 43 32 96 32l64 0c17.7 0 32 14.3 32 32s-14.3 32-32 32z"></path></svg></div>
+  
+  <div class="text">Logout</div>
+</button>
+
+
+&nbsp;</a>
+</div>
+<div class="user-message">
+  <h1>User Messages</h1>
+  <div class="search-container">
+    <i class="fas fa-search"></i>
+    <textarea name="search" id="search1" cols="30" rows="10"></textarea>
+  </div>
+  <div class="all-message">
+    <div class="user1">
+     <img src="../images/Mugisha photo.jpeg" alt=""/>
+      <div class="info">
+        <h6>Keza Kelly</h6>
+        <p class="prev-message" onclick="toggleMessage(this)">Morning developer am kelly and i wish to collaborate with you am developing an website to online store if you  are available </p>
+        <p class="full-message" style="display: none;">Morning developer am kelly and i wish to collaborate with you am developing an website to online store if you are available you can respond to me thank you.</p>
+      </div>
+      <div class="time-and-count">
+        <span class="time">10:30 AM</span>
+        <span class="message-count">3 messages</span>
+      </div>
+    </div>
+    
+        <div class="user1">
+      <img src="../images/Mugisha photo.jpeg" alt="" />
+      <div class="info">
+        <h6>Keza Kelly</h6>
+        <p class="prev-message" onclick="toggleMessage(this)">Morning developer am kelly and i wish to collaborate with you am developing an website to online store if you  are available </p>
+        <p class="full-message" style="display: none;">Morning developer am kelly and i wish to collaborate with you am developing an website to online store if you are available you can respond to me thank you.</p>
+      </div>
+      <div class="time-and-count">
+        <span class="time">10:30 AM</span>
+        <span class="message-count">3 messages</span>
+      </div>
+    </div>
+        <div class="user1">
+      <img src="../images/Mugisha photo.jpeg" alt="" />
+      <div class="info">
+        <h6>Keza Kelly</h6>
+        <p class="prev-message" onclick="toggleMessage(this)">Morning developer am kelly and i wish to collaborate with you am developing an website to online store if you  are available </p>
+        <p class="full-message" style="display: none;">Morning developer am kelly and i wish to collaborate with you am developing an website to online store if you are available you can respond to me thank you.</p>
+      </div>
+      <div class="time-and-count">
+        <span class="time">10:30 AM</span>
+        <span class="message-count">3 messages</span>
+      </div>
+    </div>
+        <div class="user1">
+      <img src="../images/Mugisha photo.jpeg" alt="" />
+      <div class="info">
+        <h6>Keza Kelly</h6>
+        <p class="prev-message" onclick="toggleMessage(this)">Morning developer am kelly and i wish to collaborate with you am developing an website to online store if you  are available </p>
+        <p class="full-message" style="display: none;">Morning developer am kelly and i wish to collaborate with you am developing an website to online store if you are available you can respond to me thank you.</p>
+      </div>
+      <div class="time-and-count">
+        <span class="time">10:30 AM</span>
+        <span class="message-count">3 messages</span>
+      </div>
+    </div>
+  </div>
+  <div class="butt">
+    <button class="see" type="button">See More...</button>
+  </div>
+</div>
+<div class="dash-count">
+  <div class="total-user">
+    <label for="">Total User</label>
+    <h1>80</h1>
+  </div>
+    <div class="user-request">
+    <label for="">User Request</label>
+    <h1>10</h1>
+  </div>
+    <div class="total-blogs">
+    <label for="">Total Blogs</label>
+    <h1>50</h1>
+  </div>
+    <div class="project">
+    <label for="">Project</label>
+    <h1>80</h1>
+  </div>
+</div>
+</div>
+        </div> 
+            <script>
+      function toggleNav() {
+        var nav = document.getElementById("navbar");
+        if (nav.style.display === "none") {
+          nav.style.display = "block";
+        } else {
+          nav.style.display = "none";
+        }
+      }
+    </script>
+    </body>
+    </html-->
+
+<!--
+
+
+
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Document</title>
+    </head>
+    <style>
+
+
+
+    </style>
+    <body>
+<div class="container">
+
+  <aside>
+    <h1>Aide</h1>
+  </aside>
+  <main>
+  <h1>Main</h1>
+
+
+  </main>
+
+</div>
+
+
+      <script>
+
+
+
+      </script>
+    </body>
+    </html>    -->
