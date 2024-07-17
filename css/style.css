@@ -1297,3 +1297,62 @@ body {
     padding: 50px;
   }
 }
+
+#reset-password {
+  display: none;
+  margin:50px 600px;
+}
+
+#reset-password .container {
+  max-width: 400px;
+  padding: 50px;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+#reset-password h1 {
+  text-align: center;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+#reset-password .form {
+  display: flex;
+  flex-direction: column;
+}
+
+#reset-password .flex-column {
+  margin-bottom: 15px;
+}
+
+#reset-password .label {
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+#reset-password .inputForm {
+  margin-bottom: 15px;
+}
+
+#reset-password .input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+#reset-password .button-submit {
+  width: 100%;
+  padding: 10px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+#reset-password .button-submit:hover {
+  background-color: #0056b3;
+}

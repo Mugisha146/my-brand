@@ -1,3 +1,93 @@
+//Signup and login
+document
+  .getElementById("signupForm")
+  .addEventListener("submit", function (event) {
+    event.preventDefault();
+    const name = document.getElementById("signupName").value;
+    const email = document.getElementById("signupEmail").value;
+    const password = document.getElementById("signupPassword").value;
+    const rePassword = document.getElementById("signupRePassword").value;
+
+    if (password !== rePassword) {
+      alert("Passwords do not match!");
+      return;
+    }
+
+    const user = {
+      name: name,
+      email: email,
+      password: password,
+    };
+
+    localStorage.setItem("user", JSON.stringify(user));
+    alert("Sign up successful!");
+
+    // Clear the signup form fields
+    document.getElementById("signupForm").reset();
+  });
+
+document
+  .getElementById("loginForm")
+  .addEventListener("submit", function (event) {
+    event.preventDefault();
+    const email = document.getElementById("loginEmail").value;
+    const password = document.getElementById("loginPassword").value;
+    const rememberMe = document.getElementById("rememberMe").checked;
+
+    const user = JSON.parse(localStorage.getItem("user"));
+
+    if (user && user.email === email && user.password === password) {
+      if (rememberMe) {
+        localStorage.setItem("rememberedUser", JSON.stringify(user));
+      }
+      alert("Login successful!");
+      // Redirect to admin page
+      window.location.href = "../admin/admin.html";
+    } else {
+      alert("Invalid email or password!");
+    }
+  });
+
+document
+  .getElementById("forgotPasswordLink")
+  .addEventListener("click", function () {
+    document.getElementById("login-register").style.display = "none";
+    document.getElementById("reset-password").style.display = "block";
+  });
+
+document
+  .getElementById("resetPasswordButton")
+  .addEventListener("click", function () {
+    const email = document.getElementById("resetEmail").value;
+    const newPassword = document.getElementById("resetNewPassword").value;
+    const confirmPassword = document.getElementById(
+      "resetConfirmPassword"
+    ).value;
+
+    if (newPassword !== confirmPassword) {
+      alert("Passwords do not match!");
+      return;
+    }
+
+    const user = JSON.parse(localStorage.getItem("user"));
+
+    if (user && user.email === email) {
+      user.password = newPassword;
+      localStorage.setItem("user", JSON.stringify(user));
+      alert("Password reset successful!");
+      document.getElementById("reset-password").style.display = "none";
+      document.getElementById("login-register").style.display = "block";
+    } else {
+      alert("Email not found!");
+    }
+  });
+
+window.addEventListener("load", function () {
+  const rememberedUser = JSON.parse(localStorage.getItem("rememberedUser"));
+  if (rememberedUser) {
+    document.getElementById("loginEmail").value = rememberedUser.email;
+  }
+});
 //humberger
 document.addEventListener("DOMContentLoaded", function () {
   const hamburger = document.querySelector(".hamburger");
@@ -7,7 +97,7 @@ document.addEventListener("DOMContentLoaded", function () {
     navLinks.classList.toggle("active");
   });
 });
-
+//scroll functionality
 document.addEventListener("DOMContentLoaded", function () {
   document
     .getElementById("scrollToHome")
