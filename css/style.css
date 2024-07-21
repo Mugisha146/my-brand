@@ -1210,8 +1210,8 @@ body {
 @media (max-width: 1200px) {
   #skills > .container {
     transform: scale(0.6);
-    height: 1200px; /* Adjust height if needed */
-    margin: 0 auto; /* Centering the container */
+    height: 1200px;
+    margin: 0 auto; 
   }
   #projects .container {
     padding: 50px;
@@ -1336,53 +1336,53 @@ body {
     display: flex;
   }
   #home > .container {
-    height: auto; /* Allow the container to expand based on content */
-    padding: 20px; /* Add padding for smaller screens */
+    height: auto;
+    padding: 20px;
   }
 
   #home > .container .info {
-    float: none; /* Remove floating */
-    padding-top: 50px; /* Adjust padding for smaller screens */
-    font-size: 30px; /* Reduce font size for smaller screens */
-    text-align: center; /* Center align text */
+    float: none; 
+    padding-top: 50px; 
+    font-size: 30px; 
+    text-align: center; 
   }
 
   #home > .container .info span {
-    font-size: 30px; /* Adjust font size for smaller screens */
+    font-size: 30px; 
   }
 
   #home > .container .info h5 {
-    font-size: 18px; /* Adjust font size for smaller screens */
-    padding: 5px 0; /* Adjust padding for smaller screens */
+    font-size: 18px; 
+    padding: 5px 0;
   }
 
   #home > .container .info a {
-    font-size: 14px; /* Adjust font size for smaller screens */
-    padding: 10px; /* Adjust padding for smaller screens */
-    margin: 20px auto; /* Center align the link and adjust margin */
-    display: inline-block; /* Make the link inline-block */
+    font-size: 14px;
+    padding: 10px; 
+    margin: 20px auto; 
+    display: inline-block; 
   }
   #aboutme h1 {
-    font-size: 30px; /* Adjust font size for smaller screens */
-    padding: 50px; /* Adjust padding for smaller screens */
+    font-size: 30px;
+    padding: 50px; 
   }
 
   #aboutme > .container {
-    flex-direction: column; /* Stack the left and right parts vertically */
-    gap: 50px; /* Adjust the gap for smaller screens */
-    margin: 20px; /* Adjust margin for smaller screens */
-    transform: scale(1); /* Reset scaling for proper fit */
+    flex-direction: column; 
+    gap: 50px;
+    margin: 20px; 
+    transform: scale(1); 
   }
 
   #aboutme > .container > .left-part {
-    width: 100%; /* Full width for smaller screens */
+    width: 100%; 
   }
 
   #aboutme > .container > .right-part {
-    width: 100%; /* Full width for smaller screens */
-    height: auto; /* Allow height to adjust based on content */
-    background-color: #dcf2f3; /* Ensure background color remains */
-    border-radius: 0; /* Remove border-radius for smaller screens */
+    width: 100%; 
+    height: auto;
+    background-color: #dcf2f3; 
+    border-radius: 0; 
     animation: none;
   }
 
@@ -1391,33 +1391,33 @@ body {
   }
 
   #aboutme > .container > .left-part > .social-media ul {
-    flex-direction: column; /* Stack social media icons vertically */
-    gap: 20px; /* Adjust the gap for smaller screens */
+    flex-direction: column; 
+    gap: 20px; 
   }
 
   #aboutme > .container > .left-part > .social-media ul li {
-    width: 50px; /* Adjust width for smaller screens */
-    height: 50px; /* Adjust height for smaller screens */
-    font-size: 30px; /* Adjust font size for smaller screens */
+    width: 50px; 
+    height: 50px; 
+    font-size: 30px; 
   }
   #skills h1 {
-    font-size: 36px; /* Adjust font size for smaller screens */
-    padding-top: 50px; /* Adjust padding for smaller screens */
+    font-size: 36px; 
+    padding-top: 50px; 
     margin-bottom: -150px;
   }
 
   #skills > .container {
-    transform: scale(0.3); /* Even larger on very small screens */
-    height: 800px; /* Adjust height if needed */
-    margin: 0 10px; /* Add horizontal margin */
+    transform: scale(0.3); 
+    height: 800px; 
+    margin: 0 10px; 
     margin-left: -58%;
   }
   #skills > .container > .skill {
     animation: none;
   }
   #projects h1 {
-    font-size: 2rem; /* Further reduce font size */
-    margin: 50px; /* Further reduce margin */
+    font-size: 2rem; 
+    margin: 50px; 
   }
   #projects .container {
     padding: 20px;
@@ -1598,34 +1598,34 @@ body {
     display: none;
   }
   #home > .container .info {
-    font-size: 24px; /* Further reduce font size for very small screens */
+    font-size: 24px; 
   }
 
   #home > .container .info span {
-    font-size: 24px; /* Further reduce font size for very small screens */
+    font-size: 24px;
   }
 
   #home > .container .info h5 {
-    font-size: 16px; /* Further reduce font size for very small screens */
+    font-size: 16px; 
   }
 
   #home > .container .info a {
-    font-size: 12px; /* Further reduce font size for very small screens */
-    padding: 8px; /* Adjust padding for very small screens */
-    margin: 10px auto; /* Adjust margin for very small screens */
+    font-size: 12px; 
+    padding: 8px; 
+    margin: 10px auto;
   }
   #aboutme h1 {
-    font-size: 24px; /* Further reduce font size */
-    padding: 30px; /* Adjust padding for very small screens */
+    font-size: 24px;
+    padding: 30px;
   }
 
   #aboutme > .container {
-    gap: 20px; /* Adjust gap for very small screens */
+    gap: 20px; 
   }
 
   #aboutme > .container > .left-part p {
-    font-size: 14px; /* Further reduce font size for paragraphs */
-    padding: 10px; /* Adjust padding for very small screens */
+    font-size: 14px;
+    padding: 10px; 
   }
   #aboutme > .container > .left-part > .social-media ul {
     display: flex;
@@ -1633,30 +1633,30 @@ body {
     transform: scale(0.8);
   }
   #aboutme > .container > .left-part > .social-media ul li {
-    width: 55px; /* Further reduce width for very small screens */
-    height: 55px; /* Further reduce height for very small screens */
-    font-size: 25px; /* Further reduce font size for icons */
+    width: 55px; 
+    height: 55px; 
+    font-size: 25px; 
     cursor: pointer;
     list-style: none;
     padding-top: -5px;
   }
   #skills h1 {
-    font-size: 24px; /* Further reduce font size */
-    padding-top: 30px; /* Adjust padding for very small screens */
+    font-size: 24px; 
+    padding-top: 30px; 
     margin-bottom: -180px;
   }
   #skills > .container {
-    transform: scale(0.25); /* Maximize on extra small screens */
-    height: 600px; /* Adjust height if needed */
-    margin: 0 5px; /* Add horizontal margin */
+    transform: scale(0.25);
+    height: 600px; 
+    margin: 0 5px; 
     margin-left: -64%;
   }
   #skills > .container > .skill {
     animation: none;
   }
   #projects h1 {
-    font-size: 1.5rem; /* Adjust font size for very small screens */
-    margin: 35px; /* Minimize margin */
+    font-size: 1.5rem; 
+    margin: 35px; 
   }
   #projects .container {
     padding: 10px;
