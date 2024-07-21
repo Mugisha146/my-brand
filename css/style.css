@@ -85,8 +85,9 @@ body {
 }
 #home > .container {
   position: relative;
-  min-height: 800px;
   width: 100%;
+  height: 100vh; /* Make the container full height of the viewport */
+  overflow: hidden; /* Hide any overflow content */
 }
 
 #home > .container::before {
@@ -98,6 +99,8 @@ body {
   height: 100%;
   background-image: url("../../assets/images/backgroundimage.jpg");
   background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
   opacity: 0.5;
 }
 
@@ -657,6 +660,7 @@ body {
   gap: 30px;
   padding: 100px;
   overflow: hidden;
+  flex-wrap: wrap;
 }
 
 #projects > .container img {
@@ -1203,14 +1207,114 @@ body {
 .error {
   border: 1px solid red;
 }
+@media (max-width: 1200px) {
+  #skills > .container {
+    transform: scale(0.6);
+    height: 1200px; /* Adjust height if needed */
+    margin: 0 auto; /* Centering the container */
+  }
+  #projects .container {
+    padding: 50px;
+    gap: 20px;
+  }
 
+  #projects > .container .project {
+    width: calc(50% - 20px);
+  }
+  #blogs h1 {
+    font-size: 40px;
+  }
+
+  #blogs .container {
+    margin: 20px;
+  }
+
+  #blogs > .container .blog {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  #blogs .container img {
+    max-width: 100%;
+  }
+
+  #blogs .blog-info {
+    padding: 10px;
+  }
+
+  #blogs .blog-info h2 {
+    font-size: 24px;
+  }
+
+  #blogs .blog-info p {
+    font-size: 16px;
+  }
+  #contact h1 {
+    font-size: 40px;
+  }
+
+  #contact .container {
+    margin: 20px;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto;
+  }
+
+  #contact > .container .left-part,
+  #contact > .container .right-part {
+    margin-bottom: 20px;
+    padding: 10px;
+  }
+
+  #contact > .container .right-part > img {
+    width: 250px;
+    margin: 10px auto;
+  }
+
+  #contact > .container .left-part form {
+    width: 100%;
+  }
+  #login-register h1 {
+    font-size: 40px;
+  }
+
+  #login-register .container {
+    margin: 20px;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto;
+    padding-left: 0;
+  }
+
+  #login-register .form {
+    width: 100%;
+  }
+  #reset-password h1 {
+    font-size: 40px;
+  }
+
+  #reset-password .container {
+    margin: 20px;
+    padding-left: 0;
+  }
+
+  #reset-password .form {
+    width: 100%;
+  }
+  #footer .container {
+    padding: 0px 20px;
+  }
+
+  #footer .container .left-part,
+  #footer .container .right-part {
+    flex: 1 1 100%;
+    margin-bottom: 20px;
+  }
+}
 @media screen and (max-width: 768px) {
   /* Navigation */
   #nav > .container {
-    flex-direction: column;
-    align-items: flex-start;
+    display: flex;
   }
-
   #nav > .container .hamburger {
     display: flex;
   }
@@ -1225,49 +1329,255 @@ body {
     width: 100%;
     text-align: center;
   }
-
-  #nav > .container > ul.nav-links.active {
-    display: flex;
-  }
-
   #nav > .container .login ul {
     display: none;
   }
+  #nav > .container > ul.nav-links.active {
+    display: flex;
+  }
+  #home > .container {
+    height: auto; /* Allow the container to expand based on content */
+    padding: 20px; /* Add padding for smaller screens */
+  }
 
   #home > .container .info {
-    padding-top: 50px;
-    font-size: 30px;
+    float: none; /* Remove floating */
+    padding-top: 50px; /* Adjust padding for smaller screens */
+    font-size: 30px; /* Reduce font size for smaller screens */
+    text-align: center; /* Center align text */
+  }
+
+  #home > .container .info span {
+    font-size: 30px; /* Adjust font size for smaller screens */
+  }
+
+  #home > .container .info h5 {
+    font-size: 18px; /* Adjust font size for smaller screens */
+    padding: 5px 0; /* Adjust padding for smaller screens */
+  }
+
+  #home > .container .info a {
+    font-size: 14px; /* Adjust font size for smaller screens */
+    padding: 10px; /* Adjust padding for smaller screens */
+    margin: 20px auto; /* Center align the link and adjust margin */
+    display: inline-block; /* Make the link inline-block */
+  }
+  #aboutme h1 {
+    font-size: 30px; /* Adjust font size for smaller screens */
+    padding: 50px; /* Adjust padding for smaller screens */
   }
 
   #aboutme > .container {
-    flex-direction: column;
-    gap: 20px;
+    flex-direction: column; /* Stack the left and right parts vertically */
+    gap: 50px; /* Adjust the gap for smaller screens */
+    margin: 20px; /* Adjust margin for smaller screens */
+    transform: scale(1); /* Reset scaling for proper fit */
   }
 
   #aboutme > .container > .left-part {
-    width: 100%;
+    width: 100%; /* Full width for smaller screens */
   }
 
   #aboutme > .container > .right-part {
-    width: 100%;
-    height: 500px;
+    width: 100%; /* Full width for smaller screens */
+    height: auto; /* Allow height to adjust based on content */
+    background-color: #dcf2f3; /* Ensure background color remains */
+    border-radius: 0; /* Remove border-radius for smaller screens */
+    animation: none;
   }
 
   #aboutme > .container > .right-part img {
-    width: 100%;
-    height: auto;
+    display: none;
+  }
+
+  #aboutme > .container > .left-part > .social-media ul {
+    flex-direction: column; /* Stack social media icons vertically */
+    gap: 20px; /* Adjust the gap for smaller screens */
+  }
+
+  #aboutme > .container > .left-part > .social-media ul li {
+    width: 50px; /* Adjust width for smaller screens */
+    height: 50px; /* Adjust height for smaller screens */
+    font-size: 30px; /* Adjust font size for smaller screens */
+  }
+  #skills h1 {
+    font-size: 36px; /* Adjust font size for smaller screens */
+    padding-top: 50px; /* Adjust padding for smaller screens */
+    margin-bottom: -150px;
   }
 
   #skills > .container {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: auto;
-    padding-top: 50px;
+    transform: scale(0.3); /* Even larger on very small screens */
+    height: 800px; /* Adjust height if needed */
+    margin: 0 10px; /* Add horizontal margin */
+    margin-left: -58%;
+  }
+  #skills > .container > .skill {
+    animation: none;
+  }
+  #projects h1 {
+    font-size: 2rem; /* Further reduce font size */
+    margin: 50px; /* Further reduce margin */
+  }
+  #projects .container {
+    padding: 20px;
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  #projects > .container img {
+    max-width: 100%;
     height: auto;
   }
 
-  #projects > .container > .project {
-    max-width: 100%;
+  #projects > .container .project {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+  #blogs h1 {
+    font-size: 30px;
+  }
+
+  #blogs .container {
+    margin: 10px;
+  }
+
+  #blogs .container img {
+    width: 100%;
+  }
+
+  #blogs .blog-info {
+    padding: 10px;
+  }
+
+  #blogs .blog-info h2 {
+    font-size: 20px;
+  }
+
+  #blogs .blog-info p {
+    font-size: 14px;
+  }
+
+  .viewBlogs {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .viewBlogs button {
+    margin: 5px 0;
+  }
+  #contact h1 {
+    font-size: 30px;
+    padding: 50px 10px;
+  }
+
+  #contact .container {
+    margin: 10px;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto;
+  }
+
+  #contact > .container .right-part > img {
+    width: 200px;
+    margin: 10px auto;
+  }
+
+  #contact > .container .left-part form {
+    width: 100%;
+    gap: 15px;
+  }
+
+  #contact > .container .left-part form input,
+  #contact > .container .left-part form textarea {
+    padding: 10px;
+  }
+
+  #contact > .container .left-part form button {
+    padding: 10px;
+  }
+
+  #contact > .container .right-part ul {
+    width: 100%;
+    padding: 0;
+    gap: 5px;
+  }
+
+  #contact > .container .right-part ul img {
+    width: 25px;
+    height: 25px;
+  }
+  #login-register h1 {
+    font-size: 30px;
+    padding-top: 50px;
+    margin-bottom: 50px;
+  }
+
+  #login-register .container {
+    margin: 10px;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto;
+  }
+
+  #login-register .form {
+    width: 100%;
+    padding: 20px;
+  }
+
+  #login-register .inputForm {
+    height: 40px;
+  }
+
+  #login-register .button-submit {
+    height: 45px;
+  }
+
+  #login-register .btn {
+    height: 45px;
+  }
+  #reset-password h1 {
+    font-size: 30px;
+    padding-top: 50px;
+    margin-bottom: 30px;
+  }
+
+  #reset-password .container {
+    margin: 10px;
+  }
+
+  #reset-password .form {
+    width: 100%;
+    padding: 20px;
+  }
+
+  #reset-password .inputForm {
+    height: 40px;
+  }
+
+  #reset-password .button-submit {
+    height: 45px;
+  }
+  #footer .container {
+    padding: 0px 10px;
+  }
+
+  #footer .container .left-part,
+  #footer .container .right-part {
+    flex: 1 1 100%;
+    margin-bottom: 20px;
+  }
+
+  #footer .container .bottom ul {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  #footer .container .bottom ul li {
+    font-size: 16px;
+  }
+
+  #footer .container .bottom .copyright {
+    padding: 1em;
+    font-size: 16px;
   }
 }
 
@@ -1276,31 +1586,257 @@ body {
     font-size: 15px;
   }
 
+  #home > .container::before {
+    background-size: cover;
+    background-position: center;
+  }
+
   #nav > .container > ul.nav-links {
     gap: 10px;
   }
-
+  #nav > .container .login ul {
+    display: none;
+  }
   #home > .container .info {
-    padding-top: 30px;
-    font-size: 20px;
+    font-size: 24px; /* Further reduce font size for very small screens */
   }
 
+  #home > .container .info span {
+    font-size: 24px; /* Further reduce font size for very small screens */
+  }
+
+  #home > .container .info h5 {
+    font-size: 16px; /* Further reduce font size for very small screens */
+  }
+
+  #home > .container .info a {
+    font-size: 12px; /* Further reduce font size for very small screens */
+    padding: 8px; /* Adjust padding for very small screens */
+    margin: 10px auto; /* Adjust margin for very small screens */
+  }
   #aboutme h1 {
-    padding: 50px;
+    font-size: 24px; /* Further reduce font size */
+    padding: 30px; /* Adjust padding for very small screens */
   }
 
+  #aboutme > .container {
+    gap: 20px; /* Adjust gap for very small screens */
+  }
+
+  #aboutme > .container > .left-part p {
+    font-size: 14px; /* Further reduce font size for paragraphs */
+    padding: 10px; /* Adjust padding for very small screens */
+  }
+  #aboutme > .container > .left-part > .social-media ul {
+    display: flex;
+    flex-direction: row;
+    transform: scale(0.8);
+  }
+  #aboutme > .container > .left-part > .social-media ul li {
+    width: 55px; /* Further reduce width for very small screens */
+    height: 55px; /* Further reduce height for very small screens */
+    font-size: 25px; /* Further reduce font size for icons */
+    cursor: pointer;
+    list-style: none;
+    padding-top: -5px;
+  }
   #skills h1 {
-    padding: 50px;
+    font-size: 24px; /* Further reduce font size */
+    padding-top: 30px; /* Adjust padding for very small screens */
+    margin-bottom: -180px;
+  }
+  #skills > .container {
+    transform: scale(0.25); /* Maximize on extra small screens */
+    height: 600px; /* Adjust height if needed */
+    margin: 0 5px; /* Add horizontal margin */
+    margin-left: -64%;
+  }
+  #skills > .container > .skill {
+    animation: none;
+  }
+  #projects h1 {
+    font-size: 1.5rem; /* Adjust font size for very small screens */
+    margin: 35px; /* Minimize margin */
+  }
+  #projects .container {
+    padding: 10px;
   }
 
-  #projects h1 {
-    padding: 50px;
+  #projects > .container img {
+    margin: 10px 0;
+  }
+
+  #prevBtn,
+  #nextBtn {
+    margin: 0 10px;
+  }
+
+  .more {
+    gap: 10px;
+    padding: 10px;
+  }
+
+  .more .io1,
+  .more .io2,
+  .more .io3 {
+    width: 15px;
+    height: 15px;
+  }
+  #blogs h1 {
+    font-size: 24px;
+  }
+
+  #blogs .container {
+    margin: 5px;
+  }
+
+  #blogs .blog-info {
+    padding: 5px;
+  }
+
+  #blogs .blog-info h2 {
+    font-size: 18px;
+  }
+
+  #blogs .blog-info p {
+    font-size: 12px;
+  }
+
+  .more {
+    gap: 10px;
+    padding: 10px;
+  }
+
+  .more .io1,
+  .more .io2,
+  .more .io3 {
+    width: 15px;
+    height: 15px;
+  }
+
+  #prevBtn,
+  #nextBtn {
+    padding: 5px;
+    margin: 0 5px;
+  }
+  #contact h1 {
+    font-size: 24px;
+    padding: 30px 5px;
+  }
+
+  #contact .container {
+    margin: 5px;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto;
+  }
+
+  #contact > .container .right-part > img {
+    width: 150px;
+    margin: 5px auto;
+  }
+
+  #contact > .container .left-part form {
+    width: 100%;
+    gap: 10px;
+  }
+
+  #contact > .container .left-part form input,
+  #contact > .container .left-part form textarea {
+    padding: 10px;
+  }
+
+  #contact > .container .left-part form button {
+    padding: 10px;
+  }
+
+  #contact > .container .right-part ul {
+    width: 100%;
+    padding: 0;
+    gap: 5px;
+  }
+
+  #contact > .container .right-part ul img {
+    width: 20px;
+    height: 20px;
+  }
+  #login-register h1 {
+    font-size: 24px;
+    padding-top: 30px;
+    margin-bottom: 30px;
+  }
+
+  #login-register .container {
+    margin: 5px;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto;
+  }
+
+  #login-register .form {
+    width: 100%;
+    padding: 15px;
+  }
+
+  #login-register .inputForm {
+    height: 35px;
+  }
+
+  #login-register .button-submit {
+    height: 40px;
+  }
+
+  #login-register .btn {
+    height: 40px;
+  }
+  #reset-password h1 {
+    font-size: 24px;
+    padding-top: 30px;
+    margin-bottom: 20px;
+  }
+
+  #reset-password .container {
+    margin: 5px;
+  }
+
+  #reset-password .form {
+    width: 100%;
+    padding: 15px;
+  }
+
+  #reset-password .inputForm {
+    height: 35px;
+  }
+
+  #reset-password .button-submit {
+    height: 40px;
+  }
+  #footer .container {
+    padding: 0px 5px;
+  }
+
+  #footer .container .left-part,
+  #footer .container .right-part {
+    flex: 1 1 100%;
+    margin-bottom: 10px;
+  }
+
+  #footer .container .bottom ul {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  #footer .container .bottom ul li {
+    font-size: 14px;
+  }
+
+  #footer .container .bottom .copyright {
+    padding: 1em;
+    font-size: 14px;
   }
 }
 
 #reset-password {
   display: none;
-  margin:50px 600px;
+  margin: 50px 600px;
 }
 
 #reset-password .container {
