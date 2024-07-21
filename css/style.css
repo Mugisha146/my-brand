@@ -1207,6 +1207,66 @@ body {
 .error {
   border: 1px solid red;
 }
+
+#reset-password {
+  display: none;
+  margin: 50px 600px;
+}
+
+#reset-password .container {
+  max-width: 400px;
+  padding: 50px;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+#reset-password h1 {
+  text-align: center;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+#reset-password .form {
+  display: flex;
+  flex-direction: column;
+}
+
+#reset-password .flex-column {
+  margin-bottom: 15px;
+}
+
+#reset-password .label {
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+#reset-password .inputForm {
+  margin-bottom: 15px;
+}
+
+#reset-password .input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+#reset-password .button-submit {
+  width: 100%;
+  padding: 10px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+#reset-password .button-submit:hover {
+  background-color: #0056b3;
+}
+
 @media (max-width: 1200px) {
   #skills > .container {
     transform: scale(0.6);
@@ -1754,10 +1814,23 @@ body {
     padding: 0;
     gap: 5px;
   }
-
+    #contact > .container .right-part img{
+margin-left: 100px;
+    }
+  #contact > .container .right-part p,h3{
+    clear: both;
+    font-size: 14px;
+    padding: 10px;
+    margin: 5px;
+    margin-left: 70px;
+  }
+    #contact > .container .right-part h3 {
+      font-size: 18px;
+    }
   #contact > .container .right-part ul img {
     width: 20px;
     height: 20px;
+    margin: 15px;
   }
   #login-register h1 {
     font-size: 24px;
@@ -1772,7 +1845,7 @@ body {
   }
 
   #login-register .form {
-    width: 100%;
+    max-width: 365px;
     padding: 15px;
   }
 
@@ -1789,12 +1862,13 @@ body {
   }
   #reset-password h1 {
     font-size: 24px;
-    padding-top: 30px;
-    margin-bottom: 20px;
+    margin:70px 30px;
+margin-left: -800px;
   }
 
   #reset-password .container {
-    margin: 5px;
+ margin: -50px -600px;
+ background-color: #d4e4f1;
   }
 
   #reset-password .form {
@@ -1832,63 +1906,4 @@ body {
     padding: 1em;
     font-size: 14px;
   }
-}
-
-#reset-password {
-  display: none;
-  margin: 50px 600px;
-}
-
-#reset-password .container {
-  max-width: 400px;
-  padding: 50px;
-  background-color: #fff;
-  border-radius: 10px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-
-#reset-password h1 {
-  text-align: center;
-  color: #333;
-  margin-bottom: 20px;
-}
-
-#reset-password .form {
-  display: flex;
-  flex-direction: column;
-}
-
-#reset-password .flex-column {
-  margin-bottom: 15px;
-}
-
-#reset-password .label {
-  font-weight: bold;
-  margin-bottom: 5px;
-}
-
-#reset-password .inputForm {
-  margin-bottom: 15px;
-}
-
-#reset-password .input {
-  width: 100%;
-  padding: 10px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-}
-
-#reset-password .button-submit {
-  width: 100%;
-  padding: 10px;
-  background-color: #007bff;
-  color: #fff;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  font-size: 16px;
-}
-
-#reset-password .button-submit:hover {
-  background-color: #0056b3;
 }
