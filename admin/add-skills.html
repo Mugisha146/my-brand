@@ -1,75 +1,100 @@
+
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Admin</title>
-    <link rel="stylesheet" href="add-skills.css">
-    <script src="https://kit.fontawesome.com/902bd6162d.js" crossorigin="anonymous"></script>
-</head>
-<body>
-    <!-- nav -->
-    <div class="about-content">
-       <!-- navigation toggle button -->
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="new-blog.css" />
+    <title>admin</title>
+  </head>
+
+  <body>
     <div class="navbar-toggle" onclick="toggleNav()">
       <i class="fas fa-bars"></i>
     </div>
-
-    <!-- nav -->
-    <div class="nav" id="navbar">
-      <ul class="text-center">
+    <!-- Sidebar -->
+    <div class="sidebar">
+      <a href="#" class="logo">
+        <div class="logo-name">El3.com</div>
+      </a>
+      <ul class="side-menu">
         <li>
-          <a href="../home.html"><i class="fa-solid fa-house"></i>&nbsp; HOME</a>
+          <a href="admin.html"><i class="bx bxs-dashboard"></i>Dashboard</a>
         </li>
         <li>
-          <a href="../about.html"
-            ><i class="fa-solid fa-address-card"></i>&nbsp; ABOUT ME</a
+          <a href="new-blog.html"><i class="bx bx-edit icon"></i>Blogs</a>
+        </li>
+        <li>
+          <a href="add-project.html"> <i class="bx bx-receipt"></i>portfolio</a>
+        </li>
+        <li>
+          <a href="add-skills.html">
+            <i class="bx bx-brain icon"></i>&nbsp;Skills</a
           >
         </li>
         <li>
-          <a href="../skills.html"
-            ><i class="fa-solid fa-flask"></i>&nbsp; SKILLS</a
-          >
+          <a href="message.html"><i class="bx bx-message-square-dots"></i>Message</a>
         </li>
         <li>
-          <a href="../blog.html"><i class="fa-solid fa-blog"></i>&nbsp; BLOG</a>
+          <a href="user.html"><i class="bx bx-group"></i>Users</a>
         </li>
         <li>
-          <a href="../portfolio.html"
-            ><i class="fa-solid fa-briefcase"></i>&nbsp; PORTFOLIO</a
-          >
-        </li>
-        <li>
-          <a href="../contact.html"
-            ><i class="fa-solid fa-phone"></i>&nbsp; CONTACT</a
-          >
+          <a href="profile.html"><i class="bx bx-cog"></i>Settings</a>
         </li>
       </ul>
-      <li>
-        <a href="../login.html" class="signup">&nbsp; Login</a>
-      </li>
+      <ul class="side-menu">
+        <li>
+          <a href="../home.html" class="logout">
+            <i class="bx bx-log-out-circle"></i>
+            Logout
+          </a>
+        </li>
+      </ul>
     </div>
-<!--admin content-->
+    <!-- End of Sidebar -->
 
+    <!-- Main Content -->
+    <div class="content">
+      <!-- Navbar -->
+      <nav>
+        <i class="bx bx-menu"></i>
+        <form action="#">
+          <div class="form-input">
+            <input type="search" placeholder="Search..." />
+            <button class="search-btn" type="submit">
+              <i class="bx bx-search"></i>
+            </button>
+          </div>
+        </form>
+        <a href="#" class="notif">
+          <i class="bx bx-bell"></i>
+          <span class="count">12</span>
+        </a>
+        <a href="#" class="profile">
+          <img src="/images/Mugisha photo.jpeg" />
+        </a>
+        <span style="margin-left: -20px">Mugisha</span>
+      </nav>
 
+      <!-- End of Navbar -->
 
+      <main>
+        <div class="header">
+          <div class="left">
+            <h1>Admin Dashboard</h1>
+          </div>
+        </div>
+<div class="nii">
+                    <!-- Reminders -->
+          <div class="reminders">
 
+    <div class="admin-content">
 
-        <div class="admin-content">
-          <div class="title">
-            <h1>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ADMIN DASHBOARD</h1>
-<img src="../images/Mugisha photo.jpeg" alt="" />
-<h6>Mugisha</h6>
-</div>
-<div class="box3">
-<div class="dash-menu">
-  <a href="admin.html"><i class="fa-solid fa-table-columns"></i>&nbsp;DASHBOARD</a>
-  <a href="user.html"><i class="fa-solid fa-people-roof"></i>&nbsp;USERS</a>
-  <a href="new-blog.html"><i class="fa-solid fa-blog"></i>&nbsp;POST BLOGS</a>
-  <a href="add-project.html"><i class="fa-solid fa-business-time"></i>&nbsp;PORTFOLIO</a>
-  <a href="add-skills.html"><i class="fa-solid fa-kitchen-set"></i>&nbsp;ADD SKILLS</a>
-  <a href="../home.html"><i class="fa-solid fa-right-from-bracket"></i>&nbsp;LOG OUT</a>
-</div>
+   
 <div class="user-message">
      <h1>Add Skill</h1>
 <form class="add-skill-form" id="add-skill-form" action="process_add_skill.php" method="POST">
@@ -87,24 +112,41 @@
 </form>
 
 </div>
-<div class="dash-count">
-  <div class="total-user">
-    <label for="">Total User</label>
-    <h1>80</h1>
-  </div>
-    <div class="user-request">
-    <label for="">User Request</label>
-    <h1>10</h1>
-  </div>
-    <div class="total-blogs">
-    <label for="">Total Blogs</label>
-    <h1>50</h1>
-  </div>
-    <div class="project">
-    <label for="">Project</label>
-    <h1>80</h1>
-  </div>
-</div>
+
+           </div>
+        </div>
+  <div class="container3">
+        <!-- Insights -->
+        <ul class="insights">
+          <li>
+            <i class="bx bx-group"></i>
+            <span class="info">
+              <h3 style="font-size: 20px">Total Users</h3>
+              <h2>&nbsp;&nbsp;&nbsp;&nbsp;190</h2>
+            </span>
+          </li>
+          <li>
+            <i class="bx bx-edit icon"></i>
+            <span class="info">
+              <h3 style="font-size: 20px">Total Blogs</h3>
+              <h2>&nbsp;&nbsp;&nbsp;&nbsp;10</h2>
+            </span>
+          </li>
+          <li>
+            <i class="bx bx-message-square-detail icon"></i>
+            <span class="info">
+              <h3 style="font-size: 18px">User Request</h3>
+              <h2>&nbsp;&nbsp;&nbsp;&nbsp;70</h2>
+            </span>
+          </li>
+          <li>
+            <i class="bx bx-receipt"></i>
+            <span class="info">
+              <h3 style="font-size: 20px">Projects</h3>
+              <h2>&nbsp;&nbsp;&nbsp;&nbsp;3</h2>
+            </span>
+          </li>
+        </ul></div>     
             <script>
              document.addEventListener("DOMContentLoaded", function() {
         var form = document.getElementById("add-skill-form");
