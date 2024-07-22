@@ -1494,9 +1494,10 @@ body {
   }
   #projects .container {
     padding: 10px;
-    margin-right: 20px;
   }
-
+ #projects .container .projectz{
+  margin-right: 10px;
+ }
   #projects > .container img {
     margin: 10px 0;
   }
@@ -1752,13 +1753,11 @@ body {
   #projects .container {
     padding: 10px;
   }
-
+#projects .container .projectz {
+  margin-right: 10px;
+}
   #projects > .container img {
     margin: 10px 0;
-  }
-  #projects > .container .projectz{
-    margin-left: -90px;
-    transform: scale(0.85);
   }
   #prevBtn,
   #nextBtn {
