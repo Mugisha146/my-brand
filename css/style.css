@@ -1369,6 +1369,19 @@ body {
     flex: 1 1 100%;
     margin-bottom: 20px;
   }
+   #footer  > .social-media ul {
+    display: flex;
+    flex-direction: row;
+    transform: scale(0.3);
+  }
+  #footer .social-media ul li {
+    width: 55px; 
+    height: 55px; 
+    font-size: 25px; 
+    cursor: pointer;
+    list-style: none;
+    padding-top: -5px;
+  }
 }
 @media screen and (max-width: 768px) {
   /* Navigation */
@@ -1475,25 +1488,19 @@ body {
   #skills > .container > .skill {
     animation: none;
   }
-  #projects h1 {
-    font-size: 2rem; 
-    margin: 50px; 
+   #projects h1 {
+    font-size: 1.5rem; 
+    margin: 35px; 
   }
   #projects .container {
-    padding: 20px;
-    flex-direction: column;
-    align-items: stretch;
+    padding: 10px;
+    margin-right: 20px;
   }
 
   #projects > .container img {
-    max-width: 100%;
-    height: auto;
+    margin: 10px 0;
   }
 
-  #projects > .container .project {
-    width: 100%;
-    margin-bottom: 20px;
-  }
   #blogs h1 {
     font-size: 30px;
   }
@@ -1626,6 +1633,16 @@ body {
     margin-bottom: 20px;
   }
 
+
+  #footer .container .left-part input {
+    width: auto;
+  }
+
+  #footer .container .left-part button {
+    padding: 10px;
+    width: 60%;
+    margin-top: 10px;
+  }
   #footer .container .bottom ul {
     flex-direction: column;
     align-items: center;
@@ -1636,8 +1653,22 @@ body {
   }
 
   #footer .container .bottom .copyright {
+    
     padding: 1em;
     font-size: 16px;
+  }
+   #footer  > .social-media ul {
+    display: flex;
+    flex-direction: row;
+    transform: scale(0.3);
+  }
+  #footer .social-media ul li {
+    width: 55px; 
+    height: 55px; 
+    font-size: 25px; 
+    cursor: pointer;
+    list-style: none;
+    padding-top: -5px;
   }
 }
 
@@ -1725,7 +1756,10 @@ body {
   #projects > .container img {
     margin: 10px 0;
   }
-
+  #projects > .container .projectz{
+    margin-left: -90px;
+    transform: scale(0.85);
+  }
   #prevBtn,
   #nextBtn {
     margin: 0 10px;
@@ -1905,5 +1939,24 @@ margin-left: -800px;
   #footer .container .bottom .copyright {
     padding: 1em;
     font-size: 14px;
+  }
+  #footer input{
+    width: 100%;
+    padding: 10px;  
+  }
+  #footer  > .container > .right-part> .social-media ul {
+    display: flex;
+    flex-direction: row;
+    gap: 3px;
+    transform: scale(0.5);
+    margin-left: 40px;
+    margin-top: -20px;
+  }
+   #footer  > .container > .right-part> .social-media  ul li {
+    width: 55px; 
+    height: 55px; 
+    font-size: 25px; 
+    cursor: pointer;
+    list-style: none;
   }
 }
