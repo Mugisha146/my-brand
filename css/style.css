@@ -916,9 +916,9 @@ body {
 }
 #contact > .container .right-part > img {
   float: left;
-  width: 300px;
+  width: 200px;
   border-radius: 55%;
-  margin: 10px 50px;
+  margin: 50px 50px;
   border: 1px solid #000000;
 }
 #contact > .container .slashi {
@@ -941,6 +941,9 @@ body {
   gap: 10px;
   list-style: none;
   border: 2px solid black;
+    margin-right: 60px;
+
+float: right;
 }
 #contact > .container .right-part ul img {
   width: 30px;
