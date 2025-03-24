@@ -43,6 +43,8 @@ body {
 #nav span {
   color: #00d4ff;
   letter-spacing: 2px;
+      font-size: 20px;
+
 }
 
 #nav > .container > ul {
@@ -52,6 +54,9 @@ body {
   gap: 50px;
   list-style: none;
   letter-spacing: 2px;
+    font-size: 20px;
+    
+
 }
 
 #nav > .container .login ul {
@@ -60,13 +65,14 @@ body {
   gap: 10px;
   list-style-type: none;
   letter-spacing: 2px;
+  margin-bottom: 10px;
 }
 #nav > .container .login ul a {
   background-color: #ffffff;
   color: #020024;
   padding: 10px;
   border-radius: 10px;
-  font-size: 15px;
+  font-size: 10px;
 }
 #nav > .container .login ul a:hover {
   background-color: #e0ebf5;
@@ -120,6 +126,7 @@ body {
   border-right: 0.15em solid rgb(99, 102, 102);
   border-radius: 0.25em;
   letter-spacing: 2px;
+  
 }
 @keyframes typing {
   0% {
@@ -658,7 +665,7 @@ body {
   justify-content: space-around;
   align-items: center;
   gap: 30px;
-  padding: 100px;
+  padding: 100px 80px;
   overflow: hidden;
   flex-wrap: wrap;
 }
@@ -669,7 +676,7 @@ body {
   object-fit: cover;
   object-position: center;
   transition: all ease 0.3s;
-  width: 400px;
+  width: 345px;
   height: 300px;
   border-radius: 5%;
   transition: 0.5s;
@@ -733,13 +740,13 @@ body {
 }
 #projects > .container .projectz.active {
   display: flex;
-  gap: 20px;
+  gap: 40px;
 }
 #projects > .container .project {
   box-shadow: 2px 2px 2px 5px #ffffff62;
   border-radius: 5%;
   max-width: 100%;
-  width: calc(33.333% - 20px);
+  width: calc(31% - 10px);
   height: auto;
   padding: 10px;
   display: flex;
